@@ -1,0 +1,363 @@
+body {
+    background: url("../img/bg.jpg");
+}
+.btn {
+    width: 160/16rem;
+    height: 40/16rem;
+    line-height: 40/16rem;
+    border-radius: 5/16rem;
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+.red {
+    background-color: #ed2123;
+    color: #fff;
+    &:hover {
+        background-color: #ee4244;
+    }
+}
+.container {
+    height: inherit;
+    width: 1200/16rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.header {
+    height: 140/16rem;
+    background-color: #fff; //  border-bottom: 1/16rem #d0d3d3 solid;
+    .header-nav {
+        padding-top: 44/16rem;
+        .logo {
+            .desc-list {
+                display: inline-block;
+                margin: 0;
+                padding: 0 20/16rem 0 0;
+                vertical-align: 10/16rem;
+                border-right: 1/16rem solid #e3e3e3;
+                overflow: hidden;
+                .desc-item {
+                    height: 20/16rem;
+                    line-height: 20/16rem;
+                    font-size: 15/16rem;
+                    color: #626262;
+                }
+            }
+        }
+        .nav-list {
+            display: inline-block;
+            height: 52/16rem;
+            line-height: 52/16rem;
+            margin: 0 0 0 40/16rem;
+            padding: 0;
+            overflow: hidden;
+            .nav-item {
+                height: inherit;
+                float: left;
+                display: inline-block;
+                padding-left: 15/16rem;
+                padding-right: 15/16rem;
+                .link {
+                    font-size: 16/16rem;
+                    transition: all 0.2s;
+                    letter-spacing: 1/16rem;
+                    &:hover {
+                        color: #54C895;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.main {
+    overflow: hidden;
+    .banner {
+        .image {
+            height: 700/16rem;
+            background-size: cover;
+            .title {}
+            &:nth-child(1) {
+                background-image: url("../img/banner-1.jpg");
+            }
+        }
+    }
+    .presentation {
+        overflow: hidden;
+        height: 400/16rem;
+        text-align: center;
+        .title {
+            font-size: 36/16rem;
+            font-weight: 300;
+            letter-spacing: 3/16rem; //          border-top: solid 2/16rem #333;
+            //          border-bottom: solid 2/16rem #333; //          padding-top: 10/16rem;
+            padding-bottom: 10/16rem;
+            width: 600/16rem;
+            margin: 70/16rem auto 40/16rem;
+        }
+        .desc {
+            letter-spacing: 1/16rem;
+            margin-bottom: 50/16rem;
+        }
+        .image {
+            background: url("../img/ico_brand.png");
+            width: 380/16rem;
+            height: 62/16rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 40/16rem;
+        }
+    }
+    .education {
+        overflow: hidden;
+        height: 980/16rem;
+        .title {
+            font-size: 36/16rem;
+            font-weight: 300;
+            letter-spacing: 3/16rem;
+            padding-bottom: 10/16rem;
+            width: 700/16rem;
+            margin: 70/16rem auto 40/16rem;
+        }
+        .education-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            .education-item {
+                margin-bottom: 20/16rem;
+                img {
+                    width: 80/16rem;
+                    height: 80/16rem;
+                    vertical-align: top;
+                    margin-top: 80/16rem;
+                }
+                .content {
+                    display: inline-block;
+                    width: 450/16rem;
+                    margin-left: 20/16rem;
+                    .sub-title {
+                        font-size: 24/16rem;
+                        font-weight: 600;
+                        letter-spacing: 1/16rem; 
+                    }
+                    .desc {
+                        font-size: 14/16rem;
+                        letter-spacing: 1/16rem;
+                        line-height: 26/16rem;
+                        .link{
+                            color: #3D97CF;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .operate {
+            margin-top: 30/16rem;
+            text-align: center;
+        }
+    }
+    .cooperator {
+        overflow: hidden;
+        height: 960/16rem;
+        .title {
+            font-size: 36/16rem;
+            font-weight: 300;
+            letter-spacing: 3/16rem;
+            text-align: center;
+            padding-bottom: 10/16rem;
+            margin: 70/16rem auto 40/16rem;
+        }
+        .desc {
+            text-align: center;
+            margin: 0;
+            line-height: 30/16rem;
+        }
+        .section-list {
+            margin: 0;
+            padding: 0;
+            width: inherit;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow: hidden;
+            .sestion-item {
+                padding-bottom: 30/16rem;
+                .section-title {
+                    font-weight: 500;
+                    margin: 10/16rem 0 5/16rem;
+                    letter-spacing: 1/16rem;
+                }
+                .section-desc {
+                    margin: 0 0 10/16rem;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                }
+            }
+        }
+    }
+    .company {
+        overflow: hidden;
+        height: 580/16rem;
+        .title {
+            font-size: 36/16rem;
+            font-weight: 300;
+            letter-spacing: 3/16rem;
+            text-align: center;
+            padding-bottom: 10/16rem;
+            margin: 70/16rem auto 10/16rem 0;
+        }
+        .desc {
+            text-align: left;
+            margin: 0/16rem 0 40/16rem;
+            padding: 0;
+            line-height: 30/16rem;
+        }
+        .company-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            .company-item {
+                padding-bottom: 15/16rem;
+                .link {
+                    img {
+                        border: solid 1/16rem #e0e0e0;
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        overflow: hidden;
+        height: 450/16rem;
+        .about-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            overflow: hidden;
+            .title {
+                font-weight: 400;
+                letter-spacing: 1/16rem;
+                margin-top: 70/16rem;
+            }
+            .sub-title {
+                font-weight: 500;
+                color: #FF5859;
+                letter-spacing: 1/16rem;
+            }
+            .desc {
+                font-weight: 300;
+                letter-spacing: 1/16rem;
+                line-height: 28/16rem;
+            }
+            .about-item {
+                width: 360/16rem;
+            }
+        }
+    }
+}
+.footer {
+    padding-top: 50/16rem;
+    padding-bottom: 10/16rem;
+    .footer-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        .foot-item {
+            &:first-child {
+                width: 380/16rem;
+                .big-title{
+                    font-size: 70/16rem;
+                    font-weight: 400;
+                    color: #FF5859;
+                    margin: 0 0 10/16rem 0;
+                    line-height: 70/16rem;
+                }
+                .middle-title{
+                    .big-title;
+                    font-size: 56/16rem;
+                    margin-top: 20/16rem;
+                }
+                .sub-title{
+                    color: #FF5859;
+                    font-weight: 400;
+                    font-size: 22/16rem;
+                    letter-spacing: 1/16rem;
+                    margin: 0 0 10/16rem 0;
+                }
+                .sub-desc{
+                    font-weight: 400;
+                    font-size: 16/16rem;
+                    letter-spacing: 1/16rem;
+                    margin: 0;
+                }
+                .desc{
+                    font-weight: 400;
+                    margin: 0;
+                    letter-spacing: 1/16rem;
+                }
+            }
+            &:nth-child(2){
+                .title{
+                    font-weight: 400;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                }
+                .desc{
+                    letter-spacing: 1/16rem;
+                    font-weight: 400;
+                }
+                img{
+                    width: 200/16rem;
+                    height: 200/16rem;
+                }
+            }
+            &:last-child{
+                .title{
+                    margin-top: 0;
+                    font-weight: 400;
+                    letter-spacing: 1/16rem;
+                    font-size: 30/16rem;
+                }
+                .contact{
+                    letter-spacing: 1/16rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+.white {
+    background-color: rgba(255,255,255,0.45);
+}
+.gray {
+    background-color: rgba(0,0,0,0);
+}
+.error{
+        color: red !important;
+    }
+#downloadModal {
+    width: 500/16rem;
+    height: 220/16rem;
+}
+#organizationModal {
+  width: 40.00rem;
+  height: 42.00rem;
+  
+}
+#professionModal {
+  width: 31.25rem;
+  height: 21.00rem;
+}

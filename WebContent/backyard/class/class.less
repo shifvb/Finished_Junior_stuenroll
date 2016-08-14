@@ -1,0 +1,268 @@
+body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    .tab-list {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #EBEEF7;
+        .tab-item {
+//          display: none;
+            float: left;
+            height: 36/16rem;
+            line-height: 36/16rem;
+            text-align: center;
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            letter-spacing: 1/16rem;
+            font-size: 14/16rem;
+            cursor: pointer;
+        }
+        .tab-active {
+            color: #fff;
+            background-color: #02A0E9;
+        }
+        .tab-show {
+            display: block;
+        }
+    }
+    .tab-container {
+        .tab-content {
+            display: none;
+            position: relative;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                position: relative;
+                .operation-item {
+//                  display: none;
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: orange;
+                        background-color: #fff;
+                    }
+                    .menu {
+                        display: none;
+                        cursor: default;
+                        left: 0;
+                        top: 38/16rem;
+                        background-color: #f0f0f0;
+                        color: #333;
+                        width: 100%;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 10/16rem;
+                        position: absolute;
+                        z-index: 50;
+                        margin-top: 10/16rem;
+                        border-radius: 3/16rem;
+                        .menu-title {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            padding-bottom: 1/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #ccc dashed 1/16rem;
+                            text-align: left;
+                            margin-left: 10/16rem;
+                        }
+                        dl {
+                            margin-top: 15/16rem;
+                            margin-bottom: 10/16rem;
+                            height: 130/16rem;
+                            margin-left: 10/16rem;
+                            dt {
+                                float: left;
+                                letter-spacing: 1/16rem;
+                                height: 32/16rem;
+                                line-height: 32/16rem;
+                                font-weight: 600;
+                                margin-right: 25/16rem;
+                                padding-top: 6/16rem;
+                            }
+                            dd {
+                                float: left;
+                                margin-left: 0;
+                                .condition-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    width: 680/16rem;
+                                    min-width: 680/16rem;
+                                    height: 130/16rem;
+                                    .label {
+                                        float: left;
+                                        width: 100/16rem;
+                                        //letter-spacing: 1/16rem;
+                                        height: 32/16rem;
+                                        line-height: 32/16rem;
+                                        text-align: right;
+                                        padding-right: 5/16rem;
+                                        padding-top: 6/16rem;
+                                        margin-bottom: 25/16rem;
+                                        font-size: 14/16rem;
+                                        list-style: none;
+                                    }
+                                    .condition {
+                                        float: left;
+                                        margin-right: 40/16rem;
+                                        margin-bottom: 12/16rem;
+                                        list-style: none;
+                                        //line-height: 32/16rem;
+                                        .keyword {
+                                            width: 200/16rem;
+                                            height: 32/16rem; //line-height: 53/16rem;
+                                            padding-left: 10/16rem;
+                                            padding-right: 10/16rem;
+                                            margin-bottom: 17/16rem;
+                                            border: solid #ccc 1/16rem;
+                                            outline: none;
+                                            letter-spacing: 1/16rem;
+                                            border-radius: 3/16rem;
+                                            color: #666666;
+                                        }
+                                        .dropdown-list {
+                                            overflow-x: auto;
+                                            overflow-y: auto;
+                                        }
+                                    }
+                                    .value {
+                                        float: left;
+                                    }
+                                    .arrowhead {
+                                        float: right;
+                                        font-size: 11/16rem;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .menu-btn {
+                                    display: block;
+                                    width: 120/16rem;
+                                    height: 32/16rem;
+                                    margin-bottom: 25/16rem;
+                                    margin-top: 8/16rem;
+                                    background-color: #F4494E;
+                                    border: none;
+                                    color: #fff;
+                                    outline: none;
+                                    border-radius: 3/16rem;
+                                    letter-spacing: 1/16rem;
+                                    font-size: 14/16rem;
+                                    font-weight: 600;
+                                    &:active {
+                                        background-color: #CD0C12;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .operation-item-show {
+                    display: block;
+                }
+                .item-active {
+                    color: red;
+                    background-color: #fff;
+                }
+            }
+            .data-table {
+                tr {
+                    span[name='classInfoId'] {
+                        color: black;
+                        cursor: default;
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                    span {
+                        cursor: pointer;
+                        color: deepskyblue;
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+            .classMenu {
+                display: none;
+                cursor: default;
+                left: 0;
+                top: 38/16rem;
+                background-color: #f0f0f0;
+                color: #333;
+                width: 100%;
+                border: solid #e0e0e0 1/16rem;
+                box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                padding: 10/16rem;
+                position: absolute;
+                z-index: 50;
+                margin-top: 10/16rem;
+                border-radius: 3/16rem;
+                .menu-title {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 8/16rem;
+                    font-size: 15/16rem;
+                    letter-spacing: 1/16rem;
+                    border-bottom: #ccc dashed 1/16rem;
+                    text-align: left;
+                    margin-left: 10/16rem;
+                }
+                .students {
+                    float: left;
+                    margin-top: 20/16rem;
+                    margin-left: 25/16rem;
+                    .data-table {
+                        width: 800/16rem;
+                        tr {
+                            th {
+                                color: #FFF;
+                                background-color: #0099FF;
+                            }
+                            td {
+                                background-color: #fff;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                    .menu-btn {
+                        display: block;
+                        width: 120/16rem;
+                        height: 35/16rem;
+                        margin-bottom: 25/16rem;
+                        background-color: #F4494E;
+                        border: none;
+                        color: #fff;
+                        outline: none;
+                        border-radius: 3/16rem;
+                        letter-spacing: 1/16rem;
+                        font-size: 14/16rem;
+                        font-weight: 600;
+                        &:active {
+                            background-color: #CD0C12;
+                        }
+                    }
+                }
+            }
+        }
+        .content-active {
+            display: block;
+        }
+        .error {
+            color: red !important;
+        }
+    }
+}

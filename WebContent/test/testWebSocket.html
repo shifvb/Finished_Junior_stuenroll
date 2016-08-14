@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var socket = new WebSocket("ws://127.0.0.1/stuenroll/mycat/websocket");
+		socket.onopen=function(){
+			setInterval(()=>{socket.send("{'view':'mycat-list'}")}, 2000);
+			 // socket.send("{'view':'mycat-list'}");
+		}
+		socket.onmessage=function(msg){
+			//var json=eval("("+msg.data+")");
+			console.log(msg.data);
+		}
+		
+	</script>
+</body>
+</html>

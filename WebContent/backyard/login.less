@@ -1,0 +1,270 @@
+html {
+    height: 100%;
+}
+body {
+    background: url("../img/student.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100%;
+}
+.main {
+    width: 1200/16rem;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    .login-container {
+        width: 500/16rem;
+        height: 420/16rem;
+        background-color: rgba(255,255,255,0.5);
+        border: solid 5/16rem rgba(255,255,255,0.6);
+        border-radius: 3/16rem;
+        position: absolute;
+        top: 150/16rem;
+        right: 20/16rem;
+        .login-list {
+            margin: 0;
+            padding: 0;
+            .login-item {
+                text-align: center;
+                .title {
+                    font-size: 30/16rem;
+                    font-weight: 300;
+                    letter-spacing: 3/16rem;
+                    line-height: 100/16rem;
+                    margin-bottom: 10/16rem;
+                }
+                .input {
+                    width: 350/16rem;
+                    height: 40/16rem;
+                    outline: none;
+                    background-color: rgba(255,255,255,0.7);
+                    border-radius: 3/16rem;
+                    border: solid #e9e9e9 1/16rem;
+                    padding-left: 15/16rem;
+                    padding-right: 15/16rem;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                    margin-bottom: 25/16rem;
+                    color: #333;
+                }
+                .btn {
+                    width: 350/16rem;
+                    height: 40/16rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 3/16rem;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-bottom: 25/16rem;
+                }
+                .blue {
+                    background-color: #00B4EF;
+                    color: #fff;
+                    &:active {
+                        background-color: #0AC2FF;
+                    }
+                }
+                .link {
+                    color: #666;
+                    padding-bottom: 3/16rem;
+                    border-bottom: solid 1/16rem #666;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .recover-container {
+        display: none;
+        width: 780/16rem;
+        height: 500/16rem;
+        background-color: rgba(255,255,255,0.95);
+        border: solid 5/16rem rgba(255,255,255,0.6);
+        border-radius: 3/16rem;
+        position: absolute;
+        top: 150/16rem;
+        left: 210/16rem;
+        overflow: hidden;
+        .title {
+            font-size: 22/16rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: rgba(0,180,239,0.75);
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            line-height: 42/16rem;
+            letter-spacing: 1/16rem;
+            margin-top: 30/16rem;
+        }
+        .step-container {
+            .step-bar {
+                .step-list {
+                    margin: 45/16rem auto 0;
+                    padding: 0;
+                    width: 720/16rem;
+                    height: 60/16rem;
+                    .step-item {
+                        float: left;
+                        width: 180/16rem;
+                        height: 10/16rem;
+                        background-color: #ccc;
+                        position: relative;
+                        .ball {
+                            position: absolute;
+                            width: 34/16rem;
+                            height: 34/16rem;
+                            border: solid 4/16rem #b9b9b9;
+                            background-color: #999;
+                            border-radius: 100%;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 12/16rem;
+                            line-height: 28/16rem;
+                            top: -12/16rem;
+                            left: 75/16rem;
+                        }
+                        .desc {
+                            position: absolute;
+                            top: 28/16rem;
+                            font-size: 14/16rem;
+                            letter-spacing: 1/16rem;
+                            text-align: center;
+                            width: inherit;
+                        }
+                    }
+                    .step-active {
+                        background-color: #E86167;
+                        .ball {
+                            background-color: #E86167;
+                            border-color: #EE8D91;
+                        }
+                    }
+                }
+            }
+            .step-content {
+                overflow: hidden;
+                .step-wrapper {
+                    width: 770*4/16rem;
+                    overflow: hidden;
+                    margin-left: 0;
+                    transition: all 0.75s;
+                    .step {
+                        width: 770/16rem;
+                        float: left;
+                        position: relative;
+                        @margin: 0 auto 0 auto;
+                        @padding: 0;
+                        @width: 650/16rem;
+                        .content-list {
+                            margin: @margin;
+                            padding: @padding;
+                            width: @width;
+                            .content-item {
+                                padding-top: 10/16rem;
+                                padding-bottom: 10/16rem;
+                                .step-title {
+                                    font-size: 18/16rem;
+                                    font-weight: 500;
+                                    letter-spacing: 1/16rem;
+                                    border-bottom: dashed 1/16rem #999;
+                                    padding-bottom: 10/16rem;
+                                }
+                                label {
+                                    width: 75/16rem;
+                                    font-size: 14/16rem;
+                                    letter-spacing: 1/16rem;
+                                    margin-right: 10/16rem;
+                                    display: inline-block;
+                                }
+                                .input {
+                                    width: 300/16rem;
+                                    height: 40/16rem;
+                                    outline: none;
+                                    border-radius: 3/16rem;
+                                    border: solid 1/16rem #e0e0e0;
+                                    color: #333;
+                                    font-size: 14/16rem;
+                                    letter-spacing: 1/16rem;
+                                    padding-left: 15/16rem;
+                                    padding-right: 15/16rem;
+                                    margin-right: 10/16rem;
+                                }
+                                .btn {
+                                    width: 150/16rem;
+                                    height: 40/16rem;
+                                    border-radius: 3/16rem;
+                                    border: none;
+                                    font-weight: bold;
+                                    letter-spacing: 1/16rem;
+                                    font-size: 14/16rem;
+                                    outline: none;
+                                    cursor: pointer;
+                                }
+                                .green {
+                                    color: #fff;
+                                    background-color: #0EC093;
+                                    &:active {
+                                        background-color: #10D8A5;
+                                    }
+                                }
+                                .red {
+                                    color: #fff;
+                                    background-color: #E86167;
+                                    &:active {
+                                        background-color: #EB777C;
+                                    }
+                                }
+                            }
+                        }
+                        .success-list {
+                            margin: 50/16rem auto 0 auto;
+                            padding: @padding;
+                            width: @width;
+                            .success-item {
+                                text-align: center;
+                                .success-title {
+                                    font-size: 24/16rem;
+                                    font-weight: 600;
+                                    color: #0CA881;
+                                    letter-spacing: 1/16rem;
+                                }
+                                .success-desc {
+                                    font-size: 16/16rem;
+                                    letter-spacing: 1/16rem;
+                                    margin-bottom: 20/16rem;
+                                    .second{
+                                        color: #E86167;
+                                        font-weight: bold;
+                                        margin-right: 5/16rem;
+                                    }
+                                }
+                                .back-btn {
+                                    width: 150/16rem;
+                                    height: 40/16rem;
+                                    background-color: #0CA881;
+                                    color: #fff;
+                                    letter-spacing: 1/16rem;
+                                    outline: none;
+                                    border: none;
+                                    border-radius: 3/16rem;
+                                    font-size: 14/16rem;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                        .QR{
+                            position: absolute;
+                            top: 50/16rem;
+                            left: 70/16rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .error{
+        color: red !important;
+    }
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Dao类 -->
+	<bean id="userDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.UserDao"></bean>
+	<bean id="userLogDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.UserLogDao"></bean>
+	<bean id="enrollDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.EnrollDao"></bean>
+	<bean id="archiveDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.ArchiveDao"></bean>
+	<bean id="permissionDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.PermissionDao"></bean>
+	<bean id="roleDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.RoleDao"></bean>
+	<bean id="enrollRedisDAO" class="cn.gov.hrss.ln.stuenroll.redis.EnrollRedisDAO"></bean>
+	<bean id="professionDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.ProfessionDao"></bean>
+	<bean id="organizationDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.OrganizationDao"></bean>
+	<bean id="organizationTransformDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.OrganizationTransformDao"></bean>
+	<bean id="classInfoDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.ClassInfoDao"></bean>
+	<bean id="reviewDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.ReviewDao"></bean>
+	<bean id="indexDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.IndexDao"></bean>
+	<bean id="messageDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.MessageDao"></bean>
+	<bean id="quitInfoDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.QuitInfoDao"></bean>
+	<bean id="systemUserDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.SystemUserDao"></bean>
+	<bean id="friendDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.FriendDao"></bean>
+	<bean id="reviewDetailsDao" class="cn.gov.hrss.ln.stuenroll.db.mariadb.ReviewDetailsDao"></bean>
+	<bean id="imageDao" class="cn.gov.hrss.ln.stuenroll.imagedb.ImageDao"></bean>
+
+	<!-- MQ类 -->
+	<bean id="producer" class="cn.gov.hrss.ln.stuenroll.rocketmq.Producer" init-method="start" destroy-method="stop">
+		<property name="namesrvAddr" value="127.0.0.1:9876"></property>
+		<property name="groupName" value="stuenroll"></property>
+		<property name="instanceName" value="producer_3"></property>
+	</bean>
+
+	<!-- 业务类 -->
+	<bean id="userService" class="cn.gov.hrss.ln.stuenroll.user.UserService">
+		<property name="i_UserDao" ref="userDao"></property>
+		<property name="i_UserLogDao" ref="userLogDao"></property>
+		<property name="i_Producer" ref="producer"></property>
+	</bean>
+	<bean id="welcomeService" class="cn.gov.hrss.ln.stuenroll.welcome.WelcomeService">
+		<property name="i_EnrollDao" ref="enrollDao"></property>
+		<property name="i_ArchiveDao" ref="archiveDao"></property>
+	</bean>
+	<bean id="permissionService" class="cn.gov.hrss.ln.stuenroll.permission.PermissionService">
+		<property name="i_PermissionDao" ref="permissionDao"></property>
+	</bean>
+	<bean id="professionService" class="cn.gov.hrss.ln.stuenroll.profession.ProfessionService">
+		<property name="i_ProfessionDao" ref="professionDao"></property>
+	</bean>
+	<bean id="enrollService" class="cn.gov.hrss.ln.stuenroll.enroll.EnrollService">
+		<property name="i_EnrollRedisDAO" ref="enrollRedisDAO"></property>
+		<property name="i_QuitInfoDao" ref="quitInfoDao"></property>
+		<property name="i_EnrollDao" ref="enrollDao"></property>
+	</bean>
+	<bean id="registerService" class="cn.gov.hrss.ln.stuenroll.register.RegisterService">
+		<property name="i_EnrollDao" ref="enrollDao"></property>
+		<property name="i_EnrollRedisDAO" ref="enrollRedisDAO"></property>
+	</bean> 
+	<bean id="roleService" class="cn.gov.hrss.ln.stuenroll.role.RoleService">
+		<property name="i_RoleDao" ref="roleDao"></property>
+	</bean>
+	<bean id="organizationService" class="cn.gov.hrss.ln.stuenroll.organization.OrganizationService">
+		<property name="i_OrganizationDao" ref="organizationDao"></property>
+	</bean>
+
+	<bean id="organizationTransformService" class="cn.gov.hrss.ln.stuenroll.organization.OrganizationTransformService">
+		<property name="i_OrganizationTransformDao" ref="organizationTransformDao"></property>
+	</bean>
+	<bean id="archiveService" class="cn.gov.hrss.ln.stuenroll.archive.ArchiveService">
+		<property name="i_ArchiveDao" ref="archiveDao"></property>
+	</bean>
+	<bean id="classInfoService" class="cn.gov.hrss.ln.stuenroll.classmanagement.ClassInfoService">
+		<property name="i_ClassInfoDao" ref="classInfoDao"></property>
+		<property name="i_UserLogDao" ref="userLogDao"></property>
+		<property name="i_ReviewDao" ref="reviewDao"></property>
+	</bean>
+	<bean id="reviewService" class="cn.gov.hrss.ln.stuenroll.classmanagement.ReviewService">
+		<property name="i_ReviewDao" ref="reviewDao"></property>
+		<property name="i_UserLogDao" ref="userLogDao"></property>
+	</bean>
+	<bean id="systemUserService" class="cn.gov.hrss.ln.stuenroll.systemUser.SystemUserService">
+		<property name="i_SystemUserDao" ref="systemUserDao"></property>
+	</bean>
+	<bean id="friendService" class="cn.gov.hrss.ln.stuenroll.friends.FriendService">
+		<property name="i_FriendDao" ref="friendDao"></property>
+		<property name="i_UserLogDao" ref="userLogDao"></property>
+	</bean>
+	<bean id="indexSevice" class="cn.gov.hrss.ln.stuenroll.index.IndexSevice">
+		<property name="i_IndexDao" ref="indexDao"></property>
+	</bean>
+	<bean id="imageService" class="cn.gov.hrss.ln.stuenroll.image.ImageService">
+		<property name="i_ImageDao" ref="imageDao"></property>
+	</bean>
+
+	<bean id="messageSevice" class="cn.gov.hrss.ln.stuenroll.message.MessageService">
+		<property name="i_MessageDao" ref="messageDao"></property>
+	</bean>
+	<bean id="reviewDetailsService" class="cn.gov.hrss.ln.stuenroll.record.ReviewDetailsService">
+		<property name="i_ReviewDao" ref="reviewDao"></property>
+		<property name="i_ReviewDetailsDao" ref="reviewDetailsDao"></property>
+		<property name="i_UserLogDao" ref="userLogDao"></property>
+	</bean>
+	
+	
+	<!-- 网络类 -->
+	<bean id="testController" class="cn.gov.hrss.ln.stuenroll.test.TestController"></bean>
+	<bean id="userController" class="cn.gov.hrss.ln.stuenroll.user.UserController">
+		<property name="i_UserService" ref="userService"></property>
+		<property name="i_PermissionService" ref="permissionService"></property>
+	</bean>
+	<bean id="welcomeController" class="cn.gov.hrss.ln.stuenroll.welcome.WelcomeController">
+		<property name="i_WelcomeService" ref="welcomeService"></property>
+	</bean>
+	<bean id="enrollController" class="cn.gov.hrss.ln.stuenroll.enroll.EnrollController">
+		<property name="i_EnrollService" ref="enrollService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+	<bean id="roleController" class="cn.gov.hrss.ln.stuenroll.role.RoleController">
+		<property name="i_RoleSevice" ref="roleService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+	<bean id="professionController" class="cn.gov.hrss.ln.stuenroll.profession.ProfessionController">
+		<property name="i_ProfessionService" ref="professionService"></property>
+		<property name="rowInPage" value="5"></property>
+	</bean>
+	<bean id="registerController" class="cn.gov.hrss.ln.stuenroll.register.RegisterController">
+		<property name="i_RegisterService" ref="registerService"></property>
+	</bean>
+	<bean id="organizationController" class="cn.gov.hrss.ln.stuenroll.organization.OrganizationController">
+		<property name="i_OrganizationService" ref="organizationService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+	<bean id="organizationTransformController" class="cn.gov.hrss.ln.stuenroll.organization.OrganizationTransformController">
+		<property name="i_OrganizationTransformService" ref="organizationTransformService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+	<!-- <bean id="archiveController" class="cn.gov.hrss.ln.stuenroll.archive.ArchiveController">
+		<property name="i_ArchiveService" ref="archiveService"></property>
+	</bean> -->
+	<bean id="classInfoController" class="cn.gov.hrss.ln.stuenroll.classmanagement.ClassInfoController">
+		<property name="i_ClassInfoService" ref="classInfoService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+	<bean id="reviewController" class="cn.gov.hrss.ln.stuenroll.classmanagement.ReviewController">
+		<property name="i_ReviewService" ref="reviewService"></property>
+		<property name="rowsPerPage" value="35"></property>
+	</bean>
+
+	<bean id="systemUserController" class="cn.gov.hrss.ln.stuenroll.systemUser.SystemUserController">
+		<property name="i_SystemUserService" ref="systemUserService"></property>
+		<property name="i_FriendService" ref="friendService"></property>
+		<property name="rowsInPage" value="35"></property>
+	</bean>
+ 	<bean id="messageController" class="cn.gov.hrss.ln.stuenroll.message.MessageController">
+		<property name="i_MessageSevice" ref="messageSevice"></property>
+	</bean>
+	<bean id="friendController" class="cn.gov.hrss.ln.stuenroll.friends.FriendController">
+		<property name="i_FriendService" ref="friendService"></property>
+		<property name="friendPerPage" value="13"></property>
+	</bean>
+	<bean id="imageController" class="cn.gov.hrss.ln.stuenroll.image.ImageController">
+		<property name="i_ImageService" ref="imageService"></property>
+	</bean>
+	<bean id="reviewDetailsController" class="cn.gov.hrss.ln.stuenroll.record.ReviewDetailsController">
+		<property name="i_ReviewDetailsService" ref="reviewDetailsService"></property>
+	</bean>
+	<bean id="indexController" class="cn.gov.hrss.ln.stuenroll.index.IndexController">
+		<property name="i_IndexSevice" ref="indexSevice"></property>
+	</bean>
+</beans>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/modal.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/dropdown.css" />
+		<link rel="stylesheet" type="text/css" href="role.css" />
+	</head>
+
+	<body>
+		<div class="main-container">
+			<dl class="tab-list no-select">
+				<dt class="tab-item tab-active" data-index="角色列表">角色列表</dt>
+			</dl>
+			<div class="tab-container">
+				<div class="tab-content content-active" data-index="角色列表">
+					<dl class="operation-list no-select">
+						<dt class="operation-item" name="addRole">添加
+							<!--添加下拉菜单开始-->
+							<div id="addRoleMenu" class="menu">
+								<div class="menu-title">角色添加</div>
+								<div class="menu-content">
+									<div class="menu-title-2">角色信息</div>
+									<ul class="menu-list">
+										<li class="menu-list-item">
+											<span class="label">角色名称：</span>
+											<input type="text" name="name" value="" class="keyword" placeholder="角色名称" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" required="required"/>
+											<input type="button" class="menu-btn" value="保存" />
+											<input type="button" class="menu-btn" value="清空" />
+										</li>
+										<li class="menu-list-item">
+											<span class="label">权限信息：</span>
+											<div class="checkbox-wrapper"></div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--添加下拉菜单结束-->
+							<dt class="operation-item" name="modifyRole">修改
+								<!--修改下拉菜单开始-->
+								<div id="modifyRoleMenu" class="menu">
+									<div class="menu-title">角色修改</div>
+									<div class="menu-content">
+										<div class="menu-title-2">角色信息</div>
+										<ul class="menu-list">
+											<li class="menu-list-item">
+												<span class="label">角色名称：</span>
+												<input type="text" name="name" value="" class="keyword" placeholder="角色名称" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" required="required"/>
+												<input type="button" class="menu-btn" value="保存" />
+												<input type="button" class="menu-btn" value="清空" />
+											</li>
+											<li class="menu-list-item">
+												<span class="label">权限信息：</span>
+												<div class="checkbox-wrapper">
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!--修改下拉菜单结束-->
+							</dt>
+						<dt class="operation-item" name="deleteRole">删除</dt>
+						</dt>
+					</dl>
+					<table class="data-table">
+						<tr>
+							<td></td>
+							<td>序号</td>
+							<td>角色名称</td>
+							<td>权限数量</td>
+							<td>用户数量</td>
+							<td>有效用户</td>
+							<td>无效用户</td>
+							<td>就业网用户</td>
+							<td>机构用户</td>
+							<td>角色状态</td>
+						</tr>
+					</table>
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">
+							总计<span id="totalRows"></span>条记录，<span id="currentPage">1</span>/<span id="totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a name="prevBtn">上一页</a>
+							<a data-page="1" class="page-active">1</a>
+							<a data-page="2">2</a>
+							<a data-page="3">3</a>
+							<a data-page="4">4</a>
+							<a data-page="5">5</a>
+							<a name="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/permission.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/modal.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/dropdown.js" type="text/javascript" charset="utf-8"></script>
+		<script src="role.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

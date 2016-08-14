@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta charset="UTF-8">
+		<meta name="description" content="辽宁省大学生离校未就业技能转换培训"/>
+		<meta name="keywords" content="大学生就业,大学生就业难,免费培训,转换培训,辽宁省大学生离校未就业技能转换培训"/>
+		<meta name="author" content="神一样的男人"/>
+		<meta name="copyright" content="辽宁省人力资源与社会保障厅" />
+		<title>辽宁省大学生离校未就业技能转换培训</title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/dropdown.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/page.css" />
+		<link rel="stylesheet" type="text/css" href="profession.css" />
+		<title></title>
+	</head>
+	<body>
+		<div class="main-container">
+			<dl class="tab-list no-select">
+				<dt class="tab-item tab-active" data-index="专业列表">专业列表</dt>
+			</dl>
+			<div class="tab-container">
+				<div class="tab-content content-active" data-index="专业列表">
+					<dl class="operation-list no-select">
+						<dt class="operation-item operation_hidden" name="add" data-index = "添加">添加
+							<div id="addMenu" class="menu">
+								<dl class="menu-list no-select">
+									<dt class="menu-item">
+										<h4 class="menuTitle">专业信息添加</h4>
+									</dt>
+									<dd class="menu-item">
+										<h5 class="sub-title">专业信息</h5>
+										<label for="profession">专业名称：</label>
+										<input type="text" class="input" name="profession" autocomplete="off" placeholder="专业名称" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$"/>
+										<input type="button" class="btn" name="save" value="保存" />
+									</dd>
+								</dl>
+							</div>								
+						</dt>
+						<dt class="operation-item operation_hidden" name="update">修改
+							<div id="updateMenu" class="menu">
+								<dl class="menu-list no-select">
+									<dt class="menu-item">
+										<h4 class="menuTitle">专业信息修改</h4>
+									</dt>
+									<dt class="menu-item">
+										<h5 class="sub-title" data-value='专业信息'>专业信息</h5>
+										<label for="profession">专业名称：</label>
+										<input type="text" class="input" name="profession" autocomplete="off" placeholder="专业名称" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$"/>
+										<input type="button" class="btn" name="saveUpdate" value="修改" />
+									</dt>
+								</dl>
+							</div>								
+						</dt>
+						<dt class="operation-item" name="delete">删除</dt>
+						<dt class="operation-item" name="import">导入
+							<div class="import-menu" id="importMenu">
+								<div class="menu-title">导入专业数据</div>
+								<form id="upload" action="#" enctype="multipart/form-data" method="post" onsubmit="return false;">
+									<div class="file">
+										<div class="select-file">
+											<i class="icon iconfont jia">&#xe617;</i>
+											<span class="icon-text">选择文件</span>
+										</div>
+										<input class="file-upload" type="file" name="uploadFile" value="" title="请上传文件" />
+									</div>
+									<input class="file-path" />
+									<input class="upload-file" id="fileUpload" type="submit" value="上传" />
+								</form> 
+							</div>
+						</dt>
+						<dt class="operation-item" name="export">导出
+							<div class="export-menu" id="export-menu">
+								<div class="menu-title">导出专业数据</div>
+								<div class="menu-content">
+									<form action="/stuenroll/profession/exportProfession" method="post">
+										<input type="hidden" name="type" id="type" value="excel" />
+										<input type="submit" value="导出Excel文件" name="exportValue"/>
+									</form>
+									<form action="/stuenroll/profession/exportProfession" method="post">
+										<input type="hidden" name="type" id="type" value="xml" />
+										<input type="submit" value="导出XML文件" name="exportValue"/>
+									</form>
+									<form action="/stuenroll/profession/exportProfession" method="post">
+										<input type="hidden" name="type" id="type" value="csv" />
+										<input type="submit" value="导出CSV文件" name="exportValue"/>
+									</form>
+								</div>
+							</div>
+						</dt>
+					</dl>
+					<table class="data-table no-select">
+						<tr>
+							<th></th>
+							<th>序号</th>
+							<th>专业名称</th>
+							<th>关联机构</th>
+							<th>关联年届</th>
+							<th>班级数量</th>
+							<th>培训人数</th>
+							<th>就业率</th>
+						</tr>
+					</table>	
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">
+							总计<span id="totalRows"></span>条记录，<span id="currentPage">1</span>/<span id="totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a data-btn="prevBtn">上一页</a>
+							<a data-btn="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/permission.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/dropdown.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/menu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="profession.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="record.css"/>
+		<title></title>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="review-container">
+				<h2 class="title">电话回访学院登记表</h3>
+				<div class="info-container" data-index="studentInfo">
+					<div class="bigPeat"></div>
+					<div class="peat-1"></div>
+					<div class="student">
+						<table class="details">
+							<tr>
+								<td>
+									<li class="label">姓名：</li>
+									<li class="content">
+										<input type="text" name="name" value="" tabindex="-1" autocomplete="off" />
+									</li>
+									<li class="content">
+										<input type="checkbox" name="sex" data-sex="男" /><span>男</span>
+										<input type="checkbox" name="sex" data-sex="女" /><span>女</span>
+									</li>
+								</td>
+								<td>
+									<li class="label">出生年月：</li>
+									<li class="content">
+										<input type="text" name="year" class="date" value="" tabindex="-1" autocomplete="off" /><span>年</span>
+										<input type="text" name="month" class="date" value="" tabindex="-1" autocomplete="off" /><span>月</span>
+										<input type="text" name="day" class="date" value="" tabindex="-1" autocomplete="off" /><span>日</span>
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<li class="label">身份证号：</li>
+									<li class="content">
+										<input type="text" name="pid" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+								<td>
+									<li class="label">电子信箱：</li>
+									<li class="content">
+										<input type="text" name="email" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<li class="label">联系电话：</li>
+									<li class="content">
+										<input type="text" name="tel" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+								<td>
+									<li class="label">现居住地：</li>
+									<li class="content">
+										<input type="text" name="residentAddress" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<li class="label">家庭地址：</li>
+									<li class="content">
+										<input type="text" name="homeAddress" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+								<td>
+									<li class="label">户籍地址：</li>
+									<li class="content">
+										<input type="text" name="permanentAddress" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<li class="label">毕业院校：</li>
+									<li class="content">
+										<input type="text" name="graduateSchool" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+								<td>
+									<li class="label">所学专业：</li>
+									<li class="content">
+										<input type="text" name="major" tabindex="-1" autocomplete="off" />
+									</li>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="peat-2"></div>
+				</div>
+				<div class="warning">
+					<span>{下面的内容为人工填写，请认真询问学员相关问题，核实学生基本信息和学习情况}</span>
+				</div>
+				<div class="info-container" data-index="reviewInfo">
+					<div class="question">
+						<div class="part">
+							<div class="ball">1
+							</div>
+						</div>
+						<div class="questions">
+							<ul class="list">
+								<li class="question">学生资料是否真实？</li>
+								<li class="answer">
+									<input type="checkbox" name="是" value="是" /><span>是</span>
+									<input type="checkbox" name="否" value="否" /><span>否</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生对转换培训总体评价？</li>
+								<li class="answer">
+									<input type="checkbox" name="很满意" value="很满意" /><span>很满意</span>
+									<input type="checkbox" name="满意" value="满意" /><span>满意</span>
+									<input type="checkbox" name="一般" value="一般" /><span>一般</span>
+									<input type="checkbox" name="不满意" value="不满意" /><span>不满意</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生对转换培训机构总体评价？</li>
+								<li class="answer">
+									<input type="checkbox" name="很满意" value="很满意" /><span>很满意</span>
+									<input type="checkbox" name="满意" value="满意" /><span>满意</span>
+									<input type="checkbox" name="一般" value="一般" /><span>一般</span>
+									<input type="checkbox" name="不满意" value="不满意" /><span>不满意</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生对转换培训机构教学评价？</li>
+								<li class="answer">
+									<input type="checkbox" name="很满意" value="很满意" /><span>很满意</span>
+									<input type="checkbox" name="满意" value="满意" /><span>满意</span>
+									<input type="checkbox" name="一般" value="一般" /><span>一般</span>
+									<input type="checkbox" name="不满意" value="不满意" /><span>不满意</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生对转换培训机构日常管理评价？</li>
+								<li class="answer">
+									<input type="checkbox" name="很满意" value="很满意" /><span>很满意</span>
+									<input type="checkbox" name="满意" value="满意" /><span>满意</span>
+									<input type="checkbox" name="一般" value="一般" /><span>一般</span>
+									<input type="checkbox" name="不满意" value="不满意" /><span>不满意</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生认为该专业设置的是否合理？</li>
+								<li class="answer">
+									<input type="checkbox" name="合理" value="合理" /><span>合理</span>
+									<input type="checkbox" name="不合理" value="不合理" /><span>不合理</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生认为该专业学习周期是否合理？</li>
+								<li class="answer">
+									<input type="checkbox" name="合理" value="合理" /><span>合理</span>
+									<input type="checkbox" name="不合理" value="不合理" /><span>不合理</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">学生认为转换培训应该做出什么样的改变？</li><br />
+								<li class="answer">
+									<textarea name="changes" ></textarea>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="question">
+						<div class="part">
+							<div class="ball">
+								<div class="part-ball">2</div>
+							</div>
+						</div>
+						<div class="questions">
+							<ul class="list">
+								<li class="question">学生是否就业？</li>
+								<li class="answer">
+									<input type="checkbox" name="是" value="是" /><span>是</span>
+									<input type="checkbox" name="否" value="否" /><span>否</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">所在公司规模？</li>
+								<li class="answer">
+									<input type="checkbox" name="50以下" value="50以下" /><span>50以下</span>
+									<input type="checkbox" name="50-200人" value="50-200人" /><span>50-200人</span>
+									<input type="checkbox" name="200-500人" value="200-500人" /><span>200-500人</span>
+									<input type="checkbox" name="500人以上" value="500人以上" /><span>500人以上</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">所在公司性质？</li>
+								<li class="answer">
+									<input type="checkbox" name="政府部门" value="政府部门" /><span>政府部门</span>
+									<input type="checkbox" name="国有企业" value="国有企业" /><span>国有企业</span>
+									<input type="checkbox" name="民营企业" value="民营企业" /><span>民营企业</span>
+									<input type="checkbox" name="外企" value="外企" /><span>外企</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">收入水平？</li>
+								<li class="answer">
+									<input type="checkbox" name="3000元以下" value="3000元以下" /><span>3000元以下</span>
+									<input type="checkbox" name="3000元-5000元" value="3000元-5000元" /><span>3000元-5000元</span>
+									<input type="checkbox" name="5000-8000元" value="5000-8000元" /><span>5000-8000元</span>
+									<input type="checkbox" name="8000元以上" value="8000元以上" /><span>8000元以上</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">从事工作是否与培训专业对口？</li>
+								<li class="answer">
+									<input type="checkbox" name="是" value="是" /><span>是</span>
+									<input type="checkbox" name="否" value="否" /><span>否</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">工作是否满意？</li>
+								<li class="answer">
+									<input type="checkbox" name="是" value="是" /><span>是</span>
+									<input type="checkbox" name="否" value="否" /><span>否</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">就业方式？</li>
+								<li class="answer">
+									<input type="checkbox" name="自主就业" value="自主就业" /><span>自主就业</span>
+									<input type="checkbox" name="推荐就业" value="推荐就业" /><span>推荐就业</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">就业是否满意？</li>
+								<li class="answer">
+									<input type="checkbox" name="是" value="是" /><span>是</span>
+									<input type="checkbox" name="否" value="否" /><span>否</span>
+								</li>
+							</ul>
+							<ul class="list">
+								<li class="question">对就业工作的建议？</li><br />
+								<li class="answer">
+									<textarea name="jobAdvice" autocomplete="off"></textarea>
+								</li>
+							</ul>
+							</ul>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="charts-container">
+				<div class="phone-container">
+					<div class="student">
+						<div class="photo"><img src="../../../img/photo.png"/></div>
+						<div class="info"><span name="name">金正恩</span><br /><span name="sex">男</span><span>,</span><span name="age">26</span><span>岁</span></div>
+						<div class="tel"><span>18202420780</span></div>
+					</div>
+					<div class="call">
+						<div class="time">
+							<label name="timer" class="timer">时长：</label><span name="hour">00</span><span>:</span><span name="minute">16</span><span>:</span><span name="second">55</span>
+						</div>
+						<div class="callBtn">
+							<span name="挂断" class="no-select">||&nbsp; 挂断</span>
+							<span name="拨打" class="no-select item-active">&nbsp; 拨打</span>
+						</div>
+					</div>
+				</div>
+				<div class="audio-container">
+					<audio src="" id="audio"></audio>
+				</div>
+				<div class="item-container">
+					<div id="attendence" class="attendence"></div>
+					<div id="scoreList" class="scoreList">
+						<table class="data-table">
+							<tr>
+								<th>序号</th>
+								<th>日期</th>
+								<th>成绩</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>5/12</td>
+								<td>85</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>6/15</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>7/09</td>
+								<td>78</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>8/11</td>
+								<td>89</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>9/17</td>
+								<td>86</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>10/05</td>
+								<td>94</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>11/18</td>
+								<td>90</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="calendar" class="calendar"></div>
+				<div id="score" class="score"></div>
+		</div>
+		
+		<script src="../../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/permission.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/dropdown.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/macarons.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/menu.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="UTF-8">
+			
+		</script>
+		<script src="record.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

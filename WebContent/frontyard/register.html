@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="辽宁省就业转换在线申报系统" />
+		<meta name="keywords" content="辽宁省就业转换在线申报系统,辽宁省大学生,离校未就业,失业,找不到工作,免费培训,免费学习,辽宁省就业网" />
+		<meta name="author" content="杨迪" />
+		<title>辽宁省就业转换在线申报系统</title>
+		<link rel="shortcut icon" href="../img/icon.png" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../font/iconfont.css" />
+		<link rel="stylesheet" href="../js/plugin/toastr.css" />
+		<link rel="stylesheet" href="../js/plugin/dropdown.css" />
+		<link rel="stylesheet" href="../js/plugin/modal.css"/>
+		<link rel="stylesheet" href="register.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="header-nav">
+					<a href="" class="logo">
+						<img src="../img/logo.png" />
+						<dl class="desc-list">
+							<dt class="desc-item">关注大学生就业</dt>
+							<dt class="desc-item">ln.hrss.gov.cn</dt>
+						</dl>
+					</a>
+					<dl class="nav-list">
+						<dt class="nav-item"><a href="" class="link">首页</a></dt>
+						<dt class="nav-item"><a href="" class="link">教育动态</a></dt>
+						<dt class="nav-item"><a href="" class="link">就业政策</a></dt>
+						<dt class="nav-item"><a href="" class="link">职业规划</a></dt>
+						<dt class="nav-item"><a href="" class="link">创业指导</a></dt>
+						<dt class="nav-item"><a href="" class="link">招聘会</a></dt>
+						<dt class="nav-item"><a href="" class="link">在线报名</a></dt>
+						<dt class="nav-item"><a href="" class="link">登陆</a></dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="container">
+				<h1 class="title">就业技能转换培训申请表</h1>
+				<div class="register">
+					<dl class="register-list">
+						<dt class="register-item">
+						<span class="name">姓名：</span>
+						<input type="text" class="input" name="name" id="name" required="required" pattern="^[\u4e00-\u9fa5]{2,15}$" placeholder="姓名"
+							autocomplete="off" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">性别：</span>
+						<div id="sex" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">男</li>
+								<li class="dropdown-item">女</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">出生日期：</span>
+						<input type="text" class="input" name="birthday" id="birthday" required="required"
+							pattern="^(?:(?!0000)[0-9]{4}-(?:(?:0?[1-9]|1[0-2])-(?:0?[1-9]|1[0-9]|2[0-8])|(?:0?[13-9]|1[0-2])-(?:29|30)|(?:0?[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-0?2-29)$"
+							placeholder="出生日期" autocomplete="off" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">民族：</span>
+						<div id="nation" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">汉族</li>
+								<li class="dropdown-item">回族</li>
+								<li class="dropdown-item">满族</li>
+								<li class="dropdown-item">苗族</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">身份证号：</span>
+						<input type="text" class="input" id="pid" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">健康状况：</span>
+						<div id="healthy" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">健康</li>
+								<li class="dropdown-item">残疾</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">毕业学校：</span>
+						<input type="text" class="input" id="graduteSchool" required="required" pattern="^[0-9\u4e00-\u9fa5]{4,30}$"/>
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">毕业年份：</span>
+						<div id="graduateYear" class="dropdown" required="required">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">毕业日期：</span>
+						<input type="text" class="input" id="graduateDate" required="required"
+							pattern="^(?:(?!0000)[0-9]{4}-(?:(?:0?[1-9]|1[0-2])-(?:0?[1-9]|1[0-9]|2[0-8])|(?:0?[13-9]|1[0-2])-(?:29|30)|(?:0?[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-0?2-29)$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">所学专业：</span>
+						<div id="major" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">哲学</li>
+									<li class="dropdown-item">经济学</li>
+									<li class="dropdown-item">法学</li>
+									<li class="dropdown-item">教育学</li>
+									<li class="dropdown-item">文学</li>
+									<li class="dropdown-item">历史学</li>
+									<li class="dropdown-item">理学</li>
+									<li class="dropdown-item">工学</li>
+									<li class="dropdown-item">农学</li>
+									<li class="dropdown-item">医学</li>
+									<li class="dropdown-item">军事学</li>、
+									<li class="dropdown-item">管理学</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">学历：</span>
+						<div id="education" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">大专</li>
+								<li class="dropdown-item">本科</li>
+								<li class="dropdown-item">硕士</li>
+								<li class="dropdown-item">博士</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">政治面貌：</span>
+						<div id="politics" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">中共党员</li>
+								<li class="dropdown-item">中共预备党员</li>
+								<li class="dropdown-item">共青团员</li>
+								<li class="dropdown-item">中共预备党员</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">现居住地：</span>
+						<input type="text" class="input" id="residentAddress" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">家庭地址：</span>
+						<input type="text" class="input" id="homeAddress" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">户籍地址：</span>
+						<input type="text" class="input" id="permanentAddress" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">移动电话：</span>
+						<input type="text" class="input" id="tel" required="required" pattern="^1\d{10}$"/>
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">家庭电话：</span>
+						<input type="text" class="input" id="homeTel" required="required" pattern="^\d{7,}$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">电子信箱：</span>
+						<input type="email" class="input" id="email" required="required" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">微信号：</span>
+						<input type="text" class="input" id="wechat" required="required" pattern="^[a-zA-Z0-9]{4,30}$" />
+						<span class="remark">* 必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">申报专业：</span>
+						<div id="profession" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<!-- Ajax动态生成 -->
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">培训机构：</span>
+						<div id="organization" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">培训地点：</span>
+						<div id="place" class="dropdown">
+							<span class="value">- 选择 -</span>
+							<i class="iconfont arrowhead">&#xe610;</i>
+							<ul class="dropdown-list">
+								<li class="dropdown-item">沈阳</li>
+								<li class="dropdown-item">大连</li>
+								<li class="dropdown-item">鞍山</li>
+							</ul>
+						</div>
+						<span class="remark">* 必选内容</span>
+					</dt>
+						<dt class="register-item">
+						<span class="name">备注信息：</span>
+						<input type="text" class="input" id="remark"  />
+						<span class="remark">* 非必填内容</span>
+					</dt>
+						<dt class="register-item">
+						<div class="operate">
+							<input type="button" id="register" class="btn green" value="注册" />
+							&nbsp;
+							<input type="button" id="cancel" class="btn red" value="取消" />
+						</div>
+					</dt>
+					</dl>
+					<dl class="suggest-list">
+						<dt class="suggest-item">
+						<h2 class="suggest-title">一、培训对象</h2>
+						<ol class="step-list">
+							<li class="step-item">我省生源是指学生户籍为辽宁省的学生，就读省内院校、省外院校均可。</li>
+							<li class="step-item">2009年之后毕业的高校毕业生如是城市户口需在县（区、市）级以上公共就业服务机构进行登记失业，方可参加培训。但已参加过以往年度专业转换及技能提升培训的离校未就业高校毕业生，不能参加2014年的相关培训。</li>
+							<li class="step-item">高校毕业生是指所有全日制的普通高校、高职、高专学校的毕业生，但不包括函授、自考、成人等非全日制学习形式。</li>
+							<li class="step-item">国外院校的毕业证书需提供国家教育部门相关论证材料，以国家承认为原则。</li>
+							<li class="step-item">参加离校未就业高校毕业生专业转换及技能提升培训以相关、相近专业为主，应具备拟参加培训专业的兴趣爱好和基础知识准备。</li>
+						</ol>
+						<h2 class="suggest-title">二、需提供的证明要件</h2>
+						<ol class="step-list">
+							<li class="step-item">粘贴近期免冠一寸照片的《辽宁省离校未就业高校毕业生专业转换及技能提升培训学员登记表》（一式三份，表格必须在辽宁省就业网转换培训专题页面进行网上报名后直接打印）</li>
+							<li class="step-item">身份证原件及正反两面复印件三份</li>
+							<li class="step-item">毕业证书原件及复印件三份</li>
+							<li class="step-item">2014年应届毕业生（农村户籍往届生）须提供未就业证明原件及复印件两份，或《就失业登记证》原件及复印件一式三份</li>
+							<li class="step-item">2009年--2013年度城市户籍毕业生须携带《就失业登记证》原件及复印件一式三份。 （注：《就失业登记证》需复印2－6页的全部内容）</li>
+						</ol>
+						<h2 class="suggest-title">三、毕业时间证明</h2>
+						<ol class="step-list">
+							<li class="step-item">毕业证书上明确标注为2009—2014年届毕业生</li>
+							<li class="step-item">如因特殊情况，未取得毕业证书，可提供由毕业学校开具的、加盖公章的毕业证明</li>
+						</ol>
+						<h2 class="suggest-title">四、未就业证明</h2>
+						<ol class="step-list">
+							<li class="step-item">已加盖学校公章的空白就业协议书</li>
+							<li class="step-item">毕业院校就业指导处出具加盖公章的未就业书面证明材料</li>
+							<li class="step-item">存放其本人人事档案的人事部门或人才服务机构出具的未就业书面证明</li>
+							<li class="step-item">户口所在地或现居住地所属街道办事处出具加盖公章的未就业书面证明材料（无街道办事处的地区，毕业生可到与街道同等级及以上部门办理未就业证明材料。）</li>
+							<li class="step-item">县（区、市）级公共就业服务机构办理的《就失业登记证》, 《就失业登记证》以下2种情况可视为失业：A、“就业登记情况”为空白或“灵活就业”，“失业登记情况”为“从学校毕业或肄业”，
+								“日期”处失业须比就业晚，也可为同一天；B、“就业登记情况”有登记记录，“失业登记情况”必须有相应的失业登记，“日期”处失业须比就业晚，也可为同一天。</li>
+						</ol>
+					</dt>
+						<dt class="suggest-item"></dt>
+					</dl>
+				</div>
+			</div>
+			<div class="about white">
+				<div class="container">
+					<dl class="about-list">
+						<dt class="about-item">
+						<h1 class="title">关于我们</h1>
+						<h2 class="sub-title">人才带动社会经济发展</h2>
+						<p class="desc">辽宁省人力资源和社会保障厅是根据《中共中央办公厅国务院办公厅关于印发〈辽宁省人民政府机构改革方案〉的通知》（厅字〔2009〕24号）而设立，辽宁省人力资源和社会保障厅为正厅级建制，为省政府组成。贯彻执行国家人力资源和社会保障事业发展规划和政策法规。</p>
+					</dt>
+						<dt class="about-item">
+						<h1 class="title">转换培训</h1>
+						<h2 class="sub-title">非学无以立身，非教无以立国</h2>
+						<p class="desc">辽宁省人力资源和社会保障厅、省财政厅、省教育厅联合制定并下发了《关于开展辽宁省离校未就业高校毕业生专业转换及技能提升培训促就业的通知》，我省计划对万名辽宁生源且尚未就业的普通高校应届毕业生开展专业转换及技能提升培训，以帮助他们实现就业。</p>
+					</dt>
+						<dt class="about-item">
+						<h1 class="title">报名须知</h1>
+						<h2 class="sub-title">十年树木，百年树人</h2>
+						<p class="desc">本次培训报名采取网上和实地相结合的方式。拟参加培训的高校毕业生须填写《辽宁省离校未就业高校毕业生专业转换培训学员登记表》。拟参加培训的高校毕业生可到各市就业服务局报名。报名需携带《学员登记表》、身份证、毕业证书和未就业证明等要件，接受真实性审核。</p>
+					</dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="footer gray">
+			<div class="container">
+				<dl class="footer-list">
+					<dt class="foot-item">
+						<h1 class="big-title">2009-2016</h1>
+						<h2 class="sub-title">中国最优秀大学生就业平台之一</h2>
+						<h2 class="sub-desc">服务中国500强品牌企业</h2>
+						<h1 class="middle-title">260,000家</h1>
+						<p class="desc">拓宽就业渠道，搭建校企对接平台，使每一名有就业意愿的高校毕业生实现高质量就业。</p>
+					</dt>
+
+					<dt class="foot-item">
+						<img src="../img/二维码.jpeg"/>
+						<h3 class="title">扫一扫</h3>
+						<p class="desc">关注转换培训微信公众平台</p>
+					</dt>
+					<dt class="foot-item">
+						<h2 class="title">联系我们</h2>
+						<p class="contact">地址：辽宁省沈阳市沈河区中山路377号</p>
+						<p class="contact">电话：024-58405691 / 024-57103850 / 13512345678</p>
+						<p class="contact">E-mail：lnhrss@126.com</p>
+						<p class="contact">公众号：lnhrss@126.com</p>
+						<p class="contact">网站管理员：18612345678 / yangdi@163.com</p>
+						<p class="contact">京ICP备15000202号-5 </p>
+					</dt>
+				</dl>
+			</div>
+		</div>
+		<div id="downloadModal" class="modal no-select">
+			<!-- 因为Ajax不能下载文件，所以下载文件的请求由Form表单发出 -->
+			<form method="post" action="/stuenroll/register/downloadRegisterReport">
+				<h3 class="title">下载我的报名表</h3>
+				<dl class="modal-list">
+					<dt class="modal-title">身份证号：</dt>
+					<dd class="modal-item">
+						<input type="text" id="pid" name="pid" class="input" autocomplete="off" placeholder="身份证号码" required="required" disabled="disabled" />
+					</dd>
+				</dl>
+				<div class="operation">
+					<input type="button" class="modal-btn" value="关闭" name="close" tabindex="-1" /> 
+					<input type="button" class="modal-btn green" value="下载" name="download"
+						 tabindex="-1" />
+				</div>
+			</form>
+		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+		<script src="../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/plugin/dropdown.js"></script>
+		<script src="../js/plugin/modal.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/plugin/toastr.js"></script>
+		<script type="text/javascript" src="register.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,278 @@
+body {
+    background: url("../img/bg.jpg");
+}
+.container {
+    height: inherit;
+    width: 1200/16rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.header {
+    height: 140/16rem;
+    background-color: #fff; //  border-bottom: 1/16rem #d0d3d3 solid;
+    .header-nav {
+        padding-top: 44/16rem;
+        .logo {
+            .desc-list {
+                display: inline-block;
+                margin: 0;
+                padding: 0 20/16rem 0 0;
+                vertical-align: 10/16rem;
+                border-right: 1/16rem solid #e3e3e3;
+                .desc-item {
+                    height: 20/16rem;
+                    line-height: 20/16rem;
+                    font-size: 15/16rem;
+                    color: #626262;
+                }
+            }
+        }
+        .nav-list {
+            display: inline-block;
+            height: 52/16rem;
+            line-height: 52/16rem;
+            margin: 0 0 0 40/16rem;
+            padding: 0;
+            .nav-item {
+                height: inherit;
+                float: left;
+                display: inline-block;
+                padding-left: 15/16rem;
+                padding-right: 15/16rem;
+                .link {
+                    font-size: 16/16rem;
+                    transition: all 0.2s;
+                    letter-spacing: 1/16rem;
+                    &:hover {
+                        color: #54C895;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+.main {
+    overflow: hidden;
+    .title {
+        font-size: 36/16rem;
+        font-weight: 300;
+        letter-spacing: 3/16rem;
+        padding-bottom: 10/16rem;
+        text-align: center;
+        margin: 70/16rem auto 40/16rem;
+    }
+    .register {
+        width: 960/16rem;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        .register-list {
+            overflow: hidden;
+            float: left;
+            margin: 0 30/16rem 60/16rem 0;
+            padding: 0;
+            overflow: hidden;
+            width: 580/16rem;
+            margin-left: 0/16rem;
+            .register-item {
+                padding: 0 0 24/16rem;
+                .name {
+                    display: inline-block;
+                    width: 90/16rem;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                }
+                .input {
+                    width: 350/16rem;
+                    height: 36/16rem;
+                    border-radius: 3/16rem;
+                    border: solid 1/16rem #e0e0e0;
+                    outline: none;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    background-color: #f9f9f9;
+                }
+                .remark {
+                    display: inline-block;
+                    width: 90/16rem;
+                    font-size: 14/16rem;
+                    letter-spacing: 1/16rem;
+                    margin-left: 20/16rem;
+                    color: indianred;
+                }
+                .operate {
+                    padding-top: 10/16rem;
+                    padding-left: 95/16rem;
+                    .btn {
+                        width: 160/16rem;
+                        height: 38/16rem;
+                        border-radius: 3/16rem;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    .green {
+                        background-color: #34C796;
+                        color: #fff;
+                        font-weight: bold;
+                        letter-spacing: 1/16rem;
+                    }
+                    .red {
+                        background-color: #FF5859;
+                        color: #fff;
+                        font-weight: bold;
+                        letter-spacing: 1/16rem;
+                    }
+                }
+            }
+        }
+        .suggest-list {
+            float: left;
+            width: 350/16rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            .suggest-item {
+                .suggest-title {
+                    margin-top: 0;
+                    letter-spacing: 1/16rem;
+                }
+                font-size: 14/16rem;
+                .step-list {
+                    margin: 0;
+                    padding: 0;
+                    .step-item {
+                        letter-spacing: 1/16rem;
+                        margin-bottom: 15/16rem;
+                        color: #555;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        clear: both;
+        overflow: hidden;
+        height: 450/16rem;
+        .about-list {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            overflow: hidden;
+            .title {
+                font-weight: 400;
+                letter-spacing: 1/16rem;
+                margin-top: 70/16rem;
+            }
+            .sub-title {
+                font-weight: 500;
+                color: #FF5859;
+                letter-spacing: 1/16rem;
+            }
+            .desc {
+                font-weight: 300;
+                letter-spacing: 1/16rem;
+                line-height: 28/16rem;
+            }
+            .about-item {
+                width: 360/16rem;
+            }
+        }
+    }
+    .error{
+        color: red !important;
+    }
+}
+.footer {
+    padding-top: 50/16rem;
+    padding-bottom: 10/16rem;
+    .footer-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        .foot-item {
+            &:first-child {
+                width: 380/16rem;
+                .big-title {
+                    font-size: 70/16rem;
+                    font-weight: 400;
+                    color: #FF5859;
+                    margin: 0 0 10/16rem;
+                    line-height: 70/16rem;
+                }
+                .middle-title {
+                    .big-title;
+                    font-size: 56/16rem;
+                    margin-top: 20/16rem;
+                }
+                .sub-title {
+                    color: #FF5859;
+                    font-weight: 400;
+                    font-size: 22/16rem;
+                    letter-spacing: 1/16rem;
+                    margin: 0 0 10/16rem;
+                }
+                .sub-desc {
+                    font-weight: 400;
+                    font-size: 16/16rem;
+                    letter-spacing: 1/16rem;
+                    margin: 0;
+                }
+                .desc {
+                    font-weight: 400;
+                    margin: 0;
+                    letter-spacing: 1/16rem;
+                }
+            }
+            &:nth-child(2) {
+                .title {
+                    font-weight: 400;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                }
+                .desc {
+                    letter-spacing: 1/16rem;
+                    font-weight: 400;
+                }
+                img {
+                    width: 200/16rem;
+                    height: 200/16rem;
+                }
+            }
+            &:last-child {
+                .title {
+                    margin-top: 0;
+                    font-weight: 400;
+                    letter-spacing: 1/16rem;
+                    font-size: 30/16rem;
+                }
+                .contact {
+                    letter-spacing: 1/16rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+.white {
+    background-color: rgba(255,255,255,0.45);
+}
+.gray {
+    background-color: rgba(0,0,0,0);
+}
+.dropdown{
+    width: 350/16rem !important;//覆盖前面的设置
+}
+#downloadModal {
+    width: 500/16rem;
+    height: 220/16rem;
+}

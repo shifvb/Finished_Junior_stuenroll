@@ -1,0 +1,141 @@
+body {
+    scrollbar-arrow-color: #1FB5AC;
+    scrollbar-base-color: #22B5AD;
+}
+.menu {
+    position: relative;
+    .professions {
+        float: left;
+        background-color: #fff;
+        border: solid 1/16rem #CCCCCC;
+        margin-left: 50/16rem;
+        height: 310/16rem;
+        width: 200/16rem;
+        overflow-y: auto;
+        overflow-x: auto;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                font-size: 14/16rem;
+                font-weight: 300;
+                letter-spacing: 1/16rem;
+                cursor: pointer;
+                margin: 10/16rem 4/16rem;
+                .profession {
+                    padding: 5/16rem 100/16rem 5/16rem 15/16rem;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                }
+                .profession-active {
+                    background-color: #33CCFF;
+                    color: #fff;
+                }
+                .profession-hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.model {
+    float: left;
+    min-width: 60/16rem;
+    min-height: 25/16rem;
+    display: block; //  box-sizing: border-box;
+    text-align: center;
+    font-size: 100%;
+    .checkbox {
+        position: relative;
+        display: inline-block;
+        input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            opacity: 0; // 设置元素透明度，取值范围为0~1。 1为完全不透明， 0为完全透明
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: normal;
+            font-size: 100%;
+            text-align: center;
+        }
+        label {
+            position: relative;
+            display: inline-block;
+            background: none;
+            border: 3/16rem solid #777;
+            border-radius: 20/16rem;
+            width: 55/16rem;
+            height: 22/16rem;
+            text-align: center;
+            transition: 0.4s;
+            // 动画效果
+        }
+    }
+    
+    .checkbox:before,
+    .checkbox:after {
+        box-sizing: border-box;
+        font-feature-settings: normal;
+        font-kerning: auto;
+        font-language-override: normal;
+        font-stretch: normal;
+        font-style: normal;
+        font-synthesis: weight style;
+        font-variant: normal;
+        font-weight: normal;
+        text-rendering: auto;
+        text-align: center;
+        font-size: 100%;
+    }
+    
+    .checkbox label:after {
+        // 使用after伪类在label元素后添加东西
+        content: '开';
+        text-align: center;
+        font-family: "微软雅黑";
+        color: #fff;
+        line-height: 16/16rem;
+        text-indent: 18/16rem; // 规定文本行的首行缩进
+        background-color: #777;
+        overflow: hidden;
+        box-shadow: none; // 向方框添加一个或多个阴影
+        border-radius: 14/16rem;
+        transform: translateX(-30/16rem); // 向右移动
+        transition: all 0.4s 0.2s, width 0.2s linear, text-indent 0.4s linear; // 过度属性
+        left: auto; // 设置定位元素左外边距边界与其包含块左边界之间的偏移
+        top: 2/16rem; // 设置定位元素的上外边距边界与其包含块上边界之间的偏移
+        right: 2/16rem; // 设置定位元素右外边距边界与其包含块右边界之间的偏移
+        width: 18/16rem;
+        height: 18/16rem;
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        
+    }
+    
+    .checkbox:after {
+        content: '关';
+        font-family: "微软雅黑";
+        position: absolute;
+        color: #666;
+        top: 3/16rem;
+        right: 12/16rem;
+    }
+    
+    .checkbox input:checked + label {
+          border-color: #329043;
+    }
+    
+    .checkbox input:checked + label:after {
+        background-color: #3eb454;
+        left: auto;
+        transform: translateX(0/16rem);
+        transition: all 0.4s, width 0.2s linear, text-indent 0.3s linear 0.4s;
+        width: 50/16rem;
+        text-align: center;
+    }
+}

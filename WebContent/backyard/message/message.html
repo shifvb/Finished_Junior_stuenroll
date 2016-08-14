@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="message.css"/>
+<link rel="shortcut icon" href="../../img/icon.png" />
+<link rel="stylesheet" type="text/css" href="../../js/plugin/toastr.css" />
+<link rel="stylesheet" type="text/css" href="../../font/iconfont.css" />
+<title></title>
+</head>
+<body>
+	<div class="main-container no-select">
+		<div class="chart-container">
+			<dl class="title-list">
+				<dt class="title-item active" data-index="getmailbar">消息收取记录</dt>
+				<dt class="title-item" data-index="getsendmailbar">消息发送记录</dt>
+				<dt class="title-item" data-index="write">发送新消息</dt>
+				<dt class="title-item" data-index="majormessage">发送专业公告</dt>
+			</dl>
+		</div>
+		<div class="getmailbar">
+			<!--<div class="daymail">
+				<div class="date"><span>2天前</span><span>(2封)</span></div>
+				<dl class="mail-list">
+					<dt class="mail-item">
+						<dl class="title-list">
+							<dt class="title-item">系统消息</dt>
+							<dt class="title-item">系统管理员</dt>
+							<dt class="title-item">这是一条测试消息</dt>
+							<dt class="title-item">18:00</dt>
+						</dl>
+					</dt>
+					<dt class="mail-item"></dt>
+				</dl>
+			</div>-->
+		</div>
+		<div class="getsendmailbar hidden">
+			<!--<div class="daymail">
+				<div class="date"><span>2天前</span><span>(2封)</span></div>
+				<dl class="mail-list">
+					<dt class="mail-item">
+						<dl class="title-list">
+							<dt class="title-item">系统消息</dt>
+							<dt class="title-item">系统管理员</dt>
+							<dt class="title-item">这是一条测试消息</dt>
+							<dt class="title-item">18:00</dt>
+						</dl>
+					</dt>
+					<dt class="mail-item"></dt>
+				</dl>
+			</div>-->
+		</div>
+		<div class="write hidden">
+			<div class="info">
+				<dl class="info-list">
+					<dt class="info-item">
+						<label for="name">收件人</label>
+						<input name="标题" type="text" placeholder="请输入消息收件人 输入‘公告’则表示发送类型为公告" id="write-receiver"/>
+					</dt>
+					<dt class="info-item">
+						<label for="name">标题</label>
+						<input name="标题" type="text" placeholder="请输入标题" id="write-title"/>
+					</dt>
+					<dt class="info-item">
+						<label for="name">正文</label>
+						<textarea name="标题" type="text" placeholder="请输入新消息正文" id="write-maininfo"></textarea>
+					</dt>
+					<dt class="info-item">
+						<input type="button" class="btn red" name="cancel" value="取消"  tabindex="-1" id="write-btn1"/>
+						<input type="button" class="btn green" name="cancel" value="发送"  tabindex="-1" id="write-btn2"/>
+					</dt>
+				</dl>
+			</div>
+		</div>
+		<div class="majormessage hidden">
+			<div class="info">
+				<dl class="info-list">
+					<dt class="info-item">
+						<label for="name">专业</label>
+						<select name="标题"  id="write2-major">
+							<option value="没有记录">未查询到专业信息</option>
+						</select>
+					</dt>
+					<dt class="info-item">
+						<label for="name">年级</label>
+						<select name="标题"  id="write2-grade">
+							<option value="没有记录">未查询到专业信息</option>
+						</select>
+					</dt>
+					<dt class="info-item">
+						<label for="name">标题</label>
+						<input name="标题" type="text" placeholder="请输入标题" id="write2-title"/>
+					</dt>
+					<dt class="info-item">
+						<label for="name">简介</label>
+						<input name="标题" type="text" placeholder="请输入简介" id="write2-listtext"/>
+					</dt>					
+					<dt class="info-item">
+						<label for="name">正文</label>
+						<textarea name="标题" type="text" placeholder="请输入新消息正文" id="write2-maininfo"></textarea>
+					</dt>
+					<dt class="info-item">
+						<input type="button" class="btn red" name="cancel" value="取消"  tabindex="-1" id="write2-btn1"/>
+						<input type="button" class="btn green" name="cancel" value="发送"  tabindex="-1" id="write2-btn2"/>
+					</dt>
+				</dl>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src="../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="../../js/permission.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="message.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

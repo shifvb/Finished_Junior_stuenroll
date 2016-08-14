@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="辽宁省大学生离校未就业技能转换培训" />
+		<meta name="keywords" content="大学生就业,大学生就业难,免费培训,转换培训,辽宁省大学生离校未就业技能转换培训" />
+		<meta name="author" content="神一样的男人" />
+		<meta name="copyright" content="辽宁省人力资源与社会保障厅" />
+		<title>辽宁省大学生离校未就业技能转换培训</title>
+		<link rel="shortcut icon" href="../../../img/icon.png" />
+		<link rel="stylesheet" type="text/css" href="../../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../../js/plugin/dropdown.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../js/plugin/modal.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../js/plugin/page.css"/>
+		<link rel="stylesheet" type="text/css" href="list.css" />
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="title">
+				<span class="organization"></span>，<span class="className"></span>班回访记录表
+			</div>
+			<div class="tab-container">
+				<div class="tab-content" data-index="回访记录表">
+					<dl class="operation-list no-select">
+						<dt class="operation-item" data-operation="search">查询
+							<div class="menu">
+								<h4 class="menu-title">回访信息查询</h4>
+								<dl>
+									<dt class="">回访信息</dt>
+									<dd>
+										<ul class="condition-list">
+											<li class="label">回访人：</li>
+											<li class="condition">
+												<input type="text" name="reviewee" class="keyword" placeholder="回访人" tabindex="-1" autocomplete="off" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{2,8}$" />
+											</li>
+											<li class="label">问询人：</li>
+											<li class="condition">
+												<input type="text" name="reviewer" class="keyword" placeholder="问询人" tabindex="-1" autocomplete="off" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{2,8}$" />
+											</li>
+											<li class="label">起始日期：</li>
+											<li class="condition">
+												<input type="text" name="startDate" class="keyword" placeholder="" tabindex="-1" autocomplete="off" pattern="^(?:(?!0000)[0-9]{4}-(?:(?:0?[1-9]|1[0-2])-(?:0?[1-9]|1[0-9]|2[0-8])|(?:0?[13-9]|1[0-2])-(?:29|30)|(?:0?[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-0?2-29)$" />
+											</li>
+											<li class="label">结束日期：</li>
+											<li class="condition">
+												<input type="text" name="endDate" class="keyword" placeholder="" tabindex="-1" autocomplete="off" pattern="^(?:(?!0000)[0-9]{4}-(?:(?:0?[1-9]|1[0-2])-(?:0?[1-9]|1[0-9]|2[0-8])|(?:0?[13-9]|1[0-2])-(?:29|30)|(?:0?[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-0?2-29)$" />
+											</li>
+											<li class="label">满意度：</li>
+											<li class="condition">
+												<div data-dropdown="satisfication" class="dropdown">
+													<span class="value">- 选择 -</span>
+													<i class="iconfont arrowhead">&#xe610;</i>
+													<ul class="dropdown-list">
+														<li class="dropdown-item" data-satisfication="很满意">很满意</li>
+														<li class="dropdown-item" data-satisfication="满意">满意</li>
+														<li class="dropdown-item" data-satisfication="一般">一般</li>
+														<li class="dropdown-item" data-satisfication="不满意">不满意</li>
+													</ul>
+												</div>
+											</li>
+											<li class="label">回访结果：</li>
+											<li class="condition">
+												<div data-dropdown="result" class="dropdown">
+													<span class="value">- 选择 -</span>
+													<i class="iconfont arrowhead">&#xe610;</i>
+													<ul class="dropdown-list">
+														<li class="dropdown-item" data-result="0">打通</li>
+														<li class="dropdown-item" data-result="1">未打通</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</dd>
+									<dd>
+										<input type="button" class="menu-btn" data-btn="查询" value="查询" />
+										<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+									</dd>
+								</dl>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="delete">删除</dt>
+						<dt class="operation-item" data-operation="export">导出
+							<div class="menu3" id="exportReviewMenu">
+								<div class="menu-title">导出回访记录</div>
+								<div class="menu-content">
+									<form action="/stuenroll/review/exportReviewInfo" method="post">
+										<input type="hidden" name="type" id="type" value="Excel" />
+										<input type="submit" id="exportExcel" value="导出Excel文件" />
+									</form>
+									<form action="/stuenroll/review/exportReviewInfo" method="post">
+										<input type="hidden" name="type" id="type" value="XML" />
+										<input type="submit" id="exportXML" value="导出XML文件" />
+									</form>
+									<form action="/stuenroll/review/exportReviewInfo" method="post">
+										<input type="hidden" name="type" id="type" value="JSON" />
+										<input type="submit" id="exportJSON" value="导出JSON文件" />
+									</form>
+								</div>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="import">导入
+							<div class="menu2" id="importReviewMenu">
+								<div class="menu-title">导入回访记录</div>
+								<form id="uploadFileForm" action="#" enctype="multipart/form-data" method="post" onsubmit="return false;">
+									<div class="selectFile">
+										<div class="selectFilePresenter">
+											<i class="icon iconfont jia">&#xe617;</i>
+											<span class="iconText">选择文件</span>
+										</div>
+										<input class="addFileView" type="file" name="uploadFile" id="uploadFile" value="" title="请上传文件" />
+									</div>
+									<input class="showFilePath"></input>
+									<input class="uploadFile" type="submit" value="上传" />
+								</form>
+							</div>
+						</dt>
+					</dl>
+					<table class="data-table">
+						<tr>
+							<th><input type="checkbox" name="select-all" /></th>
+							<th>序号</th>
+							<th>回访人</th>
+							<th>日期时间</th>
+							<th>时长</th>
+							<th>问询人</th>
+							<th>满意度</th>
+							<th>回访内容</th>
+							<th>回访结果</th>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="id" value="" /></td>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+							<td>5</td>
+							<td>6</td>
+							<td>7</td>
+							<td><span class="details">[&nbsp;详细记录&nbsp;]</span></td>
+						</tr>
+					</table>
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">
+						总计<span id="totalRows"></span>条记录，<span id="currentPage">1</span>/<span id="totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a data-btn="prevBtn">上一页</a> 
+							<a data-btn="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/echarts/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/permission.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/dropdown.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/macarons.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/plugin/page.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/menu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="list.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

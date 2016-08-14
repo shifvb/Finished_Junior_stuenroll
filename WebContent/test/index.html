@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+
+	<body>
+
+		<form class="uploadImageForm" action="#" enctype="multipart/form-data" method="post" onsubmit="return false;">
+			<div class="selectFile">
+				<img class="preView" src="img/temp_photo.PNG" title="点击选择文件" />
+				<input class="file" type="file" name="photo" id="file" value="" />
+				<input type="hidden" name="collectionName" id="" value="image">
+			</div>
+		</form>
+
+		<hr>
+		<input class="save" type="submit" value="保存修改/新建用户" />
+		<!--<hr>
+
+		<form enctype="multipart/form-data" name="form1">
+			<input id="f" type="file" name="f" onchange="change()" />
+			<div class="upload">上传图片</div>
+			<p>
+				<img id="preview" alt="请上传图片" name="pic" />
+			</p>
+		</form>-->
+
+		<script src="js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				var $menu = $(document.body);
+				// 添加用户和修改用户的图片上传控件
+				var $uploadImageForm = $(".uploadImageForm");
+				$uploadImageForm.find(".preView").click(function(event) {
+					$(this).parents(".uploadImageForm").find(".file").click();
+					event.stopPropagation();
+				});
+				$uploadImageForm.find(".file").on("change", handler = function() {
+					// get filename to calculate extension
+					var temp_filename = $(this).parents(".uploadImageForm").find(".file").val();
+					var $temp_this = $(this);
+
+					// extension
+					var _ext = temp_filename.split(".").slice(-1)[0].toLowerCase();
+					if(temp_filename == "") {
+						return;
+					}
+					// only .png, .bmp, .jpg and .gif formats are supported
+					if(['png', 'bmp', 'jpg', 'gif'].indexOf(_ext) == -1) {
+						console.log("不支持的图片格式: " + _ext);
+						return;
+					}
+					// html5 FileReader
+					var reader = new FileReader();
+					reader.readAsDataURL($(this).parents(".uploadImageForm").find(".file")[0].files[0]);
+
+					// When this reader is loaded, set the src of the preView <img> to this.result
+					reader.onload = function(e) {
+						$temp_this.parents(".uploadImageForm").find(".preView").attr("src", this.result);
+					}
+					selectedPhotoName = temp_filename;
+				});
+
+				$(".save").click(function() {
+					// 如果图片上传了，就请求后台添加用户
+					// 返回去，如果不是空，就会消失菜单
+					var final_result = null;
+					$.ajax({
+						"type": "post",
+						"url": "/stuenroll/image/saveImage",
+						"async": true,
+						"data": new FormData($menu.find(".uploadImageForm")[0]),
+						"cache": false,
+						"contentType": false,
+						"processData": false,
+						"success": function(json) {
+							if(json.result) {
+								var t = json.result;
+
+								console.log(t);
+								return;
+							}
+						},
+						"error": function() {
+							console.log("系统异常");
+						}
+					});
+				})
+
+			})
+		</script>
+
+	</body>
+
+</html>

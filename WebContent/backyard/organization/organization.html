@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="" />
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/modal.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/dropdown.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/page.css" />
+		<link rel="stylesheet" type="text/css" href="organization.css" />
+		<title></title>
+	</head>
+
+	<body>
+		<div class="main-container">
+			<dl class="tab-list no-select">
+				<dt class="tab-item tab-active" data-index="机构列表">机构列表</dt>
+				<dt class="tab-item" data-index="参与转换">参与转换</dt>
+			</dl>
+			<div class="tab-container">
+				<div class="tab-content content-active" data-index="机构列表">
+					<dl class="operation-list no-select">
+						<dt class="operation-item" data-operation="search">查询
+							<div id="searchMenu1" class="menu">
+								<h4 class="menu-title">机构信息查询</h4>
+								<dl>
+									<dt class="">机构信息</dt>
+									<dd>
+										<ul class="condition-list">
+											<li class="label">机构名称：</li>
+											<li class="condition">
+												<input type="text" name="name" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构名称" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+											</li>
+											<li class="label">机构简称：</li>
+											<li class="condition">
+												<input type="text" name="abbreviation" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构简称" pattern="^[\u4e00-\u9fa5]{4,10}$" required="required" />
+											</li>
+											<li class="label">机构地址：</li>
+											<li class="condition">
+												<input type="text" name="address" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构地址" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{5,50}$" />
+											</li>
+											<li class="label">联系人：</li>
+											<li class="condition">
+												<input type="text" name="liasion" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系人" pattern="^[\u4e00-\u9fa5]{2,15}$" />
+											</li>
+											<li class="label">联系电话：</li>
+											<li class="condition">
+												<input type="text" name="tel" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系电话" pattern="^[0]\d{2,4}[-]\d{8}$" />
+											</li>
+										</ul>
+									</dd>
+									<dd>
+										<input type="button" class="menu-btn" data-btn="查询" value="查询" />
+										<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+									</dd>
+								</dl>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="add">添加
+							<div id="addMenu1" class="menu">
+								<h4 class="menu-title">机构信息添加</h4>
+								<dl>
+									<dt class="">机构信息</dt>
+									<dd>
+										<ul class="condition-list">
+											<li class="label">机构名称：</li>
+											<li class="condition">
+												<input type="text" name="name" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构名称" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" required="required" />
+											</li>
+											<li class="label">机构简称：</li>
+											<li class="condition">
+												<input type="text" name="abbreviation" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构简称" pattern="^[\u4e00-\u9fa5]{4,10}$" required="required" />
+											</li>
+											<li class="label">机构地址：</li>
+											<li class="condition">
+												<input type="text" name="address" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构地址" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{5,50}$" required="required" />
+											</li>
+											<li class="label">联系人：</li>
+											<li class="condition">
+												<input type="text" name="liasion" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系人" pattern="^[\u4e00-\u9fa5]{2,15}$" required="required" />
+											</li>
+											<li class="label">联系电话：</li>
+											<li class="condition">
+												<input type="text" name="tel" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系电话" pattern="^[0]\d{2,4}[-]\d{8}$" required="required" />
+											</li>
+											<li class="label">联系人电话：</li>
+											<li class="condition">
+												<input type="text" name="liasion_tel" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系人电话" pattern="^[1-9]\d{10}$" required="required" />
+											</li>
+										</ul>
+									</dd>
+									<dd>
+										<input type="button" class="menu-btn" data-btn="保存" value="保存" />
+										<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+									</dd>
+								</dl>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="update">修改
+							<div id="updateMenu1" class="menu">
+								<h4 class="menu-title">机构信息修改</h4>
+									<dl>
+										<dt class="menu-subtitle">机构信息</dt>
+										<dd>
+											<ul class="condition-list">
+												<li class="label">机构名称：</li>
+												<li class="condition">
+													<input type="text" name="name" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构名称" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+												</li>
+												<li class="label">机构简称：</li>
+												<li class="condition">
+													<input type="text" name="abbreviation" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构简称" pattern="^[\u4e00-\u9fa5]{4,10}$" />
+												</li>
+												<li class="label">机构地址：</li>
+												<li class="condition">
+													<input type="text" name="address" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构地址" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{5,50}$" />
+												</li>
+												<li class="label">联系人：</li>
+												<li class="condition">
+													<input type="text" name="liasion" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系人" pattern="^[\u4e00-\u9fa5]{2,15}$" />
+												</li>
+												<li class="label">联系电话：</li>
+												<li class="condition">
+													<input type="text" name="tel" class="keyword" tabindex="-1" autocomplete="off" placeholder="联系电话" pattern="^[0]\d{2,4}[-]\d{8}$" />
+												</li>
+											</ul>
+										</dd>
+										<dd>
+											<input type="button" class="menu-btn" data-btn="保存" value="保存" />
+											<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+										</dd>
+									</dl>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="delete">删除
+								
+						</dt>
+						<dt class="operation-item" data-operation="transform">参与转换
+							<div id="transform" class="menu">
+								<h4 class="menu-title">参与转换信息</h4>
+								<dl>
+									<dt class="">机构信息</dt>
+									<dd>
+										<ul class="transform-list condition-list">
+											<li class="label">机构数量：</li>
+											<li class="condition">
+												<input type="text" name="amount" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构数量" value="" disabled="true" />
+											</li>
+											<li class="label">参与年届：</li>
+											<li class="condition">
+												<input type="text" name="year" class="keyword" tabindex="-1" autocomplete="off" placeholder="参与年届 " pattern="^[1-9]\d{3}$" required="required" />
+											</li>
+											<li class="label">开放报名：</li>
+											<li class="condition">
+												<div data-dropdown="open-registration" class="dropdown">
+													<span class="value">- 选择 -</span>
+													<i class="iconfont arrowhead">&#xe610;</i>
+													<ul class="dropdown-list">
+														<li class="dropdown-item" data-id='0'>是</li>
+														<li class="dropdown-item" data-id='1'>否</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</dd>
+									<dd>
+										<input type="button" class="menu-btn" data-btn="保存" value="保存" />
+										<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+									</dd>
+								</dl>
+							</div>
+						</dt>
+					</dl>
+					<table class="data-table">
+						<tr>
+							<th></th>
+							<th>序号</th>
+							<th>机构名称</th>
+							<th>机构简称</th>
+							<th>机构地址</th>
+							<th>联系电话</th>
+							<th>联系人</th>
+							<th>专业数量</th>
+							<th>班级数量</th>
+							<th>学员数量</th>
+						</tr>
+					</table>
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">总计<span id="organ-totalRows"></span>条记录，<span id="organ-currentPage">1</span>/<span id="organ-totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a data-btn="prevBtn">上一页</a> 
+							<a data-btn="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+				<div class="tab-content" data-index="参与转换">
+					<dl class="operation-list no-select">
+						<dt class="operation-item" data-operation="search">查询
+								<div id="searchMenu2" class="menu">
+									<h4 class="menu-title">机构信息查询</h4>
+										<dl>
+											<dt class="">机构信息</dt>
+											<dd>
+												<ul class="transform-list condition-list">
+													<li class="label ">机构名称：</li>
+													<li class="condition">
+														<input type="text" name="name" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构名称 " pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" />
+													</li>
+													<li class="label ">机构简称：</li>
+													<li class="condition ">
+														<input type="text" name="abbreviation" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构简称" pattern="^[\u4e00-\u9fa5]{4,10}$" />
+													</li>
+													<li class="label ">年届：</li>
+													<li class="condition ">
+														<input type="text" name="year" class="keyword" tabindex="-1" autocomplete="off" placeholder="年届" pattern="^[1-9]\d{3}$" />
+													</li>
+												</ul>
+											</dd>
+											<dd>
+												<input type="button" class="menu-btn" data-btn="查询" value="查询" />
+												<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+											</dd>
+										</dl>
+								</div>
+						</dt>
+						<dt class="operation-item" data-operation="update">修改
+							<div id="updateMenu2" class="menu">
+								<h4 class="menu-title ">机构信息查询</h4>
+									<dl>
+										<dt class=" ">机构信息</dt>
+										<dd>
+											<ul class="transform-list condition-list">
+												<li class="label">机构名称：</li>
+												<li class="condition">
+													<input type="text" name="name" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构名称" value="" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$" disabled="true" />
+												</li>
+												<li class="label">机构简称：</li>
+												<li class="condition">
+													<input type="text" name="abbreviation" class="keyword" tabindex="-1" autocomplete="off" placeholder="机构简称" value="" pattern="^[\u4e00-\u9fa5]{4,10}$" disabled="true" />
+												</li>
+												<li class="label">年届：</li>
+												<li class="condition">
+													<input type="text" name="year" class="keyword" tabindex="-1" autocomplete="off" placeholder="年届" value="" pattern="^[1-9]\d{3}$" />
+												</li>
+											</ul>
+										</dd>
+										<dd>
+											<input type="button" class="menu-btn" data-btn="保存" value="保存" />
+											<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+										</dd>
+									</dl>
+							</div>
+						</dt>
+						<dt class="operation-item" data-operation="delete">删除</dt>
+					</dl>
+					<table class="data-table">
+						<tr>
+							<th><input type="checkbox" class="trans-select-all" value="" /></th>
+							<th>序号</th>
+							<th>机构名称</th>
+							<th>机构简称</th>
+							<th>年届</th>
+							<th>专业数量</th>
+							<th>班级数量</th>
+							<th>学员数量</th>
+							<th>中退人数</th>
+							<th>就业人数</th>
+							<th>开放报名</th>
+						</tr>
+					</table>
+					<div class="professionMenu no-select">
+						<h4 class="menu-title">设置培训专业</h4>
+						<dl>
+							<dt>专业设置</dt>
+							<dd>
+								<div id="leftProfessions" class="professions">
+									<ul>
+									</ul>
+								</div>
+								<div id="selectedProfessions" class="professions">
+									<ul>
+									</ul>
+								</div>
+							</dd>
+							<dd>
+								<input type="button" class="menu-btn" data-btn="保存" value="保存" />
+								<input type="button" class="menu-btn" data-btn="清除" value="清除" />
+							</dd>
+						</dl>
+					</div>
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">总计<span id="trans-totalRows"></span>条记录，<span id="trans-currentPage">1</span>/<span id="trans-totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a data-btn="prevBtn">上一页</a> 
+							<a data-btn="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/jquery-2.1.4.min.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/pid.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/plugin/toastr.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/plugin/modal.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/plugin/dropdown.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/tab.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/menu.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/permission.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="../../js/plugin/page.js" type="text/javascript " charset="utf-8 "></script>
+		<script src="organization.js" type="text/javascript " charset="utf-8 "></script>
+	</body>
+
+</html>

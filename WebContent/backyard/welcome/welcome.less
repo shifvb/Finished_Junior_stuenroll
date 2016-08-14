@@ -1,0 +1,477 @@
+body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    height: 1600/16rem;
+    padding: 15/16rem;
+    .chart-container {
+        height: inherit;
+        float: left;
+        width: 70%; //      background-color: green;
+        //浮动效果添加边距时应当向内添加才不会使得空间被挤出去
+        padding-right: 15/16rem;
+        //
+        box-sizing: border-box !important;
+        .annual-statistics {
+            background-color: #fff;
+            height: 671/16rem;
+            margin-bottom: 15/16rem;
+            //解决子控件外填充对父控件的影响
+            overflow: hidden;
+            .title {
+                letter-spacing: 1/16rem;
+                font-size: 18/16rem;
+                font-weight: 500;
+                color: #555;
+                margin-left: 20/16rem;
+                margin-top: 22/16rem;
+                margin-bottom: 22/16rem;
+            }
+            .step-list {
+                margin: 0 0 0 20/16rem;
+                padding: 0;
+//              overflow: hidden;
+                height: 36/16rem;
+                .step-item {
+                    float: left;
+                    text-align: center;
+                    color: #fff;
+                    padding-left: 30/16rem;
+                    padding-right: 30/16rem;
+                    font-size: 14/16rem;
+                    height: 30/16rem;
+                    letter-spacing: 1/16rem;
+                    line-height: 30/16rem;
+                    &:nth-child(1) {
+                        background-color: #2AB0DB;
+                        border-bottom-left-radius: 18/16rem;
+                        border-top-left-radius: 18/16rem;
+                    }
+                    &:nth-child(2) {
+                        background-color: #40B8DF;
+                    }
+                    &:nth-child(3) {
+                        background-color: #56C0E3;
+                    }
+                    &:nth-child(4) {
+                        background-color: #6CC8E7;
+                    }
+                    &:nth-child(5) {
+                        background-color: #82D0EB;
+                    }
+                    &:last-child {
+                        background-color: #98D8EF;
+                        border-bottom-right-radius: 18/16rem;
+                        border-top-right-radius: 18/16rem;
+                    }
+                }
+                .step-item-active {
+                    height: 36/16rem;
+                    line-height: 36/16rem;
+                    margin-top: -3/16rem;
+                }
+            }
+            .statistics {
+//             background-color: red;
+               height: 530/16rem;
+               margin: 20/16rem 20/16rem 0 20/16rem;
+            }
+        }
+        .organization-statistics {
+            .statistics-4 {
+                //弹性布局
+                //兼容老版本的浏览器的旧写法
+                display: -moz-box;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                //新写法
+                display: flex;
+                margin: 0 0 15/16rem;
+                padding: 0;
+                background-color: white;
+                dt {
+                    border-right: solid 15/16rem #e7e7e7;
+                    width: 25%;
+                    height: 350/16rem;
+                    &:last-child {
+                        border-right: solid 15/16rem #fff;
+                    }
+                    .statistics-4-1-title{
+                        padding-left: 20/16rem;
+                        height: 40/16rem;
+                        color: #4A4A4A;
+                        font-size: larger;
+                        line-height: 60/16rem;
+                    }
+                    .statistics-4-1-pie{
+                        width: 100%;
+                        height: 310/16rem;
+                    }
+                }
+            }
+            .statistics-2 {
+                //弹性布局
+                //兼容老版本的浏览器的旧写法
+                display: -moz-box;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                //新写法
+                display: flex;
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                dt {
+                    background-color: #fff;
+                    height: 380/16rem;
+                    &:first-child {
+                        //占比例为2/3
+                        width: 66%;
+                        height: 380/16rem;
+                        margin-right: 15/16rem;
+                        border-right: solid 15/16rem #e7e7e7;
+                    }
+                    &:last-child {
+                        //占比为1/3
+                        width: 34%;
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+    }
+    .info-container {
+        height: inherit;
+        width: 30%;
+        float: left;
+        background-color: #fff;
+        padding: 20/16rem;
+        .monthdata{
+            .monthdata-list{
+                margin: 0;
+                .monthdata-item{
+                    padding-bottom: 20/16rem;
+                    &:first-child{
+                        font-family: "微软雅黑";
+                        font-size: x-large;
+                        color:#2E2E2E;
+                        span{
+                            &:nth-child(3){
+                                cursor: pointer;
+                                color: #007AFF;
+                                &:hover{
+                                    color: #FF3300;
+                                }
+                            }
+                            &:nth-child(5){
+                                color: #007AFF;
+                                cursor: pointer;
+                                &:hover{
+                                    color: #FF3300;
+                                }
+                            }                            
+                            &:last-child{
+                                color: #2AB0DB;
+                                float: right;
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        letter-spacing: 1/16rem;
+                        span{
+                            &:last-child{
+                                float: right;
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        padding: 0;
+                        height: 10/16rem;
+                        background-color: #D9D9D9;
+                        border: 0;
+                        border-radius: 18/16rem;
+                        overflow: hidden;
+                        #apply-1{
+                            background-color: #32C900;
+                            float: left;
+                            width: 40%;
+                            background-clip: padding-box;
+                            height: 100%;
+                            transition-duration: 1s;
+                        }
+                        #examine-1{
+                            background-color: #12A0FF;
+                            float: left;
+                            width: 90/16rem;
+                            background-clip: padding-box;
+                            height: 100%;
+                            transition-duration: 1s;
+                        }
+                        #archive-1{
+                            background-color: #DCA630;
+                            float: left;
+                            width: 60/16rem;
+                            background-clip: padding-box;
+                            height: 100%;
+                            transition-duration: 1s;
+                        }
+                        #quit-1{
+                            background-color: #CA2C4F;
+                            float: left;
+                            width: 20/16rem;
+                            background-clip: padding-box;
+                            height: 100%;
+                            transition-duration: 1s;
+                        }
+                    }
+                    &:nth-child(4){
+                        margin-top:  15/16rem;
+                        height: 20/16rem;
+                        padding: 0;
+                        .step-list{
+                            margin: 0;
+                            height: 20/16rem;
+                            font-size: 16/16rem;
+                            line-height: 25/16rem;
+                            font-family: "微软雅黑";
+                            .item{
+                                float: left;
+                                height: 15/16rem;
+                                width: 20%;
+                                padding-left: 5/16rem;
+                                &:nth-child(1){
+                                    background-color: #32C900;
+                                }
+                                &:nth-child(3){
+                                    background-color:#12A0FF;
+                                }
+                                &:nth-child(5){
+                                    background-color: #DCA630;
+                                }
+                                &:nth-child(7){
+                                    background-color: #CA2C4F;
+                                }
+                            }
+                            .icon{
+                                width: 15/16rem;
+                                margin-top: 5/16rem;
+                                padding: 0;
+                            }
+                        }
+                    }
+                    &:nth-child(5){
+                        font-size: x-large;
+                        color: #2E2E2E;
+                        margin-top: 35/16rem;
+                        padding-bottom: 20/16rem;
+                        border-bottom: solid 1/16rem #D1D1D1;
+                    }
+                    &:nth-child(6){
+                        .step2-list{
+                            .step2-item{
+                                margin-top: 20/16rem;
+                                height: 45/16rem;
+                                .icon{
+                                    float: left;
+                                    font-size: xx-large;
+                                    height: 45/16rem;
+                                    line-height: 45/16rem;
+                                    width: 30/16rem;
+                                }
+                                .color{
+                                    float: left;
+                                    width: 50/16rem;
+                                    height: 45/16rem;
+                                    margin-right: 20/16rem;
+                                }
+                                .date{
+                                    float: left;
+                                    width: 100/16rem;
+                                    height: 45/16rem;                                   
+                                    margin-right: 20/16rem;                                  
+                                    .date-text{
+                                        height: 22/16rem;  
+                                        color: #212121;
+                                        line-height: 20/16rem;
+                                    }
+                                    .date-date{
+                                        height: 23/16rem;  
+                                        color: #858585;
+                                        line-height: 32/16rem;
+                                    }
+                                }
+                                .data{
+                                    float: right;
+                                    font-family: "微软雅黑";
+                                    font-size: x-large;
+                                    height: 45/16rem;
+                                    line-height: 45/16rem;
+                                }
+                                .color-1{
+                                    background-color: #32C900;
+                                }
+                                .color-2{
+                                   background-color: #12A0FF; 
+                                }
+                                .color-3{
+                                    background-color: #DCA630;
+                                }
+                                .color-4{
+                                    background-color: #CA2C4F;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        .clock{
+            height: 132/16rem;
+            border-radius: 8/16rem;
+            color: #fff;
+            text-align: center;
+            .clock-top{
+                border-top-left-radius: 8/16rem;
+                border-top-right-radius: 8/16rem;
+                background-color: rgba(51, 79, 83, 1);
+                height: 40%;
+                font-size: x-large;
+                line-height: 52.8/16rem;
+            }
+            .clock-bottom{
+                height: 60%;
+                border-bottom-left-radius: 8/16rem;
+                border-bottom-right-radius: 8/16rem;
+                background-color: rgba(31, 187, 166, 1);
+                font-size: 55/16rem;
+                line-height: 79.2/16rem;
+            }
+        }
+        .money{
+            .money-title{
+                font-size: x-large;
+                color: #2E2E2E;
+                margin-top: 35/16rem;
+                padding-bottom: 20/16rem;
+                border-bottom: solid 1/16rem #D1D1D1;
+            }
+            .money-data{
+                .step2-list{
+                    .step2-item{
+                        margin-top: 20/16rem;
+                        height: 45/16rem;
+                        .icon{
+                            float: left;
+                            font-size: xx-large;
+                            height: 45/16rem;
+                            line-height: 45/16rem;
+                            width: 30/16rem;
+                        }
+                        .color{
+                            float: left;
+                            width: 50/16rem;
+                            height: 45/16rem;
+                            margin-right: 20/16rem;
+                        }
+                        .date{
+                            float: left;
+                            width: 100/16rem;
+                            height: 45/16rem;                                   
+                            margin-right: 20/16rem;                                  
+                            .date-text{
+                                height: 22/16rem;  
+                                color: #212121;
+                                line-height: 20/16rem;
+                            }
+                            .date-date{
+                                height: 23/16rem;  
+                                color: #858585;
+                                line-height: 32/16rem;
+                            }
+                        }
+                        .data{
+                            float: right;
+                            font-family: "微软雅黑";
+                            font-size: x-large;
+                            height: 45/16rem;
+                            line-height: 45/16rem;
+                        }
+                        .color-1{
+                            background-color: #32C900;
+                        }
+                        .color-2{
+                           background-color: #12A0FF; 
+                        }
+                        .color-3{
+                            background-color: #DCA630;
+                        }
+                        .color-4{
+                            background-color: #CA2C4F;
+                        }
+                    }
+                }
+            }
+        }
+        .message{
+            .message-title{
+                font-size: x-large;
+                color: #2E2E2E;
+                margin-top: 35/16rem;
+                padding-bottom: 20/16rem;
+                border-bottom: solid 1/16rem #D1D1D1;
+            }
+            .message-list{
+                height: 300/16rem;
+                .message-item{
+                    height: 80/16rem;
+                    margin-bottom: 10/16rem;
+                    .img{
+                        width: 18%;
+                        float: left;
+                        height: 80/16rem;
+                        img{
+                            width: 100%;
+                            height: inherit;
+                        }
+                    }
+                    .text{
+                        width: 82%;
+                        float: left;
+                        height: 80/16rem;
+                        padding-left: 10/16rem;
+                        .text-title{
+                            width: 100%;
+                            height: 20/16rem;
+                            margin-bottom: 5/16rem;
+                            line-height: normal;
+                            font-size: medium;
+                            .left{
+                                line-height: 17/16rem;
+                                float: left;
+                                color: #1C1C1C;
+                                font-weight: bold;
+                            }
+                            .right{
+                                float: right;
+                            }
+                        }
+                        .text-all{
+                            line-height: 31/16rem;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+//                          height: 55/16rem;
+                            width: 100%;
+                            overflow: hidden;
+                            text-overflow:clip;//超出部分用...代替
+//                          white-space:nowrap;
+                        }
+                    }
+                }
+            }
+        }       
+    }
+    
+}

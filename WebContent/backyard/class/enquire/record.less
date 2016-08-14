@@ -1,0 +1,258 @@
+body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    margin: 10/16rem;
+    .review-container {
+        float: left;
+        background-color: #fff;
+        padding-top: 10/16rem;
+        width: 900/16rem;
+        height: 1550/16rem;
+        .title {
+            //      padding-top: 10/16rem;
+            margin-left: 40/16rem;
+            margin-bottom: 4/16rem;
+            letter-spacing: 8/16rem;
+            font-weight: 700;
+            font-size: 28/16rem;
+            width: 900/16rem;
+        }
+        .info-container {
+            margin-left: 40/16rem;
+            width: 900/16rem;
+            position: relative;
+            .bigPeat {
+                background-color: #3399FF;
+                width: 800/16rem;
+                height: 16/16rem;
+            }
+            .peat-1 {
+                background-color: #999999;
+                height: 6/16rem;
+                width: 800/16rem;
+                margin-top: 4/16rem;
+            }
+            .peat-2 {
+                background-color: #3399FF;
+                height: 6/16rem;
+                width: 800/16rem;
+                margin-top: 4/16rem;
+            }
+            .student {
+                list-style: none;
+                width: 900/16rem;
+                .details {
+                    padding-bottom: 15/16rem;
+                    tr {
+                        td {
+                            letter-spacing: 1/16rem;
+                            font-size: 14/16rem;
+                            .label {}
+                            li {
+                                margin-top: 25/16rem;
+                                margin-right: 10/16rem;
+                                float: left;
+                                .date {
+                                    width: 55/16rem !important;
+                                }
+                                input[type="text"] {
+                                    border: none;
+                                    border-bottom: solid 1/16rem black;
+                                    width: 275/16rem;
+                                    font-size: 16/16rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .question {
+                margin: 0;
+                padding: 0;
+                .part {
+                    border-right: solid 1/16rem #797979;
+                    height: 500/16rem;
+                    width: 100/16rem;
+                    padding-top: 225/16rem;
+                    padding-left: 25/16rem;
+                    margin-right: 35/16rem;
+                    float: left;
+                    .ball {
+                        border-radius: 100%;
+                        background-color: #3399FF;
+                        width: 50/16rem;
+                        height: 50/16rem;
+                        color: #FFFFFF;
+                        text-align: center;
+                        padding-top: 10/16rem;
+                        font-size: 20/16rem;
+                        font-weight: 500;
+                    }
+                }
+                .questions {
+                    margin-bottom: 100/16rem;
+                    font-size: 14/16rem;
+                    width: 900/16rem;
+                    .list {
+                        list-style: none;
+                        .question {
+                            float: left;
+                            padding-right: 20/16rem;
+                        }
+                        .answer {
+                            span {
+                                padding-right: 10/16rem;
+                            }
+                            textarea {
+                                height: 180/16rem;
+                                margin-top: 10/16rem;
+                                width: 600/16rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .warning {
+            margin-top: 18/16rem;
+            margin-bottom: 18/16rem;
+            padding-left: 150/16rem;
+            color: #999999;
+            width: 900/16rem;
+        }
+    }
+    .charts-container {
+        float: left;
+        width: 670/16rem;
+        padding-bottom: 10/16rem;
+        padding-left: 20/16rem;
+        .phone-container {
+            //          height: 250/16rem;
+            .student {
+                background-color: #4D4D65;
+                height: 125/16rem;
+                position: relative;
+                .photo {
+                    float: left;
+                    img {
+                        width: 130/16rem;
+                        height: 130/16rem;
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 35/16rem;
+                        left: 25/16rem;
+                        border: solid 6/16rem #fff;
+                        z-index: 50;
+                    }
+                }
+                .info {
+                    float: left;
+                    color: #fff;
+                    position: absolute;
+                    left: 170/16rem;
+                    top: 50/16rem;
+                    span {}
+                    span[name='name'] {
+                        font-size: 30/16rem;
+                        font-weight: 600;
+                    }
+                }
+                .tel {
+                    color: #fff;
+                    float: left;
+                    position: absolute;
+                    top: 40/16rem;
+                    right: 30/16rem;
+                    span {
+                        font-size: 45/16rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .call {
+                background-color: #fff;
+                height: 125/16rem;
+                position: relative;
+                .time {
+                    position: absolute;
+                    top: 45/16rem;
+                    left: 100/16rem;
+                    text-align: center;
+                    span {
+                        font-size: 40/16rem;
+                        font-weight: 600;
+                        color: black;
+                    }
+                    .timer {
+                        font-size: 14/16rem !important;
+                        font-weight: 300 !important;
+                        color: black;
+                    }
+                }
+                .callBtn {
+                    background-color: #FF0066;
+                    width: 150/16rem;
+                    height: 50/16rem;
+                    border-radius: 6/16rem;
+                    color: #FFFFFF;
+                    position: absolute;
+                    top: 45/16rem;
+                    right: 100/16rem;
+                    text-align: center;
+                    span {
+                        display: none;
+                        font-size: 22/16rem;
+                        font-weight: 400;
+                        height: 50/16rem;
+                        line-height: 50/16rem;
+                    }
+                    .item-active {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .audio-container {
+            height: 200/16rem;
+        }
+        .item-container {
+            overflow: hidden;
+            .attendence {
+                float: left;
+                background-color: #fff !important;
+                width: 350/16rem;
+                height: 280/16rem;
+            }
+            .scoreList {
+                float: left;
+                margin-left: 10/16rem;
+                background-color: #fff !important;
+                width: 290/16rem;
+                height: 280/16rem;
+                overflow-x: auto;
+                overflow-y: auto;
+                .data-table {
+                    tr {
+                        th {
+                            background-color: #3399FF;
+                        }
+                    }
+                }
+            }
+        }
+        .calendar {
+            margin-top: 10/16rem;
+            background-color: #fff !important;
+            width: 650/16rem;
+            height: 400/16rem;
+        }
+        .score {
+            margin-top: 10/16rem;
+            margin-bottom: 10/16rem;
+            background-color: #fff !important;
+            width: 650/16rem;
+            height: 400/16rem;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+body {
+  background-color: #fff;
+}
+.main-container .getmailbar {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  background-color: #fff;
+}
+.main-container .getmailbar .daymail {
+  padding-top: 1.25rem;
+}
+.main-container .getmailbar .daymail .date {
+  padding-left: 0.625rem;
+  padding-bottom: 0.3125rem;
+  border-bottom: solid 0.1875rem #9182A8;
+}
+.main-container .getmailbar .daymail .date span {
+  color: #7C5EA8;
+}
+.main-container .getmailbar .daymail .date span:first-child {
+  font-family: "微软雅黑";
+  font-size: large;
+  font-weight: 600;
+}
+.main-container .getmailbar .daymail .date span:nth-child(2) {
+  font-family: "微软雅黑";
+  font-size: medium;
+  font-weight: 400;
+}
+.main-container .getmailbar .daymail .mail-list {
+  margin: 0;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list {
+  border-bottom: solid 0.0625rem #AD9DCC;
+  height: 1.5625rem;
+  margin: 0;
+  padding-bottom: 0.3125rem;
+  padding-top: 0.3125rem;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list:hover {
+  background-color: #B0B0B0;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item {
+  padding-left: 0.625rem;
+  float: left;
+  margin-right: 1.875rem;
+  font-size: medium;
+  color: #212121;
+  font-family: "微软雅黑";
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:first-child {
+  color: black;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(2) {
+  width: 9.375rem;
+  color: red;
+  font-weight: 500;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(3) {
+  font-weight: bold;
+  min-width: 9.375rem;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6) {
+  color: blue;
+  font-weight: 500;
+  float: right;
+  cursor: pointer;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6):hover {
+  color: red;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(5) {
+  float: right;
+}
+.no-select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=message.css.map */

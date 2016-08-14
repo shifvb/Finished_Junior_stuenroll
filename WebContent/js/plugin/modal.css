@@ -1,0 +1,93 @@
+.modal {
+  display: none;
+  background-color: #fafafa;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 1.25rem;
+  box-sizing: border-box;
+  z-index: 9999;
+  border: solid 0.4375rem rgba(0, 0, 0, 0.2);
+  padding: 1.25rem;
+}
+.modal .title {
+  margin: 0;
+  padding-top: 0rem;
+  padding-bottom: 0.625rem;
+  border-bottom: dashed 0.0625rem #c9c9c9;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 1.5625rem;
+}
+.modal .modal-list {
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.modal .modal-list .modal-title {
+  float: left;
+  width: 5rem;
+  line-height: 2rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+.modal .modal-list .modal-item {
+  float: right;
+  margin: 0;
+  width: 22.8125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+.modal .modal-list .modal-item .input {
+  height: 2rem;
+  outline: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  width: inherit;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  border: solid 0.0625rem #e3e3e3;
+  background-color: #fcfcfc;
+}
+.modal .operation {
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+.modal .operation .modal-btn {
+  outline: none;
+  float: right;
+  width: 6.25rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  border: none;
+  background-color: #e0e0e0;
+}
+.modal .operation .modal-btn:active {
+  background-color: #C6C6C6;
+}
+.modal .operation .green {
+  background-color: #54C895;
+  color: #FFFFFF;
+}
+.modal .operation .green:active {
+  background-color: #39B17C;
+}
+.shade {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 9800;
+}
+/*# sourceMappingURL=modal.css.map */

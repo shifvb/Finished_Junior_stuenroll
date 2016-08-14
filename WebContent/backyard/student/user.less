@@ -1,0 +1,876 @@
+body {
+    background-color: #e7e7e7;
+    position: relative;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    .tab-list {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #EBEEF7;
+        .tab-item {
+            float: left;
+            height: 36/16rem;
+            line-height: 36/16rem;
+            text-align: center;
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            letter-spacing: 1/16rem;
+            font-size: 14/16rem;
+            cursor: pointer;
+        }
+        .tab-active {
+            color: #FFFFFF;
+            background-color: #02A0E9;
+        }
+    }
+    .tab-container {
+        .tab-content {
+            display: none;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                .operation-item {
+                    display: none;
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+                    .menu {
+                        position: absolute;
+                        top: -15/16rem;
+                        left: 0;
+                        background-color: #E7E7E7;
+                        z-index: 50;
+                        cursor: default;
+                        width: 100%;
+                        min-width: 1400/16rem;
+                        display: none;
+                        .flex-wrapper {
+                            width: 100%;
+                            display: -moz-box;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: -webkit-flex;
+                            display: flex;
+                            .mainAddUserMenu,
+                            .mainModifyUserMenu {
+                                flex-grow: 1;
+                                height: 1487/16rem;
+                                background-color: #FFFFFF;
+                                margin-top: 15/16rem;
+                                margin-left: 15/16rem;
+                                .title-1 {
+                                    padding-top: 45/16rem;
+                                    padding-left: 55/16rem;
+                                    overflow: hidden;
+                                    span {
+                                        float: left;
+                                        &:nth-child(1) {
+                                            width: 139/16rem;
+                                            height: 51/16rem;
+                                            background-color: #333333;
+                                            font-size: 26/16rem;
+                                            color: #FFFFFF;
+                                            font-family: "微软雅黑 Bold","微软雅黑";
+                                            text-align: center;
+                                            line-height: 51/16rem;
+                                            font-weight: 700;
+                                        }
+                                        &:nth-child(2) {
+                                            width: 152/16rem;
+                                            height: 36/16rem;
+                                            font-size: 20/16rem;
+                                            font-weight: 400;
+                                            line-height: 31/16rem;
+                                            text-align: center;
+                                            margin-top: 15/16rem;
+                                            border-bottom: solid 5px #333333;
+                                        }
+                                    }
+                                }
+                                .inputs-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    .inputs-item {
+                                        overflow: hidden;
+                                        &:nth-child(odd) {
+                                            padding-bottom: 20/16rem;
+                                        }
+                                        &:nth-child(even) {
+                                            padding-bottom: 20/16rem;
+                                            background-color: #ECF0F1;
+                                        }
+                                        * {
+                                            float: left;
+                                        }
+                                        .title-2 {
+                                            margin-left: 10%;
+                                            margin-top: 40/16rem;
+                                            >img {
+                                                width: 71/16rem;
+                                                height: 43/16rem;
+                                            }
+                                            >span {
+                                                margin-top: 10/16rem;
+                                                margin-left: 22/16rem;
+                                                font-size: 18/16rem;
+                                                font-weight: 400;
+                                                text-align: left;
+                                                line-height: 25/16rem;
+                                            }
+                                        }
+                                        .content-2 {
+                                            margin-top: 40/16rem;
+                                            padding-left: 6.5%;
+                                            >label {
+                                                margin-bottom: 25/16rem;
+                                                .dropdown {
+                                                    margin-left: 5/16rem;
+                                                    width: 300/16rem;
+                                                    .dropdown-list {
+                                                        max-height: 170/16rem;
+                                                        overflow-y: auto;
+                                                        overflow-x: hidden;
+                                                        .dropdown-item {
+                                                            clear: both;
+                                                            width: 298/16rem;
+                                                        }
+                                                    }
+                                                }
+                                                >span {
+                                                    margin-top: 10/16rem;
+                                                    color: #333;
+                                                    width: 90/16rem;
+                                                    text-align: right;
+                                                    font-size: 14/16rem;
+                                                    font-weight: 500;
+                                                    height: 19/16rem;
+                                                    line-height: 19/16rem;
+                                                }
+                                                >input {
+                                                    margin-left: 5/16rem;
+                                                    height: 35/16rem;
+                                                    width: 300/16rem;
+                                                    outline: none;
+                                                    font-size: 14/16rem;
+                                                    letter-spacing: 1/16rem;
+                                                    padding: 0 20/16rem;
+                                                    line-height: 35/16rem;
+                                                    border-radius: 3/16rem;
+                                                    border: solid 1px #E0E0E0;
+                                                }
+                                            }
+                                            .buttons-2 {
+                                                overflow: hidden;
+                                                margin-left: 95/16rem;
+                                                margin-top: 13/16rem;
+                                                >a {
+                                                    float: left;
+                                                    width: 142/16rem;
+                                                    height: 35/16rem;
+                                                    line-height: 35/16rem;
+                                                    text-align: ccenter;
+                                                    font-size: 14/16rem;
+                                                    font-weight: 700;
+                                                    color: #FFFFFF;
+                                                    letter-spacing: 1/16rem;
+                                                    border-radius: 3/16rem;
+                                                    border: 0;
+                                                    outline: none;
+                                                    cursor: pointer;
+                                                    &:nth-child(1) {
+                                                        background-color: #66CC66;
+                                                        &:hover {
+                                                            background-color: #40C040;
+                                                        }
+                                                        &:active {
+                                                            background-color: #39AD39;
+                                                        }
+                                                    }
+                                                    &:nth-child(2) {
+                                                        background-color: #FF3366;
+                                                        margin-left: 18/16rem;
+                                                        &:hover {
+                                                            background-color: #FF0040;
+                                                        }
+                                                        &:active {
+                                                            background-color: #E6003A;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            br {
+                                                clear: left !important;
+                                            }
+                                        }
+                                        .photo-2 {
+                                            margin-top: 40/16rem;
+                                            margin-left: 10%;
+                                            width: 179/16rem;
+                                            height: 179/16rem;
+                                        }
+                                        .user-notes {
+                                            width: 100%;
+                                            background-color: #ECF0F1;
+                                            overflow: hidden;
+                                            color: #666666;
+                                            * {
+                                                float: left;
+                                            }
+                                            .user-notes-title {
+                                                margin: 1.8% 2.7% 0;
+                                                >span {
+                                                    font-size: 24/16rem;
+                                                    font-weight: 700;
+                                                    letter-spacing: 1/16rem;
+                                                }
+                                            }
+                                            .accountRules,
+                                            .userRules {
+                                                width: 38%;
+                                                margin-left: 2%;
+                                                margin-right: 2%;
+                                                .rules-list {
+                                                    font-size: 14/16rem;
+                                                    .rules-title {
+                                                        font-weight: 700;
+                                                    }
+                                                    .rules-item {
+                                                        margin-bottom: 20/16rem;
+                                                        font-weight: 400;
+                                                        line-height: 22/16rem;
+                                                        text-align: left;
+                                                        letter-spacing: 0;
+                                                    }
+                                                }
+                                            }
+                                            .middle-line {
+                                                margin: 0;
+                                                width: 1/16rem;
+                                                margin-top: 25/16rem;
+                                                height: 245/16rem;
+                                                border-right: solid #999999 1px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .friends {
+                                flex-grow: 0;
+                                min-width: 342/16rem;
+                                margin-top: 15/16rem;
+                                margin-left: 15/16rem;
+                                margin-right: 15/16rem;
+                                height: 1487/16rem;
+                                background-color: #FFFFFF;
+                                position: relative;
+                                .friends-title {
+                                    overflow: hidden;
+                                    margin-bottom: 15/16rem;
+                                    >span {
+                                        float: left;
+                                        color: #39F;
+                                        font-size: 20/16rem;
+                                        font-weight: 700;
+                                        line-height: 20/16rem;
+                                        margin-top: 30/16rem;
+                                        margin-left: 30/16rem;
+                                    }
+                                    >i {
+                                        margin-top: 25/16rem;
+                                        margin-left: 15/16rem;
+                                        float: left;
+                                        background-color: #3399FF;
+                                        color: #FFFFFF;
+                                        font-size: 20/16rem;
+                                        height: 30/16rem;
+                                        width: 25/16rem;
+                                        padding: 3/16rem;
+                                        line-height: 24/16rem;
+                                        cursor: pointer;
+                                        position: relative;
+                                        &:hover {
+                                            background-color: #198CFF;
+                                        }
+                                        &:active {
+                                            background-color: #007FFF;
+                                        }
+                                    }
+                                }
+                                .friends-search {
+                                    position: absolute;
+                                    display: none;
+                                    top: 70/16rem;
+                                    left: 0/16rem;
+                                    width: 342/16rem;
+                                    height: 109/16rem;
+                                    background-color: rgba(0, 204, 204, 0.95);
+                                    z-index: 2;
+                                    overflow: hidden;
+                                    .search-bar {
+                                        width: 300/16rem;
+                                        height: 45/16rem;
+                                        background-color: rgba(255, 255, 255, 0.95);
+                                        border-radius: 22.5/16rem;
+                                        margin: 33.5/16rem 0 17/16rem 21/16rem;
+                                        .search-btn,
+                                        .close-btn {
+                                            float: left;
+                                            margin-top: 4/16rem;
+                                            >i {
+                                                color: #333;
+                                                font-size: 25/16rem;
+                                                line-height: 25/16rem;
+                                            }
+                                        }
+                                        .search-input {
+                                            float: left;
+                                            >input {
+                                                border: 0;
+                                                height: 45/16rem;
+                                                width: 210/16rem;
+                                                outline: none;
+                                                padding: 15/16rem 15/16rem 13/16rem;
+                                                font-size: 15/16rem;
+                                                line-height: 15/16rem;
+                                                letter-spacing: 1/16rem;
+                                                background-color: #F3FDFD;
+                                            }
+                                        }
+                                        .search-btn {
+                                            margin-left: 15/16rem;
+                                        }
+                                        .close-btn {
+                                            margin-left: 5/16rem;
+                                            height: 41/16rem;
+                                            >i {
+                                                cursor: pointer;
+                                            }
+                                        }
+                                    }
+                                    .search-result {
+                                        .friends-item {
+                                            overflow: hidden;
+                                            padding: 13/16rem 0;
+                                            margin-top: 5/16rem;
+                                            * {
+                                                float: left;
+                                            }
+                                            .user-img-wrapper {
+                                                position: relative;
+                                                width: 70/16rem;
+                                                height: 70/16rem;
+                                                margin-left: 30/16rem;
+                                                >img {
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    width: 70/16rem;
+                                                    height: 70/16rem;
+                                                    border-radius: 100%;
+                                                }
+                                                .status-circle {
+                                                    position: absolute;
+                                                    bottom: 0;
+                                                    right: 0;
+                                                    width: 20/16rem;
+                                                    height: 20/16rem;
+                                                    border-radius: 100%;
+                                                    background-color: #82D15C;
+                                                    border: solid 2/16rem #FFFFFF;
+                                                }
+                                                .status-circle-offline {
+                                                    background-color: #F55D5E;
+                                                }
+                                            }
+                                            .user-text-wrapper {
+                                                width: 232/16rem;
+                                                margin-left: 10/16rem;
+                                                .text-title-1 {
+                                                    clear: left;
+                                                    width: 100%;
+                                                    >span {
+                                                        margin-top: 10/16rem;
+                                                        margin-bottom: 5/16rem;
+                                                        font-size: 18/16rem;
+                                                        line-height: 18/16rem;
+                                                        font-weight: 700;
+                                                    }
+                                                    >i {
+                                                        float: right;
+                                                        font-size: 22/16rem;
+                                                        height: 22/16rem;
+                                                        margin: 4/16rem 39/16rem 0 0;
+                                                        line-height: 22/16rem;
+                                                        cursor: pointer;
+                                                    }
+                                                }
+                                                .text-title-2 {
+                                                    clear: left;
+                                                    margin-top: 5/16rem;
+                                                    color: #666;
+                                                    font-size: 12/16rem;
+                                                    line-height: 12/16rem;
+                                                    text-align: left;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .friends-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    height: 1248/16rem;
+                                    .friends-item {
+                                        overflow: hidden;
+                                        padding: 13/16rem 0;
+                                        * {
+                                            float: left;
+                                        }
+                                        .user-img-wrapper {
+                                            position: relative;
+                                            width: 70/16rem;
+                                            height: 70/16rem;
+                                            margin-left: 30/16rem;
+                                            >img {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 70/16rem;
+                                                height: 70/16rem;
+                                                border-radius: 100%;
+                                            }
+                                            .status-circle {
+                                                position: absolute;
+                                                bottom: 0;
+                                                right: 0;
+                                                width: 20/16rem;
+                                                height: 20/16rem;
+                                                border-radius: 100%;
+                                                background-color: #82D15C;
+                                                border: solid 2/16rem #FFFFFF;
+                                            }
+                                            .status-circle-offline {
+                                                background-color: #F55D5E;
+                                            }
+                                        }
+                                        .user-text-wrapper {
+                                            width: 232/16rem;
+                                            margin-left: 10/16rem;
+                                            .text-title-1 {
+                                                clear: left;
+                                                width: 100%;
+                                                >span {
+                                                    margin-top: 10/16rem;
+                                                    margin-bottom: 5/16rem;
+                                                    font-size: 18/16rem;
+                                                    line-height: 18/16rem;
+                                                    font-weight: 700;
+                                                }
+                                                >i {
+                                                    float: right;
+                                                    display: none;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                            .text-title-2 {
+                                                clear: left;
+                                                margin-top: 5/16rem;
+                                                color: #999;
+                                                font-size: 12/16rem;
+                                                line-height: 12/16rem;
+                                                text-align: left;
+                                            }
+                                        }
+                                    }
+                                    .friends-item-active {
+                                        background-color: #3399FF;
+                                        .user-text-wrapper {
+                                            .text-title-1 {
+                                                color: #FFFFFF;
+                                                .xingxing,
+                                                .chacha-copy {
+                                                    display: inline-block;
+                                                    z-index: 51;
+                                                    color: #FFFFFF;
+                                                    font-size: 18/16rem;
+                                                    text-align: center;
+                                                    height: 18/16rem;
+                                                    line-height: 18/16rem;
+                                                    margin-right: 15/16rem;
+                                                }
+                                                .xingxing {
+                                                    margin-top: 7/16rem;
+                                                }
+                                                .chacha-copy {
+                                                    margin-top: 9/16rem;
+                                                }
+                                                .xingxing-active {
+                                                    color: #E9C342;
+                                                    font-size: 20/16rem;
+                                                    font-weight: 700;
+                                                }
+                                            }
+                                            .text-title-2 {
+                                                color: #FFFFFF;
+                                            }
+                                        }
+                                    }
+                                }
+                                .friends-pages {
+                                    height: 115/16rem;
+                                    overflow: hidden;
+                                    padding: 40/16rem 0;
+                                    .prevBtn {
+                                        float: left;
+                                        margin-left: 30/16rem;
+                                        cursor: pointer;
+                                        >img {
+                                            width: 81/16rem;
+                                            height: 35/16rem;
+                                        }
+                                    }
+                                    .pageText {
+                                        color: #333333;
+                                        font-size: 14/16rem;
+                                        font-weight: 700;
+                                        float: left;
+                                        width: 120/16rem;
+                                        height: 35/16rem;
+                                        text-align: center;
+                                        line-height: 35/16rem;
+                                    }
+                                    .nextBtn {
+                                        float: right;
+                                        margin-right: 30/16rem;
+                                        cursor: pointer;
+                                        >img {
+                                            width: 81/16rem;
+                                            height: 35/16rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .menu2 {
+                        display: none;
+                        cursor: default;
+                        position: absolute;
+                        left: 30/16rem;
+                        top: 97/16rem;
+                        background-color: #F0F0F0;
+                        color: #333;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 20/16rem;
+                        z-index: 50;
+                        width: 96.5%;
+                        .menu-title {
+                            margin: 0;
+                            padding: 0;
+                            margin-left: 13/16rem;
+                            text-align: left;
+                            height: 50/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #CCC dashed 1/16rem;
+                            font-weight: 700;
+                        }
+                        #uploadFileForm {
+                            overflow: hidden;
+                            margin-top: 20/16rem;
+                            margin-left: 13/16rem;
+                            .selectFile {
+                                float: left;
+                                width: 140/16rem;
+                                height: 39/16rem;
+                                border: 0;
+                                overflow: hidden;
+                                background-color: #08AFFD;
+                                cursor: pointer;
+                                border-radius: 3/16rem;
+                                .selectFilePresenter {
+                                    overflow: hidden;
+                                    height: 39/16rem;
+                                    border: 0;
+                                    border-radius: 3/16rem;
+                                    .iconText {
+                                        float: left;
+                                        color: #FFFFFF;
+                                        font-size: 15/16rem;
+                                        line-height: 16/16rem;
+                                        text-align: center;
+                                        letter-spacing: 1/16rem;
+                                        margin-left: 5/16rem;
+                                        margin-top: 11/16rem;
+                                        font-family: "微软雅黑";
+                                    }
+                                    .jia {
+                                        float: left;
+                                        color: #FFFFFF;
+                                        width: 20/16rem;
+                                        height: 20/16rem;
+                                        line-height: 19/16rem;
+                                        font-size: 14/16rem;
+                                        padding-left: 1/16rem;
+                                        text-align: center;
+                                        border-radius: 100%;
+                                        cursor: pointer;
+                                        margin-left: 20/16rem;
+                                        margin-top: 9/16rem;
+                                    }
+                                    &:hover {
+                                        background-color: #02A0EA;
+                                    }
+                                    &:active {
+                                        background-color: #028FD1;
+                                    }
+                                }
+                            }
+                            .showFilePath {
+                                float: left;
+                                margin-left: 20/16rem;
+                                border-radius: 1/16rem;
+                                height: 39/16rem;
+                                width: 400/16rem;
+                                border: solid 1/16rem #d0d0d0;
+                                border-radius: 1/16rem;
+                                outline: none;
+                                line-height: 20/16rem;
+                                float: left;
+                                font-size: 14/16rem;
+                                letter-spacing: 1/16rem;
+                                padding: 0 15/16rem;
+                            }
+                            .uploadFile {
+                                float: left;
+                                height: 39/16rem;
+                                border: 0;
+                                color: #FFFFFF;
+                                width: 120/16rem;
+                                line-height: 39/16rem;
+                                letter-spacing: 1/16rem;
+                                font-size: 14/16rem;
+                                font-family: "微软雅黑";
+                                background-color: #08AFFD;
+                                margin-left: 20/16rem;
+                                border-radius: 3/16rem;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: #02A0EA;
+                                }
+                                &:active {
+                                    background-color: #028FD1;
+                                }
+                            }
+                        }
+                    }
+                    .menu3 {
+                        display: none;
+                        cursor: default;
+                        position: absolute;
+                        left: 30/16rem;
+                        top: 97/16rem;
+                        background-color: #F0F0F0;
+                        color: #333;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 20/16rem;
+                        z-index: 50;
+                        width: 96.5%;
+                        .menu-title {
+                            margin: 0;
+                            padding: 0;
+                            margin-left: 13/16rem;
+                            text-align: left;
+                            height: 50/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #CCC dashed 1/16rem;
+                            font-weight: 700;
+                        }
+                        .menu-content {
+                            overflow: hidden;
+                            margin-left: 14/16rem;
+                            margin-top: 20/16rem;
+                            input {
+                                float: left;
+                                border: 0;
+                                color: #FFFFFF;
+                                font-size: 14/16rem;
+                                letter-spacing: 1/16rem;
+                                font-weight: 500;
+                                width: 150/16rem;
+                                height: 30/16rem;
+                                outline: none;
+                                margin-right: 30/16rem;
+                                background-color: #02A0E9;
+                                cursor: pointer;
+                                border-radius: 2/16rem;
+                                &:hover {
+                                    background-color: #028FD0;
+                                }
+                                &:active {
+                                    background-color: #027EB7;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .data-table {
+                td {
+                    &:nth-child(1) {
+                        width: 60/16rem;
+                    }
+                    &:nth-child(2) {
+                        width: 99/16rem;
+                    }
+                    &:nth-child(3) {
+                        width: 199/16rem;
+                        .text-overflow {
+                            width: 199/16rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                    &:nth-child(4) {
+                        width: 149/16rem;
+                    }
+                    &:nth-child(5) {
+                        width: 278/16rem;
+                    }
+                    &:nth-child(6) {
+                        width: 179/16rem;
+                    }
+                    &:nth-child(7) {
+                        width: 139/16rem;
+                    }
+                    &:nth-child(8) {
+                        width: 248/16rem;
+                    }
+                    &:nth-child(9) {
+                        width: 180/16rem;
+                    }
+                }
+                .statusBtnBase {
+                    background-color: #00CC99;
+                    height: 20/16rem;
+                    width: 50/16rem;
+                    border-radius: 10/16rem;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    .statusCircus {
+                        float: left;
+                        background-color: #FFFFFF;
+                        width: 20/16rem;
+                        height: 20/16rem;
+                        border-radius: 100%;
+                        display: inline-block;
+                    }
+                    .statusText {
+                        font-weight: 600;
+                        color: #FFF;
+                        font-size: 12/16rem;
+                        float: left;
+                        display: inline-block;
+                        margin: 2/16rem 5/16rem;
+                        padding: 0;
+                        cursor: pointer;
+                    }
+                    .statusCircusOff {
+                        position: absolute;
+                        left: 30/16rem;
+                    }
+                    .statusTextOff {
+                        position: absolute;
+                        left: 5/16rem;
+                    }
+                }
+                .statusBtnBaseOff {
+                    background-color: #FF6633;
+                }
+            }
+            .page-list {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: ##EBEEF7;
+                margin-top: 15/16rem;
+                .page-item {
+                    height: 40/16rem;
+                    font-size: 14/16rem;
+                    line-height: 40/16rem;
+                }
+                .page-info {
+                    float: left;
+                    margin-left: 15/16rem;
+                    span {
+                        margin-left: 5/16rem;
+                        margin-right: 5/16rem;
+                    }
+                }
+                .page-operation {
+                    float: right;
+                    margin-right: 10/16rem;
+                    a {
+                        cursor: pointer;
+                        padding-left: 5/16rem;
+                        padding-right: 5/16rem;
+                        &:hover {
+                            color: #ff6700;
+                        }
+                    }
+                    .page-active {
+                        color: red;
+                        font-weight: 600;
+                    }
+                    .page-disable {
+                        color: #B9B9B9;
+                        cursor: default;
+                        &:hover {
+                            color: #B9B9B9;
+                        }
+                    }
+                }
+            }
+        }
+        .content-active {
+            display: block;
+        }
+    }
+}
+.uploadImageForm {
+    overflow: hidden;
+    margin-top: 20/16rem;
+    margin-left: 13/16rem;
+    .selectFile {
+        float: left;
+        width: 179/16rem;
+        height: 179/16rem;
+        overflow: hidden;
+        cursor: pointer;
+        border: 3/16rem solid rgba(130, 160, 90, 0.3);
+        border-radius: 3/16rem;
+        .preView {
+            width: 179/16rem;
+            height: 179/16rem;
+        }
+    }
+}
+.input-error {
+    color: red !important;
+}

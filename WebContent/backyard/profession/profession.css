@@ -1,0 +1,282 @@
+body {
+  min-width: 43.75rem;
+  background-color: #e7e7e7;
+}
+.main-container {
+  background-color: #fff;
+  margin: 0.9375rem;
+  padding: 0.9375rem;
+}
+.main-container .tab-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+}
+.main-container .tab-list .tab-item {
+  float: left;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main-container .tab-list .tab-active {
+  color: #fff;
+  background-color: #02A0E9;
+}
+.main-container .tab-container .tab-content .operation-list {
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  position: relative;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item {
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+  display: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu {
+  display: none;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  background-color: #F0F0F0;
+  color: #333;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 1.25rem;
+  z-index: 50;
+  width: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu .menu-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.8125rem;
+  text-align: left;
+  height: 3.125rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #CCC dashed 0.0625rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload {
+  overflow: hidden;
+  margin-top: 1.25rem;
+  margin-left: 0.8125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file {
+  float: left;
+  width: 8.75rem;
+  height: 2.4375rem;
+  border: 0;
+  overflow: hidden;
+  background-color: #08AFFD;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file .select-file {
+  overflow: hidden;
+  height: 2.4375rem;
+  border: 0;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file .select-file .icon-text {
+  float: left;
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  margin-left: 0.3125rem;
+  margin-top: 0.6875rem;
+  font-family: "微软雅黑";
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file .select-file .jia {
+  float: left;
+  color: #FFFFFF;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.1875rem;
+  font-size: 0.875rem;
+  padding-left: 0.0625rem;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 1.25rem;
+  margin-top: 0.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file .select-file:hover {
+  background-color: #02A0EA;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file .select-file:active {
+  background-color: #028FD1;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .file-path {
+  margin-left: 1.25rem;
+  height: 2.4375rem;
+  width: 25rem;
+  border: solid 0.0625rem #d0d0d0;
+  border-radius: 0.0625rem;
+  outline: none;
+  line-height: 1.25rem;
+  float: left;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding: 0 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .upload-file {
+  float: left;
+  height: 2.4375rem;
+  border: 0;
+  color: #FFFFFF;
+  width: 7.5rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-family: "微软雅黑";
+  background-color: #08AFFD;
+  margin-left: 1.25rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .upload-file:hover {
+  background-color: #02A0EA;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .import-menu #upload .upload-file:active {
+  background-color: #028FD1;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu {
+  display: none;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  background-color: #F0F0F0;
+  color: #333;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 1.25rem;
+  z-index: 50;
+  width: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu .menu-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.8125rem;
+  text-align: left;
+  height: 3.125rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #CCC dashed 0.0625rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu .menu-content {
+  overflow: hidden;
+  margin-left: 0.875rem;
+  margin-top: 1.25rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu .menu-content input {
+  float: left;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  font-weight: 500;
+  width: 9.375rem;
+  height: 1.875rem;
+  outline: none;
+  margin-right: 1.875rem;
+  background-color: #02A0E9;
+  cursor: pointer;
+  border-radius: 0.125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu .menu-content input:hover {
+  background-color: #028FD0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .export-menu .menu-content input:active {
+  background-color: #027EB7;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu {
+  background-color: #f0f0f0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  border: none;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.17);
+  display: none;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list {
+  margin: 0;
+  padding: 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item {
+  text-align: left;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+  letter-spacing: 0.0625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item .menuTitle {
+  margin-top: 0.625rem;
+  margin-bottom: 0;
+  font-weight: 800;
+  font-size: 0.9375rem;
+  outline: none;
+  border-bottom: #ccc dashed 0.0625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item .sub-title {
+  padding-right: 1.5625rem;
+  display: inline-block;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  margin-top: 0.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item label {
+  display: inline-block;
+  letter-spacing: 0.0625rem;
+  padding-right: 0.3125rem;
+  font-size: 0.875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item .input {
+  height: 1.875rem;
+  outline: none;
+  padding: 1rem 0.625rem;
+  letter-spacing: 0.0625rem;
+  border-radius: 0.1875rem;
+  border: solid #ccc 0.0625rem;
+  font-size: 0.875rem;
+  font-weight: ;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item .btn {
+  height: 2rem;
+  width: 7.5rem;
+  outline: none;
+  background-color: #F4494E;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  border: none;
+  margin: 0 1.875rem;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-list .menu-item .btn:active {
+  background-color: #CD0C12;
+}
+.main-container .error {
+  color: red !important;
+}
+/*# sourceMappingURL=profession.css.map */

@@ -1,0 +1,36 @@
+.page-list {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #EBEEF7;
+    margin-top: 15/16rem;
+    .page-item {
+        height: 40/16rem;
+        font-size: 14/16rem;
+        line-height: 40/16rem;
+    }
+    .page-info {
+        float: left;
+        margin-left: 15/16rem;
+        span {
+            margin-left: 5/16rem;
+            margin-right: 5/16rem;
+        }
+    }
+    .page-operation {
+        float: right;
+        margin-right: 10/16rem;
+        a {
+            cursor: pointer;
+            padding-left: 5/16rem;
+            padding-right: 5/16rem;
+            &:hover {
+                color: #ff6700;
+            }
+        }
+        .page-active {
+            color: red;
+            font-weight: 600;
+        }
+    }
+}

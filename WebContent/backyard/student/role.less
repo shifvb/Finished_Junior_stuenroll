@@ -1,0 +1,284 @@
+body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    .tab-list {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #EBEEF7;
+        .tab-item {
+            float: left;
+            height: 36/16rem;
+            line-height: 36/16rem;
+            text-align: center;
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            letter-spacing: 1/16rem;
+            font-size: 14/16rem;
+            cursor: pointer;
+        }
+        .tab-active {
+            color: #FFFFFF;
+            background-color: #02A0E9;
+        }
+    }
+    .tab-container {
+        .tab-content {
+            display: none;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                position: relative;
+                .operation-item {
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+                    display: none;
+                    .menu {
+                        display: none;
+                        cursor: default;
+                        position: absolute;
+                        left: 0;
+                        top: 47/16rem;
+                        background-color: #F0F0F0;
+                        color: #333;
+                        width: 100%;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 20/16rem;
+                        z-index: 50;
+                        .menu-title {
+                            margin: 0;
+                            padding: 0;
+                            margin-left: 13/16rem;
+                            text-align: left;
+                            height: 50/16rem;
+                            line-height: 50/16rem;
+                            margin-bottom: 0;
+                            padding-bottom: 10/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #ccc dashed 1/16rem;
+                            font-weight: 700;
+                        }
+                        .menu-content {
+                            overflow: hidden;
+                            .menu-title-2 {
+                                float: left;
+                                padding: 0;
+                                margin: 0;
+                                padding-top: 20/15rem;
+                                text-align: left;
+                                padding-left: 15/16rem;
+                                margin: 0;
+                                font-weight: 700;
+                                font-size: 14/16rem;
+                            }
+                            .menu-list {
+                                float: left;
+                                margin: 0 0 0 40/16rem;
+                                padding: 0;
+                                list-style: none;
+                                .menu-list-item:nth-child(1) {
+                                    * {
+                                        float: left;
+                                    }
+                                    .label {
+                                        margin-top: 22/16rem;
+                                    }
+                                    overflow: hidden;
+                                    .keyword {
+                                        width: 200/16rem;
+                                        height: 32/16rem;
+                                        margin-top: 20/16rem;
+                                        letter-spacing: 1/16rem;
+                                        font-weight: 400;
+                                        outline: none;
+                                        margin-top: 30/16rem;
+                                        margin-left: 15/16rem;
+                                        margin-right: 20/16rem;
+                                        padding: 5/16rem;
+                                    }
+                                    .menu-btn {
+                                        display: block;
+                                        width: 120/16rem;
+                                        height: 32/16rem;
+                                        margin-bottom: 25/16rem;
+                                        margin-top: 30/16rem;
+                                        margin-left: 25/16rem;
+                                        background-color: #F4494E;
+                                        border: none;
+                                        color: #fff;
+                                        outline: none;
+                                        border-radius: 3/16rem;
+                                        letter-spacing: 1/16rem;
+                                        font-size: 14/16rem;
+                                        font-weight: 600;
+                                        &:active {
+                                            background-color: #CD0C12;
+                                        }
+                                    }
+                                }
+                                .menu-list-item:nth-child(2) {
+                                    overflow: hidden;
+                                    * {
+                                        float: left;
+                                    }
+                                    .menu-title-3 {
+                                        height: 100%;
+                                    }
+                                    .checkbox-wrapper {
+                                        width: 900/16rem;
+                                        input {
+                                            margin-top: 16/16rem;
+                                            margin-left: 17/16rem;
+                                            width: 15/16rem;
+                                            height: 15/16rem;
+                                        }
+                                        span {
+                                            margin-right: 15/16rem;
+                                            color: #333;
+                                            font-size: 14/16rem;
+                                            font-weight: 400;
+                                            margin-top: 18/16rem;
+                                            line-height: 13/16rem;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .operation-active {
+                    //                  color: #fff;
+                    //                  background-color: #02A0E9;
+                }
+            }
+            .surface {
+                display: none;
+            }
+            .active {
+                display: block;
+            }
+            .data-table {
+                td {
+                    width: 145/16rem;
+                    &:nth-child(1) {
+                        width: 63/16rem;
+                    }
+                    &:nth-child(2) {
+                        width: 90/16rem;
+                    }
+                    &:nth-child(3) {
+                        width: 230/16rem;
+                        .text-overflow {
+                            width: 230/16rem;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                .statusBtnBase {
+                    background-color: #00CC99;
+                    height: 20/16rem;
+                    width: 50/16rem;
+                    border-radius: 10/16rem;
+                    overflow: hidden;
+                    position: relative;
+                    cursor: pointer;
+                    .statusCircus {
+                        float: left;
+                        background-color: #FFFFFF;
+                        width: 20/16rem;
+                        height: 20/16rem;
+                        border-radius: 100%;
+                        display: inline-block;
+                    }
+                    .statusText {
+                        font-weight: 600;
+                        color: #FFF;
+                        font-size: 12/16rem;
+                        float: left;
+                        display: inline-block;
+                        margin: 2/16rem 5/16rem;
+                        padding: 0;
+                        cursor: pointer;
+                    }
+                    .statusCircusOff {
+                        position: absolute;
+                        left: 30/16rem;
+                    }
+                    .statusTextOff {
+                        position: absolute;
+                        left: 5/16rem;
+                    }
+                }
+                .statusBtnBaseOff {
+                    background-color: #FF6633;
+                }
+            }
+        }
+        .content-active {
+            display: block;
+        }
+        .page-list {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: ##EBEEF7;
+            margin-top: 15/16rem;
+            .page-item {
+                height: 40/16rem;
+                font-size: 14/16rem;
+                line-height: 40/16rem;
+            }
+            .page-info {
+                float: left;
+                margin-left: 15/16rem;
+                span {
+                    margin-left: 5/16rem;
+                    margin-right: 5/16rem;
+                }
+            }
+            .page-operation {
+                float: right;
+                margin-right: 10/16rem;
+                a {
+                    cursor: pointer;
+                    padding-left: 5/16rem;
+                    padding-right: 5/16rem;
+                    &:hover {
+                        color: #ff6700;
+                    }
+                }
+                .page-active {
+                    color: red;
+                    font-weight: 600;
+                }
+                .page-disable {
+                    color: #B9B9B9;
+                    cursor: default;
+                    &:hover {
+                        color: #B9B9B9;
+                    }
+                }
+            }
+        }
+    }
+}
+.input-error {
+    color: red !important;
+}

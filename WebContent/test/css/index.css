@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.uploadImageForm {
+  overflow: hidden;
+  margin-top: 1.25rem;
+  margin-left: 0.8125rem;
+}
+.uploadImageForm .selectFile {
+  float: left;
+  width: 11.1875rem;
+  height: 11.1875rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.uploadImageForm .selectFile .preView {
+  width: 11.1875rem;
+  height: 11.1875rem;
+}
+.save {
+  height: 2.4375rem;
+  border: 0;
+  color: #FFFFFF;
+  width: 9.375rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-family: "微软雅黑";
+  background-color: #59CF4C;
+  margin-left: 1.25rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+.save:hover {
+  background-color: #47CA39;
+}
+.save:active {
+  background-color: #3EB831;
+}

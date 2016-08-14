@@ -1,0 +1,340 @@
+body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    min-width: 1000/16rem;
+    .title {
+        padding: 8/16rem 0 8/16rem 14/16rem;
+        background-color: #EBEEF7;
+        letter-spacing: 1/16rem;
+        font-size: 14/16rem;
+        min-width: 450/16rem;
+        span {}
+    }
+    .tab-container {
+        .tab-content {
+            position: relative;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                position: relative;
+                .operation-item {
+                    //                  display: none;
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: orange;
+                        background-color: #fff;
+                    }
+                    .menu {
+                        display: none;
+                        cursor: default;
+                        left: 0;
+                        top: 38/16rem;
+                        background-color: #f0f0f0;
+                        color: #333;
+                        width: 100%;
+                        min-width: 950/16rem;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 10/16rem;
+                        position: absolute;
+                        z-index: 50;
+                        margin-top: 10/16rem;
+                        border-radius: 3/16rem;
+                        .menu-title {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            padding-bottom: 1/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #ccc dashed 1/16rem;
+                            text-align: left;
+                            margin-left: 10/16rem;
+                        }
+                        dl {
+                            margin-top: 15/16rem;
+                            margin-bottom: 10/16rem;
+                            height: 130/16rem;
+                            margin-left: 10/16rem;
+                            dt {
+                                float: left;
+                                letter-spacing: 1/16rem;
+                                height: 32/16rem;
+                                line-height: 32/16rem;
+                                font-weight: 600;
+                                margin-right: 25/16rem;
+                                padding-top: 6/16rem;
+                            }
+                            dd {
+                                float: left;
+                                margin-left: 0;
+                                .condition-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    width: 680/16rem;
+                                    min-width: 680/16rem;
+                                    height: 130/16rem;
+                                    .label {
+                                        float: left;
+                                        width: 100/16rem;
+                                        //letter-spacing: 1/16rem;
+                                        height: 32/16rem;
+                                        line-height: 32/16rem;
+                                        text-align: right;
+                                        padding-right: 5/16rem;
+                                        padding-top: 6/16rem;
+                                        margin-bottom: 25/16rem;
+                                        font-size: 14/16rem;
+                                        list-style: none;
+                                    }
+                                    .condition {
+                                        float: left;
+                                        margin-right: 40/16rem;
+                                        margin-bottom: 12/16rem;
+                                        list-style: none;
+                                        //line-height: 32/16rem;
+                                        .keyword {
+                                            width: 200/16rem;
+                                            height: 32/16rem; //line-height: 53/16rem;
+                                            padding-left: 10/16rem;
+                                            padding-right: 10/16rem; //                                          margin-bottom: 17/16rem;
+                                            border: solid #ccc 1/16rem;
+                                            outline: none;
+                                            letter-spacing: 1/16rem;
+                                            border-radius: 3/16rem;
+                                            color: #666666;
+                                        }
+                                    }
+                                    .value {
+                                        float: left;
+                                    }
+                                    .arrowhead {
+                                        float: right;
+                                        font-size: 11/16rem;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .menu-btn {
+                                    display: block;
+                                    width: 120/16rem;
+                                    height: 32/16rem;
+                                    margin-bottom: 36/16rem;
+                                    margin-top: 8/16rem;
+                                    background-color: #F4494E;
+                                    border: none;
+                                    color: #fff;
+                                    outline: none;
+                                    border-radius: 3/16rem;
+                                    letter-spacing: 1/16rem;
+                                    font-size: 14/16rem;
+                                    font-weight: 600;
+                                    &:active {
+                                        background-color: #CD0C12;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .menu2 {
+                        display: none;
+                        cursor: default;
+                        position: absolute;
+                        left: 30/16rem;
+                        top: 97/16rem;
+                        background-color: #F0F0F0;
+                        color: #333;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 20/16rem;
+                        z-index: 50;
+                        width: 96.5%;
+                        .menu-title {
+                            margin: 0;
+                            padding: 0;
+                            margin-left: 13/16rem;
+                            text-align: left;
+                            height: 50/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #CCC dashed 1/16rem;
+                            font-weight: 700;
+                        }
+                        #uploadFileForm {
+                            overflow: hidden;
+                            margin-top: 20/16rem;
+                            margin-left: 13/16rem;
+                            .selectFile {
+                                float: left;
+                                width: 140/16rem;
+                                height: 39/16rem;
+                                border: 0;
+                                overflow: hidden;
+                                background-color: #08AFFD;
+                                cursor: pointer;
+                                border-radius: 3/16rem;
+                                .selectFilePresenter {
+                                    overflow: hidden;
+                                    height: 39/16rem;
+                                    border: 0;
+                                    border-radius: 3/16rem;
+                                    .iconText {
+                                        float: left;
+                                        color: #FFFFFF;
+                                        font-size: 15/16rem;
+                                        line-height: 16/16rem;
+                                        text-align: center;
+                                        letter-spacing: 1/16rem;
+                                        margin-left: 5/16rem;
+                                        margin-top: 11/16rem;
+                                        font-family: "微软雅黑";
+                                    }
+                                    .jia {
+                                        float: left;
+                                        color: #FFFFFF;
+                                        width: 20/16rem;
+                                        height: 20/16rem;
+                                        line-height: 19/16rem;
+                                        font-size: 14/16rem;
+                                        padding-left: 1/16rem;
+                                        text-align: center;
+                                        border-radius: 100%;
+                                        cursor: pointer;
+                                        margin-left: 20/16rem;
+                                        margin-top: 9/16rem;
+                                    }
+                                    &:hover {
+                                        background-color: #02A0EA;
+                                    }
+                                    &:active {
+                                        background-color: #028FD1;
+                                    }
+                                }
+                            }
+                            .showFilePath {
+                                float: left;
+                                margin-left: 20/16rem;
+                                border-radius: 1/16rem;
+                                height: 39/16rem;
+                                width: 400/16rem;
+                                border: solid 1/16rem #d0d0d0;
+                                border-radius: 1/16rem;
+                                outline: none;
+                                line-height: 20/16rem;
+                                float: left;
+                                font-size: 14/16rem;
+                                letter-spacing: 1/16rem;
+                                padding: 0 15/16rem;
+                            }
+                            .uploadFile {
+                                float: left;
+                                height: 39/16rem;
+                                border: 0;
+                                color: #FFFFFF;
+                                width: 120/16rem;
+                                line-height: 39/16rem;
+                                letter-spacing: 1/16rem;
+                                font-size: 14/16rem;
+                                font-family: "微软雅黑";
+                                background-color: #08AFFD;
+                                margin-left: 20/16rem;
+                                border-radius: 3/16rem;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: #02A0EA;
+                                }
+                                &:active {
+                                    background-color: #028FD1;
+                                }
+                            }
+                        }
+                    }
+                    .menu3 {
+                        display: none;
+                        cursor: default;
+                        position: absolute;
+                        left: 30/16rem;
+                        top: 97/16rem;
+                        background-color: #F0F0F0;
+                        color: #333;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 20/16rem;
+                        z-index: 50;
+                        width: 96.5%;
+                        .menu-title {
+                            margin: 0;
+                            padding: 0;
+                            margin-left: 13/16rem;
+                            text-align: left;
+                            height: 50/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #CCC dashed 1/16rem;
+                            font-weight: 700;
+                        }
+                        .menu-content {
+                            overflow: hidden;
+                            margin-left: 14/16rem;
+                            margin-top: 20/16rem;
+                            input {
+                                float: left;
+                                border: 0;
+                                color: #FFFFFF;
+                                font-size: 14/16rem;
+                                letter-spacing: 1/16rem;
+                                font-weight: 500;
+                                width: 150/16rem;
+                                height: 30/16rem;
+                                outline: none;
+                                margin-right: 30/16rem;
+                                background-color: #02A0E9;
+                                cursor: pointer;
+                                border-radius: 2/16rem;
+                                &:hover {
+                                    background-color: #028FD0;
+                                }
+                                &:active {
+                                    background-color: #027EB7;
+                                }
+                            }
+                        }
+                    }
+                }
+                .operation-item-show {
+                    display: block;
+                }
+                .item-active {
+                    color: red;
+                    background-color: #fff;
+                }
+            }
+            .data-table {
+                tr {
+                    span {
+                        cursor: pointer;
+                        color: deepskyblue;
+                        &:hover {
+                            color: orange;
+                        }
+                    }
+                }
+            }
+        }
+        .error {
+            color: red !important;
+        }
+    }
+}

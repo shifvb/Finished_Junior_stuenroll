@@ -1,0 +1,93 @@
+.modal {
+    display: none;
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 1.25rem;
+    box-sizing: border-box;
+    z-index: 9999;
+    border: solid 7/16rem rgba(0,0,0,0.2);
+    padding: 20/16rem;
+    .title {
+        margin: 0;
+        padding-top: 0/16rem;
+        padding-bottom: 10/16rem;
+        border-bottom: dashed 1/16rem #c9c9c9;
+        font-weight: 600;
+        letter-spacing: 1/16rem;
+        margin-bottom: 25/16rem;
+    }
+    .modal-list {
+        font-size: 14/16rem;
+        letter-spacing: 1/16rem;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        .modal-title {
+            float: left;
+            width: 80/16rem;
+            line-height: 32/16rem;
+            padding-top: 5/16rem;
+            padding-bottom: 5/16rem;
+        }
+        .modal-item {
+            float: right;
+            margin: 0;
+            width: 365/16rem;
+            padding-top: 5/16rem;
+            padding-bottom: 5/16rem;
+            .input {
+                height: 32/16rem;
+                outline: none;
+                font-size: 14/16rem;
+                letter-spacing: 1/16rem;
+                width: inherit;
+                padding-left: 10/16rem;
+                padding-right: 10/16rem;
+                border: solid 1/16rem #e3e3e3;
+                background-color: #fcfcfc;
+            }
+        }
+    }
+    .operation {
+        overflow: hidden;
+        margin-top: 20/16rem;
+        .modal-btn {
+            outline: none;
+            float: right;
+            width: 100/16rem;
+            height: 32/16rem;
+            margin-left: 12/16rem;
+            font-size: 14/16rem;
+            letter-spacing: 1/16rem;
+            border: none;
+            background-color: #e0e0e0;
+            &:active {
+                background-color: #C6C6C6;
+            }
+        }
+        .green {
+            background-color: #54C895;
+            color: #FFFFFF;
+            &:active {
+                background-color: #39B17C;
+            }
+        }
+    }
+}
+.shade {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 9800;
+    
+}

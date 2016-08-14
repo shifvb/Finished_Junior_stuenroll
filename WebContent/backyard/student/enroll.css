@@ -1,0 +1,254 @@
+body {
+  background-color: #e7e7e7;
+}
+.main-container {
+  background-color: #fff;
+  margin: 0.9375rem;
+  padding: 0.9375rem;
+  height: 102.0625rem;
+}
+.main-container .tab-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+}
+.main-container .tab-list .tab-item {
+  float: left;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main-container .tab-list .tab-active {
+  color: #fff;
+  background-color: #02A0E9;
+}
+.main-container .tab-container .menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 3rem;
+}
+.main-container .tab-container .menu-list .menu-item {
+  display: none;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.main-container .tab-container .menu-list .menu-item .menu {
+  display: none;
+  cursor: default;
+  left: 0;
+  top: 2.375rem;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 1.25rem;
+  position: absolute;
+  z-index: 50;
+}
+.main-container .tab-container .menu-list .menu-item .menu .value {
+  float: left;
+}
+.main-container .tab-container .menu-list .menu-item .menu .arrowhead {
+  float: right;
+  font-size: 0.6875rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu .menu-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0.625rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #ccc dashed 0.0625rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  height: 10.6875rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dt {
+  float: left;
+  letter-spacing: 0.0625rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-right: 1.25rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd {
+  float: left;
+  margin-left: 0;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 60rem;
+  min-width: 60rem;
+  height: 10.6875rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .label {
+  float: left;
+  width: 5rem;
+  letter-spacing: 0.0625rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: right;
+  padding-right: 0.3125rem;
+  margin-bottom: 1.5625rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .condition {
+  float: left;
+  margin-right: 2.5rem;
+  margin-bottom: 1.5625rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .condition .dropdown-list {
+  height: 8.5rem;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .condition .dropdown-list .dropdown-item {
+  text-overflow: ellipsis;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .condition .keyword {
+  width: 12.5rem;
+  height: 2rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin-bottom: 0.6875rem;
+  border: solid #ccc 0.0625rem;
+  outline: none;
+  letter-spacing: 0.0625rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .condition-list .condition textarea {
+  height: 9.375rem;
+  width: 31.25rem;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd #allot-list {
+  width: 40rem !important;
+  min-width: 40rem !important;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .menu-btn {
+  display: block;
+  width: 7.5rem;
+  height: 2rem;
+  margin-bottom: 1.5625rem;
+  background-color: #F4494E;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border-radius: 0.1875rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.main-container .tab-container .menu-list .menu-item .menu dl dd .menu-btn:active {
+  background-color: #CD0C12;
+}
+.main-container .tab-container .menu-list .menu-item #searchMenu {
+  height: 16.875rem;
+}
+.main-container .tab-container .menu-list .menu-item #allotMenu {
+  height: 13.75rem;
+}
+.main-container .tab-container .menu-list .menu-item #allotMenu {
+  height: 13.75rem;
+}
+.main-container .tab-container .menu-list .item-active {
+  color: #fff;
+  background-color: #444;
+}
+.main-container .tab-container .error {
+  color: red !important;
+}
+.main-container .tab-container .surface {
+  display: none;
+}
+.main-container .tab-container .active {
+  display: block;
+}
+.main-container .tab-container .tab-content {
+  display: none;
+}
+.main-container .tab-container .tab-content .operation-list {
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item {
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+  display: none;
+}
+.main-container .tab-container .content-active {
+  display: block;
+}
+.main-container .tab-container .page-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+  margin-top: 0.9375rem;
+}
+.main-container .tab-container .page-list .page-item {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+}
+.main-container .tab-container .page-list .page-info {
+  float: left;
+  margin-left: 0.9375rem;
+}
+.main-container .tab-container .page-list .page-info span {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+.main-container .tab-container .page-list .page-operation {
+  float: right;
+  margin-right: 0.625rem;
+}
+.main-container .tab-container .page-list .page-operation a {
+  cursor: pointer;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+.main-container .tab-container .page-list .page-operation a:hover {
+  color: #ff6700;
+}
+.main-container .tab-container .page-list .page-operation .page-active {
+  color: red;
+  font-weight: 600;
+}
+.main-container .tab-container .page-list .page-operation .page-disable {
+  color: #B9B9B9;
+  cursor: default;
+}
+.main-container .tab-container .page-list .page-operation .page-disable:hover {
+  color: #B9B9B9;
+}
+/*# sourceMappingURL=enroll.css.map */

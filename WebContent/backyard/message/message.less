@@ -1,0 +1,369 @@
+body{
+    background-color: #fff;
+}
+.main-container{
+    .chart-container{
+//      border-bottom: 2/16rem solid #757575;
+        height: 50/16rem;       
+        background-color: #BABABA;
+        .title-list{
+            height: 50/16rem;
+            margin: 0;
+            .title-item{
+                height: 50/16rem;
+                line-height: 50/16rem;
+                padding-right: 20/16rem;
+                padding-left: 20/16rem;
+                float: left;
+                font-size: large;
+//              border-right: 1/16rem solid #CFCFCF;
+                color: #1C1C1C;
+                font-weight: bolder;
+                &:last-child {
+                    border-right: 0;
+                }
+            }   
+            .active{
+                color: #fff;
+                background-color: #2AB0DB;
+            }             
+        }
+    }
+    .getmailbar{
+        padding-left: 15/16rem;
+        padding-right: 15/16rem;
+        background-color: #fff;
+        .daymail{
+            padding-top: 20/16rem;
+            .date{
+                padding-left: 10/16rem;
+                padding-bottom: 5/16rem;
+                border-bottom: solid 3/16rem #9182A8;
+                span{
+                    color: #7C5EA8;
+                    &:first-child{
+                        font-family: "微软雅黑";
+                        font-size: large;
+                        font-weight: 600;                       
+                    }
+                    &:nth-child(2){
+                        font-family: "微软雅黑";
+                        font-size: medium;
+                        font-weight: 400;  
+                    }
+                }
+            }
+            .mail-list{
+                margin: 0;
+                .mail-item{
+                    .title-list{
+                        border-bottom: solid 1/16rem #AD9DCC;
+                        height: 25/16rem;
+                        margin: 0;
+                        padding-bottom: 5/16rem;
+                        padding-top: 5/16rem;
+                        &:hover{
+                            background-color: #B0B0B0;
+                        }
+                        .title-item{
+                            padding-left: 10/16rem;
+                            float: left;
+                            margin-right:  30/16rem;
+                            font-size: medium;
+                            color: #212121;
+                            font-family: "微软雅黑";
+                            &:first-child{
+                                color: black;
+                            }
+                            &:nth-child(2){
+                                width: 150/16rem;
+                                color: red;
+                                font-weight: 500;
+                            }
+                            &:nth-child(3){
+                                font-weight: bold;
+                                min-width: 150/16rem;
+                            }                                                     
+                            &:nth-child(6){
+                                color: blue;
+                                font-weight: 500;
+                                float: right;
+                                cursor: pointer;
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                            &:nth-child(5){
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .getsendmailbar{
+        padding-left: 15/16rem;
+        padding-right: 15/16rem;
+        background-color: #fff;
+        .daymail{
+            
+            padding-top: 20/16rem;
+            .date{
+                padding-left: 10/16rem;
+                padding-bottom: 5/16rem;
+                border-bottom: solid 3/16rem #9182A8;
+                span{
+                    color: #7C5EA8;
+                    &:first-child{
+                        font-family: "微软雅黑";
+                        font-size: large;
+                        font-weight: 600;                       
+                    }
+                    &:nth-child(2){
+                        font-family: "微软雅黑";
+                        font-size: medium;
+                        font-weight: 400;  
+                    }
+                }
+            }
+            .mail-list{
+                margin: 0;
+                .mail-item{
+                    .title-list{
+                        border-bottom: solid 1/16rem #AD9DCC;
+                        height: 25/16rem;
+                        margin: 0;
+                        padding-bottom: 5/16rem;
+                        padding-top: 5/16rem;
+                        &:hover{
+                            background-color: #B0B0B0;
+                        }
+                        .title-item{
+                            padding-left: 10/16rem;
+                            float: left;
+                            margin-right:  30/16rem;
+                            font-size: medium;
+                            color: #212121;
+                            font-family: "微软雅黑";
+                            overflow: hidden;
+                            &:first-child{
+                                color: black;
+                            }
+                            &:nth-child(2){
+                                color: red;
+                                font-weight: 500;
+                                width: 150/16rem;
+                            }
+                            &:nth-child(3){
+                                font-weight: bold;
+                                min-width: 150/16rem;
+                            }                                                      
+                            &:nth-child(6){
+                                color: blue;
+                                font-weight: 500;
+                                float: right;
+                                cursor: pointer;
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                            &:nth-child(5){
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .write{
+        padding: 20/16rem;
+        background-color: #F0F0F0;
+        .info{
+            .info-list{
+                margin: 0;
+                .info-item{
+                    &:nth-child(3){
+                        textarea{
+                            width: 1000/16rem;
+                            height: 300/16rem;
+                            margin-left: 10/16rem;
+                            outline: none;
+                            border-radius: 3/16rem;
+                            border: solid 1/16rem #e0e0e0;
+                            color: black;
+                            font-weight: 700;
+                            font-size: 30/16rem;
+                            letter-spacing: 1/16rem;
+                            padding-left: 10/16rem;
+                            padding-right: 15/16rem;
+                            margin-right: 10/16rem;
+                            border-color: grey;
+                            resize: none;
+                        }
+                        label{
+                            display: block;
+                            float: left;
+                        }
+                    }
+                    margin-bottom: 30/16rem;
+                    label {
+                        width: 75/16rem;
+                        font-size: 20/16rem;
+                        letter-spacing: 1/16rem;
+                        margin-right: 10/16rem;
+                        display: inline-block;
+                        text-align: right;
+                    }
+                    input {
+                        width: 1000/16rem;
+                        height: 30/16rem;
+                        outline: none;
+                        border-radius: 3/16rem;
+                        border: solid 1/16rem #e0e0e0;
+                        color: #333;
+                        font-size: 14/16rem;
+                        letter-spacing: 1/16rem;
+                        padding-left: 15/16rem;
+                        padding-right: 15/16rem;
+                        margin-right: 10/16rem;
+                        border-color: grey;
+                    }
+                    .btn {
+                        width: 150/16rem;
+                        height: 40/16rem;
+                        border-radius: 3/16rem;
+                        border: none;
+                        font-weight: bold;
+                        letter-spacing: 1/16rem;
+                        font-size: 14/16rem;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    .green {
+                        color: #fff;
+                        background-color: #0EC093;
+                        &:active {
+                            background-color: #10D8A5;
+                        }
+                    }
+                    .red {
+                        color: #fff;
+                        background-color: #E86167;
+                        &:active {
+                            background-color: #EB777C;
+                        }
+                    }            
+                           
+                }
+            }
+        }
+    }
+    .majormessage{
+        padding: 20/16rem;
+        background-color: #F0F0F0;
+        .info{
+            .info-list{
+                margin: 0;
+                .info-item{
+                    &:nth-child(5){
+                        textarea{
+                            width: 1000/16rem;
+                            height: 300/16rem;
+                            margin-left: 10/16rem;
+                            outline: none;
+                            border-radius: 3/16rem;
+                            border: solid 1/16rem #e0e0e0;
+                            color: black;
+                            font-weight: 700;
+                            font-size: 30/16rem;
+                            letter-spacing: 1/16rem;
+                            padding-left: 10/16rem;
+                            padding-right: 15/16rem;
+                            margin-right: 10/16rem;
+                            border-color: grey;
+                            resize: none;
+                        }
+                        label{
+                            display: block;
+                            float: left;
+                        }
+                    }
+                    select{
+                        width: 1032/16rem;
+                        height: 35/16rem;
+                        outline: none;
+                        border-radius: 3/16rem;
+                        border: solid 1/16rem #e0e0e0;
+                        color: #333;
+                        font-size: 14/16rem;
+                        letter-spacing: 1/16rem;
+                        padding-left: 15/16rem;
+                        padding-right: 15/16rem;
+                        margin-right: 10/16rem;
+                        border-color: grey;
+                    }
+                    margin-bottom: 30/16rem;
+                    label {
+                        width: 75/16rem;
+                        font-size: 20/16rem;
+                        letter-spacing: 1/16rem;
+                        margin-right: 10/16rem;
+                        display: inline-block;
+                        text-align: right;
+                    }
+                    input {
+                        width: 1000/16rem;
+                        height: 30/16rem;
+                        outline: none;
+                        border-radius: 3/16rem;
+                        border: solid 1/16rem #e0e0e0;
+                        color: #333;
+                        font-size: 14/16rem;
+                        letter-spacing: 1/16rem;
+                        padding-left: 15/16rem;
+                        padding-right: 15/16rem;
+                        margin-right: 10/16rem;
+                        border-color: grey;
+                    }
+                    .btn {
+                        width: 150/16rem;
+                        height: 40/16rem;
+                        border-radius: 3/16rem;
+                        border: none;
+                        font-weight: bold;
+                        letter-spacing: 1/16rem;
+                        font-size: 14/16rem;
+                        outline: none;
+                        cursor: pointer;
+                    }
+                    .green {
+                        color: #fff;
+                        background-color: #0EC093;
+                        &:active {
+                            background-color: #10D8A5;
+                        }
+                    }
+                    .red {
+                        color: #fff;
+                        background-color: #E86167;
+                        &:active {
+                            background-color: #EB777C;
+                        }
+                    }            
+                           
+                }
+            }
+        }
+    }
+}
+.no-select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.hidden{
+    display: none;
+}

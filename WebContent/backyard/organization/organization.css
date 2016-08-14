@@ -1,0 +1,383 @@
+.body {
+  background-color: #e7e7e7;
+}
+.main-container {
+  background-color: #fff;
+  margin: 0.9375rem;
+  padding: 0.9375rem;
+}
+.main-container .tab-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+}
+.main-container .tab-list .tab-item {
+  display: none;
+  float: left;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main-container .tab-list .tab-item-show {
+  display: block;
+}
+.main-container .tab-list .tab-active {
+  color: #fff;
+  background-color: #02A0E9;
+}
+.main-container .tab-container .tab-content {
+  display: none;
+  position: relative;
+}
+.main-container .tab-container .tab-content .operation-list {
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  position: relative;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item {
+  display: none;
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item:hover {
+  color: orange;
+  background-color: #fff;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu {
+  display: none;
+  cursor: default;
+  left: 0;
+  top: 2.375rem;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 0.625rem;
+  position: absolute;
+  z-index: 50;
+  margin-top: 0.625rem;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .value {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .arrowhead {
+  float: right;
+  font-size: 0.6875rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .menu-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0.0625rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #ccc dashed 0.0625rem;
+  text-align: left;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.625rem;
+  height: 10.625rem;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dt {
+  float: left;
+  letter-spacing: 0.0625rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-right: 1.5625rem;
+  padding-top: 0.375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd {
+  float: left;
+  margin-left: 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .condition-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 42.5rem;
+  min-width: 42.5rem;
+  height: 10.6875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .condition-list .label {
+  float: left;
+  width: 6.25rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: right;
+  padding-right: 0.3125rem;
+  padding-top: 0.375rem;
+  margin-bottom: 1.5625rem;
+  font-size: 0.875rem;
+  list-style: none;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .condition-list .condition {
+  float: left;
+  margin-right: 2.5rem;
+  margin-bottom: 0.75rem;
+  list-style: none;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .condition-list .condition input[name='address'] {
+  width: 33.75rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .condition-list .condition .keyword {
+  width: 12.5rem;
+  height: 2rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin: 0;
+  border: solid #ccc 0.0625rem;
+  outline: none;
+  letter-spacing: 0.0625rem;
+  border-radius: 0.1875rem;
+  color: #666666;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .transform-list {
+  width: 21.25rem;
+  min-width: 21.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 10.6875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .menu-btn {
+  display: block;
+  width: 7.5rem;
+  height: 2rem;
+  margin-bottom: 1.5625rem;
+  margin-top: 0.5rem;
+  background-color: #F4494E;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 0.1875rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu dl dd .menu-btn:active {
+  background-color: #CD0C12;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item-show {
+  display: block;
+}
+.main-container .tab-container .tab-content .operation-list .item-active {
+  color: red;
+  background-color: #fff;
+}
+.main-container .tab-container .tab-content .data-table a {
+  color: #02A0E9;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .data-table .model {
+  float: left;
+  min-width: 3.75rem;
+  min-height: 1.5625rem;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+  margin-top: 0.375rem;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox {
+  position: relative;
+  display: inline-block;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: normal;
+  font-size: 100%;
+  text-align: center;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox label {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: 0.125rem solid #777;
+  border-radius: 1.25rem;
+  width: 3.4375rem;
+  height: 1.5625rem;
+  text-align: center;
+  transition: 0.4s;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox:before,
+.main-container .tab-container .tab-content .data-table .model .checkbox:after {
+  box-sizing: border-box;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  text-align: center;
+  font-size: 100%;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox label:after {
+  content: '开';
+  text-align: center;
+  font-family: "微软雅黑";
+  color: #fff;
+  line-height: 0.9375rem;
+  text-indent: 1.125rem;
+  background-color: #777;
+  overflow: hidden;
+  box-shadow: none;
+  border-radius: 0.875rem;
+  transform: translateX(-1.875rem);
+  transition: all 0.4s 0.2s, width 0.2s linear, text-indent 0.4s linear;
+  left: auto;
+  top: 0.10625rem;
+  right: 0.1875rem;
+  width: 1rem;
+  height: 1.125rem;
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox:after {
+  content: '关';
+  font-family: "微软雅黑";
+  position: absolute;
+  color: #666;
+  top: 0.0625rem;
+  right: 0.75rem;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox input:checked + label {
+  border-color: #62C874;
+}
+.main-container .tab-container .tab-content .data-table .model .checkbox input:checked + label:after {
+  background-color: #40B655;
+  left: auto;
+  transform: translateX(0rem);
+  transition: all 0.4s, width 0.2s linear, text-indent 0.3s linear 0.4s;
+  width: 2.8125rem;
+  text-align: center;
+}
+.main-container .tab-container .tab-content .professionMenu {
+  display: none;
+  cursor: default;
+  left: 0;
+  top: 2.375rem;
+  background-color: #f0f0f0;
+  color: #333;
+  width: 100%;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 0.625rem;
+  position: absolute;
+  z-index: 50;
+  margin-top: 0.625rem;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .professionMenu .menu-title {
+  margin: 0;
+  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #ccc dashed 0.0625rem;
+  text-align: left;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .professionMenu dl {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.625rem;
+  height: 10.625rem;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .professionMenu dl dt {
+  float: left;
+  letter-spacing: 0.0625rem;
+  height: 2rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-right: 1.5625rem;
+  font-size: 0.875rem;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd {
+  float: left;
+  margin-left: 0;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .professions {
+  float: left;
+  background-color: #fff;
+  border: solid 0.0625rem #CCCCCC;
+  margin-right: 1.875rem;
+  margin-top: 0.5rem;
+  height: 19.375rem;
+  width: 13.125rem;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .professions ul {
+  padding: 0;
+  margin: 0;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .professions ul li {
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  margin: 0.625rem 0.25rem;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .professions ul li .profession {
+  padding: 0.3125rem 6.25rem 0.3125rem 0.9375rem;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .professions ul li .profession-active {
+  background-color: #33CCFF;
+  color: #fff;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .menu-btn {
+  display: block;
+  width: 7.5rem;
+  height: 2rem;
+  margin-bottom: 1.5625rem;
+  margin-top: 0.5rem;
+  margin-left: 1.875rem;
+  background-color: #F4494E;
+  border: none;
+  color: #fff;
+  outline: none;
+  border-radius: 0.1875rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.main-container .tab-container .tab-content .professionMenu dl dd .menu-btn:active {
+  background-color: #CD0C12;
+}
+.main-container .tab-container .content-active {
+  display: block;
+}
+.main-container .tab-container .error {
+  color: red !important;
+}
+/*# sourceMappingURL=organization.css.map */

@@ -1,0 +1,910 @@
+body {
+  background-color: #e7e7e7;
+  position: relative;
+}
+.main-container {
+  background-color: #fff;
+  margin: 0.9375rem;
+  padding: 0.9375rem;
+}
+.main-container .tab-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+}
+.main-container .tab-list .tab-item {
+  float: left;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+.main-container .tab-list .tab-active {
+  color: #FFFFFF;
+  background-color: #02A0E9;
+}
+.main-container .tab-container .tab-content {
+  display: none;
+}
+.main-container .tab-container .tab-content .operation-list {
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item {
+  display: none;
+  float: left;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu {
+  position: absolute;
+  top: -0.9375rem;
+  left: 0;
+  background-color: #E7E7E7;
+  z-index: 50;
+  cursor: default;
+  width: 100%;
+  min-width: 87.5rem;
+  display: none;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper {
+  width: 100%;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu {
+  flex-grow: 1;
+  height: 92.9375rem;
+  background-color: #FFFFFF;
+  margin-top: 0.9375rem;
+  margin-left: 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .title-1,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .title-1 {
+  padding-top: 2.8125rem;
+  padding-left: 3.4375rem;
+  overflow: hidden;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .title-1 span,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .title-1 span {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .title-1 span:nth-child(1),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .title-1 span:nth-child(1) {
+  width: 8.6875rem;
+  height: 3.1875rem;
+  background-color: #333333;
+  font-size: 1.625rem;
+  color: #FFFFFF;
+  font-family: "微软雅黑 Bold", "微软雅黑";
+  text-align: center;
+  line-height: 3.1875rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .title-1 span:nth-child(2),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .title-1 span:nth-child(2) {
+  width: 9.5rem;
+  height: 2.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.9375rem;
+  text-align: center;
+  margin-top: 0.9375rem;
+  border-bottom: solid 5px #333333;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list {
+  margin: 0;
+  padding: 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item {
+  overflow: hidden;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item:nth-child(odd),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item:nth-child(odd) {
+  padding-bottom: 1.25rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item:nth-child(even),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item:nth-child(even) {
+  padding-bottom: 1.25rem;
+  background-color: #ECF0F1;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item *,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item * {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .title-2,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .title-2 {
+  margin-left: 10%;
+  margin-top: 2.5rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .title-2 > img,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .title-2 > img {
+  width: 4.4375rem;
+  height: 2.6875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .title-2 > span,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .title-2 > span {
+  margin-top: 0.625rem;
+  margin-left: 1.375rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: left;
+  line-height: 1.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 {
+  margin-top: 2.5rem;
+  padding-left: 6.5%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label {
+  margin-bottom: 1.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label .dropdown,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label .dropdown {
+  margin-left: 0.3125rem;
+  width: 18.75rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label .dropdown .dropdown-list,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label .dropdown .dropdown-list {
+  max-height: 10.625rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label .dropdown .dropdown-list .dropdown-item,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label .dropdown .dropdown-list .dropdown-item {
+  clear: both;
+  width: 18.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label > span,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label > span {
+  margin-top: 0.625rem;
+  color: #333;
+  width: 5.625rem;
+  text-align: right;
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 1.1875rem;
+  line-height: 1.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 > label > input,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 > label > input {
+  margin-left: 0.3125rem;
+  height: 2.1875rem;
+  width: 18.75rem;
+  outline: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding: 0 1.25rem;
+  line-height: 2.1875rem;
+  border-radius: 0.1875rem;
+  border: solid 1px #E0E0E0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 {
+  overflow: hidden;
+  margin-left: 5.9375rem;
+  margin-top: 0.8125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a {
+  float: left;
+  width: 8.875rem;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  text-align: ccenter;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.0625rem;
+  border-radius: 0.1875rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1) {
+  background-color: #66CC66;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1):hover,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1):hover {
+  background-color: #40C040;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1):active,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(1):active {
+  background-color: #39AD39;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2),
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2) {
+  background-color: #FF3366;
+  margin-left: 1.125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2):hover,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2):hover {
+  background-color: #FF0040;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2):active,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 .buttons-2 > a:nth-child(2):active {
+  background-color: #E6003A;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .content-2 br,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .content-2 br {
+  clear: left !important;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .photo-2,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .photo-2 {
+  margin-top: 2.5rem;
+  margin-left: 10%;
+  width: 11.1875rem;
+  height: 11.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes {
+  width: 100%;
+  background-color: #ECF0F1;
+  overflow: hidden;
+  color: #666666;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes *,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes * {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .user-notes-title,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .user-notes-title {
+  margin: 1.8% 2.7% 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .user-notes-title > span,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .user-notes-title > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .accountRules,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .accountRules,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .userRules,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .userRules {
+  width: 38%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list {
+  font-size: 0.875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list .rules-title,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list .rules-title,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list .rules-title,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list .rules-title {
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list .rules-item,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .accountRules .rules-list .rules-item,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list .rules-item,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .userRules .rules-list .rules-item {
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  text-align: left;
+  letter-spacing: 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainAddUserMenu .inputs-list .inputs-item .user-notes .middle-line,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .mainModifyUserMenu .inputs-list .inputs-item .user-notes .middle-line {
+  margin: 0;
+  width: 0.0625rem;
+  margin-top: 1.5625rem;
+  height: 15.3125rem;
+  border-right: solid #999999 1px;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends {
+  flex-grow: 0;
+  min-width: 21.375rem;
+  margin-top: 0.9375rem;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  height: 92.9375rem;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-title {
+  overflow: hidden;
+  margin-bottom: 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-title > span {
+  float: left;
+  color: #39F;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  margin-top: 1.875rem;
+  margin-left: 1.875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-title > i {
+  margin-top: 1.5625rem;
+  margin-left: 0.9375rem;
+  float: left;
+  background-color: #3399FF;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  height: 1.875rem;
+  width: 1.5625rem;
+  padding: 0.1875rem;
+  line-height: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-title > i:hover {
+  background-color: #198CFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-title > i:active {
+  background-color: #007FFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search {
+  position: absolute;
+  display: none;
+  top: 4.375rem;
+  left: 0rem;
+  width: 21.375rem;
+  height: 6.8125rem;
+  background-color: rgba(0, 204, 204, 0.95);
+  z-index: 2;
+  overflow: hidden;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar {
+  width: 18.75rem;
+  height: 2.8125rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1.40625rem;
+  margin: 2.09375rem 0 1.0625rem 1.3125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .search-btn,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .close-btn {
+  float: left;
+  margin-top: 0.25rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .search-btn > i,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .close-btn > i {
+  color: #333;
+  font-size: 1.5625rem;
+  line-height: 1.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .search-input {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .search-input > input {
+  border: 0;
+  height: 2.8125rem;
+  width: 13.125rem;
+  outline: none;
+  padding: 0.9375rem 0.9375rem 0.8125rem;
+  font-size: 0.9375rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  background-color: #F3FDFD;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .search-btn {
+  margin-left: 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .close-btn {
+  margin-left: 0.3125rem;
+  height: 2.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-bar .close-btn > i {
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item {
+  overflow: hidden;
+  padding: 0.8125rem 0;
+  margin-top: 0.3125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item * {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-img-wrapper {
+  position: relative;
+  width: 4.375rem;
+  height: 4.375rem;
+  margin-left: 1.875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-img-wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-img-wrapper .status-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: #82D15C;
+  border: solid 0.125rem #FFFFFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-img-wrapper .status-circle-offline {
+  background-color: #F55D5E;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-text-wrapper {
+  width: 14.5rem;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-text-wrapper .text-title-1 {
+  clear: left;
+  width: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-text-wrapper .text-title-1 > span {
+  margin-top: 0.625rem;
+  margin-bottom: 0.3125rem;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-text-wrapper .text-title-1 > i {
+  float: right;
+  font-size: 1.375rem;
+  height: 1.375rem;
+  margin: 0.25rem 2.4375rem 0 0;
+  line-height: 1.375rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-search .search-result .friends-item .user-text-wrapper .text-title-2 {
+  clear: left;
+  margin-top: 0.3125rem;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list {
+  margin: 0;
+  padding: 0;
+  height: 78rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item {
+  overflow: hidden;
+  padding: 0.8125rem 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item * {
+  float: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-img-wrapper {
+  position: relative;
+  width: 4.375rem;
+  height: 4.375rem;
+  margin-left: 1.875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-img-wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-img-wrapper .status-circle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background-color: #82D15C;
+  border: solid 0.125rem #FFFFFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-img-wrapper .status-circle-offline {
+  background-color: #F55D5E;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-text-wrapper {
+  width: 14.5rem;
+  margin-left: 0.625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-text-wrapper .text-title-1 {
+  clear: left;
+  width: 100%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-text-wrapper .text-title-1 > span {
+  margin-top: 0.625rem;
+  margin-bottom: 0.3125rem;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-text-wrapper .text-title-1 > i {
+  float: right;
+  display: none;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item .user-text-wrapper .text-title-2 {
+  clear: left;
+  margin-top: 0.3125rem;
+  color: #999;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  text-align: left;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active {
+  background-color: #3399FF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 {
+  color: #FFFFFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 .xingxing,
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 .chacha-copy {
+  display: inline-block;
+  z-index: 51;
+  color: #FFFFFF;
+  font-size: 1.125rem;
+  text-align: center;
+  height: 1.125rem;
+  line-height: 1.125rem;
+  margin-right: 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 .xingxing {
+  margin-top: 0.4375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 .chacha-copy {
+  margin-top: 0.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-1 .xingxing-active {
+  color: #E9C342;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-list .friends-item-active .user-text-wrapper .text-title-2 {
+  color: #FFFFFF;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages {
+  height: 7.1875rem;
+  overflow: hidden;
+  padding: 2.5rem 0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages .prevBtn {
+  float: left;
+  margin-left: 1.875rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages .prevBtn > img {
+  width: 5.0625rem;
+  height: 2.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages .pageText {
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight: 700;
+  float: left;
+  width: 7.5rem;
+  height: 2.1875rem;
+  text-align: center;
+  line-height: 2.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages .nextBtn {
+  float: right;
+  margin-right: 1.875rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu .flex-wrapper .friends .friends-pages .nextBtn > img {
+  width: 5.0625rem;
+  height: 2.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 {
+  display: none;
+  cursor: default;
+  position: absolute;
+  left: 1.875rem;
+  top: 6.0625rem;
+  background-color: #F0F0F0;
+  color: #333;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 1.25rem;
+  z-index: 50;
+  width: 96.5%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 .menu-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.8125rem;
+  text-align: left;
+  height: 3.125rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #CCC dashed 0.0625rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm {
+  overflow: hidden;
+  margin-top: 1.25rem;
+  margin-left: 0.8125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile {
+  float: left;
+  width: 8.75rem;
+  height: 2.4375rem;
+  border: 0;
+  overflow: hidden;
+  background-color: #08AFFD;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile .selectFilePresenter {
+  overflow: hidden;
+  height: 2.4375rem;
+  border: 0;
+  border-radius: 0.1875rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile .selectFilePresenter .iconText {
+  float: left;
+  color: #FFFFFF;
+  font-size: 0.9375rem;
+  line-height: 1rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  margin-left: 0.3125rem;
+  margin-top: 0.6875rem;
+  font-family: "微软雅黑";
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile .selectFilePresenter .jia {
+  float: left;
+  color: #FFFFFF;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.1875rem;
+  font-size: 0.875rem;
+  padding-left: 0.0625rem;
+  text-align: center;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 1.25rem;
+  margin-top: 0.5625rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile .selectFilePresenter:hover {
+  background-color: #02A0EA;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .selectFile .selectFilePresenter:active {
+  background-color: #028FD1;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .showFilePath {
+  margin-left: 1.25rem;
+  height: 2.4375rem;
+  width: 25rem;
+  border: solid 0.0625rem #d0d0d0;
+  border-radius: 0.0625rem;
+  outline: none;
+  line-height: 1.25rem;
+  float: left;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding: 0 0.9375rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .uploadFile {
+  float: left;
+  height: 2.4375rem;
+  border: 0;
+  color: #FFFFFF;
+  width: 7.5rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  font-family: "微软雅黑";
+  background-color: #08AFFD;
+  margin-left: 1.25rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .uploadFile:hover {
+  background-color: #02A0EA;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu2 #uploadFileForm .uploadFile:active {
+  background-color: #028FD1;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 {
+  display: none;
+  cursor: default;
+  position: absolute;
+  left: 1.875rem;
+  top: 6.0625rem;
+  background-color: #F0F0F0;
+  color: #333;
+  border: solid #e0e0e0 0.0625rem;
+  box-shadow: 0 0.1875rem 0.25rem rgba(0, 0, 0, 0.18);
+  padding: 1.25rem;
+  z-index: 50;
+  width: 96.5%;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 .menu-title {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.8125rem;
+  text-align: left;
+  height: 3.125rem;
+  font-size: 0.9375rem;
+  letter-spacing: 0.0625rem;
+  border-bottom: #CCC dashed 0.0625rem;
+  font-weight: 700;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 .menu-content {
+  overflow: hidden;
+  margin-left: 0.875rem;
+  margin-top: 1.25rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 .menu-content input {
+  float: left;
+  border: 0;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  font-weight: 500;
+  width: 9.375rem;
+  height: 1.875rem;
+  outline: none;
+  margin-right: 1.875rem;
+  background-color: #02A0E9;
+  cursor: pointer;
+  border-radius: 0.125rem;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 .menu-content input:hover {
+  background-color: #028FD0;
+}
+.main-container .tab-container .tab-content .operation-list .operation-item .menu3 .menu-content input:active {
+  background-color: #027EB7;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(1) {
+  width: 3.75rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(2) {
+  width: 6.1875rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(3) {
+  width: 12.4375rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(3) .text-overflow {
+  width: 12.4375rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(4) {
+  width: 9.3125rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(5) {
+  width: 17.375rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(6) {
+  width: 11.1875rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(7) {
+  width: 8.6875rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(8) {
+  width: 15.5rem;
+}
+.main-container .tab-container .tab-content .data-table td:nth-child(9) {
+  width: 11.25rem;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBase {
+  background-color: #00CC99;
+  height: 1.25rem;
+  width: 3.125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBase .statusCircus {
+  float: left;
+  background-color: #FFFFFF;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  display: inline-block;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBase .statusText {
+  font-weight: 600;
+  color: #FFF;
+  font-size: 0.75rem;
+  float: left;
+  display: inline-block;
+  margin: 0.125rem 0.3125rem;
+  padding: 0;
+  cursor: pointer;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBase .statusCircusOff {
+  position: absolute;
+  left: 1.875rem;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBase .statusTextOff {
+  position: absolute;
+  left: 0.3125rem;
+}
+.main-container .tab-container .tab-content .data-table .statusBtnBaseOff {
+  background-color: #FF6633;
+}
+.main-container .tab-container .tab-content .page-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: ##EBEEF7;
+  margin-top: 0.9375rem;
+}
+.main-container .tab-container .tab-content .page-list .page-item {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+}
+.main-container .tab-container .tab-content .page-list .page-info {
+  float: left;
+  margin-left: 0.9375rem;
+}
+.main-container .tab-container .tab-content .page-list .page-info span {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+.main-container .tab-container .tab-content .page-list .page-operation {
+  float: right;
+  margin-right: 0.625rem;
+}
+.main-container .tab-container .tab-content .page-list .page-operation a {
+  cursor: pointer;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+.main-container .tab-container .tab-content .page-list .page-operation a:hover {
+  color: #ff6700;
+}
+.main-container .tab-container .tab-content .page-list .page-operation .page-active {
+  color: red;
+  font-weight: 600;
+}
+.main-container .tab-container .tab-content .page-list .page-operation .page-disable {
+  color: #B9B9B9;
+  cursor: default;
+}
+.main-container .tab-container .tab-content .page-list .page-operation .page-disable:hover {
+  color: #B9B9B9;
+}
+.main-container .tab-container .content-active {
+  display: block;
+}
+.uploadImageForm {
+  overflow: hidden;
+  margin-top: 1.25rem;
+  margin-left: 0.8125rem;
+}
+.uploadImageForm .selectFile {
+  float: left;
+  width: 11.1875rem;
+  height: 11.1875rem;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0.1875rem solid rgba(130, 160, 90, 0.3);
+  border-radius: 0.1875rem;
+}
+.uploadImageForm .selectFile .preView {
+  width: 11.1875rem;
+  height: 11.1875rem;
+}
+.input-error {
+  color: red !important;
+}

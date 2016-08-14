@@ -1,0 +1,26 @@
+.a-upload {
+  padding: 0.25rem 0.625rem;
+  height: 3.125rem;
+  line-height: 3.125rem;
+  position: relative;
+  cursor: pointer;
+  color: #009688;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.a-upload input {
+  position: absolute;
+  font-size: 6.25rem;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.a-upload img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+/*# sourceMappingURL=img.css.map */

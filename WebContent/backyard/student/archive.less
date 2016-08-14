@@ -1,0 +1,173 @@
+body {
+    //  padding: 0 15/16rem;
+    background-color: #e7e7e7;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    min-width: 600/16rem;
+    .tab-list {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #EBEEF7;
+        .tab-item {
+            float: left;
+            height: 36/16rem;
+            line-height: 36/16rem;
+            text-align: center;
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            letter-spacing: 1/16rem;
+            font-size: 14/16rem;
+            cursor: pointer;
+        }
+        .tab-active {
+            color: #fff;
+            background-color: #02A0E9;
+        }
+    }
+    .tab-container {
+        //      overflow: hidden;
+        .tab-content {
+            display: none;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                position: relative;
+                .operation-item {
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+//                  display:none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    -webkit-user-select: none;
+                    .menu {
+                        min-width: 1300/16rem;
+                        display: none;
+                        background-color: #f0f0f0;
+                        position: absolute;
+                        left: 0;
+                        width: 100%;
+                        z-index: 50;
+                        border: none;
+                        padding: 20/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.17);
+                        .menuTitle {
+                            margin-top: 0;
+                            text-align: left;
+                            margin-bottom: 0;
+                            padding-bottom: 10/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #ccc dashed 1/16rem;
+                        }
+                        .value {
+                            float: left;
+                        }
+                        .arrowhead {
+                            float: right;
+                            font-size: 11/16rem;
+                        }
+                        dl {
+                            margin-top: 20/16rem;
+                            margin-bottom: 20/16rem; 
+                            dt {
+                                float: left; 
+                                letter-spacing: 1/16rem;
+                                height: 32/16rem;
+                                line-height: 32/16rem;
+                                font-weight: 600;
+                                margin-right: 20/16rem;
+                            }
+                            dd {
+                                float: left;
+                                margin-left: 0;
+                                .condition-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    width: 960/16rem;
+                                    min-width: 960/16rem; 
+                                    .label {
+                                        float: left;
+                                        width: 80/16rem;
+                                        letter-spacing: 1/16rem;
+                                        height: 32/16rem;
+                                        line-height: 32/16rem;
+                                        text-align: right;
+                                        padding-right: 5/16rem; 
+                                        margin-bottom: 25/16rem;
+                                    }
+                                    .condition {
+                                        float: left;
+                                        margin-right: 40/16rem;
+                                        margin-bottom: 25/16rem;
+                                        line-height: 32/16rem;
+                                        .keyword {
+                                            width: 200/16rem;
+                                            height: 34/16rem;
+                                            line-height: 34/16rem;
+                                            padding-left: 10/16rem;
+                                            padding-right: 10/16rem;
+                                            margin-bottom: 11/16rem;
+                                            border: solid #ccc 1/16rem;
+                                            outline: none;
+                                            letter-spacing: 1/16rem;
+                                        }
+                                        .value{
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            overflow: hidden;
+                                            width: 140/16rem;
+                                            text-align: left;
+                                        }
+                                        .dropdown-list {
+                                            height: auto;
+                                            max-height: 210/16rem;
+                                            overflow-x: auto;
+                                            overflow-y: auto;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                }
+                                .menu-btn {
+                                    display: block;
+                                    width: 120/16rem;
+                                    height: 34/16rem;
+                                    margin-bottom: 35/16rem;
+                                    background-color: #F4494E;
+                                    border: none;
+                                    color: #fff;
+                                    outline: none;
+                                    border-radius: 3/16rem;
+                                    letter-spacing: 1/16rem;
+                                    font-size: 14/16rem;
+                                    font-weight: 600;
+                                    &:active {
+                                        background-color: #CD0C12;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-active {
+            display: block;
+        }
+    }
+    .error {
+        color: red !important;
+    }
+}

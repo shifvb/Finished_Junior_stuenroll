@@ -1,0 +1,135 @@
+body {
+  display: -moz-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: #e7e7e7;
+}
+.sidebar-container {
+  width: 15rem;
+  height: 94.5rem;
+  background-color: #32323A;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.sidebar-container .sidebar-list {
+  margin: 0;
+  padding: 0;
+}
+.sidebar-container .sidebar-list .sidebar-item:first-child {
+  background-color: #29282E;
+  height: 9.375rem;
+  padding-top: 1.875rem;
+}
+.sidebar-container .sidebar-list .sidebar-item:first-child .sidebar-title {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+  color: #22B5AD;
+  font-weight: 300;
+  margin: 0;
+}
+.sidebar-container .sidebar-list .sidebar-item:nth-child(2) {
+  position: relative;
+  padding-top: 4.6875rem;
+  padding-bottom: 1.25rem;
+}
+.sidebar-container .sidebar-list .sidebar-item:nth-child(2) .user-photo {
+  width: 8.125rem;
+  height: 8.125rem;
+  border-radius: 100%;
+  position: absolute;
+  top: -4.0625rem;
+  left: 3.4375rem;
+  border: solid 0.25rem #939395;
+}
+.sidebar-container .sidebar-list .sidebar-item:nth-child(2) .username {
+  display: block;
+  color: #fbfbfb;
+  font-size: 1.375rem;
+  letter-spacing: 0.0625rem;
+  text-align: center;
+}
+.sidebar-container .sidebar-list .sidebar-item:nth-child(2) .user-level {
+  text-align: center;
+  color: #FEA106;
+}
+.sidebar-container .sidebar-list .sidebar-item:nth-child(2) .user-description {
+  text-align: center;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.sidebar-container .sidebar-list .sidebar-item {
+  color: #848891;
+}
+.sidebar-container .sidebar-list .sidebar-item .section {
+  color: #848891;
+  display: block;
+  height: 3.75rem;
+  line-height: 3.75rem;
+  padding-left: 1.875rem;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  border-bottom: solid rgba(255, 255, 255, 0.05) 0.0625rem;
+}
+.sidebar-container .sidebar-list .sidebar-item .section i {
+  cursor: pointer;
+}
+.sidebar-container .sidebar-list .sidebar-item .section i:nth-child(1) {
+  margin-right: 1.125rem;
+}
+.sidebar-container .sidebar-list .sidebar-item .section i:nth-child(2) {
+  margin-left: 3.75rem;
+}
+.sidebar-container .sidebar-list .sidebar-item .section-active {
+  color: #fff;
+  background-color: #1FB5AC;
+}
+.sidebar-container .sidebar-list .sidebar-item-hidden {
+  display: none;
+}
+.main-container {
+  height: 94.5rem;
+  flex-grow: 1;
+  min-width: 87.5rem;
+}
+.main-container .navbar {
+  height: 3.125rem;
+  background-color: #0176DF;
+}
+.main-container .navbar .navbar-list {
+  margin: 0;
+  padding: 0 0.9375rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  color: #fbfbfb;
+  height: inherit;
+}
+.main-container .navbar .navbar-list .navbar-item {
+  height: inherit;
+  line-height: 3.125rem;
+}
+.main-container .navbar .navbar-list .navbar-item a {
+  color: #fbfbfb;
+  cursor: pointer;
+}
+.main-container .navbar .navbar-list .navbar-item a:hover {
+  color: #ff6700;
+}
+.main-container .navbar .navbar-list .navbar-item:nth-of-type(1) {
+  float: left;
+}
+.main-container .navbar .navbar-list .navbar-item:nth-of-type(2) {
+  float: right;
+}
+.main-container .page {
+  width: 100%;
+  height: 90.625rem;
+}
+/*# sourceMappingURL=index.css.map */

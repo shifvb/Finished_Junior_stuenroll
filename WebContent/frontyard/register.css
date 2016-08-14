@@ -1,0 +1,274 @@
+body {
+  background: url("../img/bg.jpg");
+}
+.container {
+  height: inherit;
+  width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.header {
+  height: 8.75rem;
+  background-color: #fff;
+}
+.header .header-nav {
+  padding-top: 2.75rem;
+}
+.header .header-nav .logo .desc-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0 1.25rem 0 0;
+  vertical-align: 0.625rem;
+  border-right: 0.0625rem solid #e3e3e3;
+}
+.header .header-nav .logo .desc-list .desc-item {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.9375rem;
+  color: #626262;
+}
+.header .header-nav .nav-list {
+  display: inline-block;
+  height: 3.25rem;
+  line-height: 3.25rem;
+  margin: 0 0 0 2.5rem;
+  padding: 0;
+}
+.header .header-nav .nav-list .nav-item {
+  height: inherit;
+  float: left;
+  display: inline-block;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+.header .header-nav .nav-list .nav-item .link {
+  font-size: 1rem;
+  transition: all 0.2s;
+  letter-spacing: 0.0625rem;
+}
+.header .header-nav .nav-list .nav-item .link:hover {
+  color: #54C895;
+  text-decoration: underline;
+}
+.main {
+  overflow: hidden;
+}
+.main .title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  padding-bottom: 0.625rem;
+  text-align: center;
+  margin: 4.375rem auto 2.5rem;
+}
+.main .register {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.main .register .register-list {
+  float: left;
+  margin: 0 1.875rem 3.75rem 0;
+  padding: 0;
+  overflow: hidden;
+  width: 36.25rem;
+  margin-left: 0rem;
+}
+.main .register .register-list .register-item {
+  padding: 0 0 1.5rem;
+}
+.main .register .register-list .register-item .name {
+  display: inline-block;
+  width: 5.625rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+}
+.main .register .register-list .register-item .input {
+  width: 21.875rem;
+  height: 2.25rem;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  outline: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  background-color: #f9f9f9;
+}
+.main .register .register-list .register-item .remark {
+  display: inline-block;
+  width: 5.625rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  margin-left: 1.25rem;
+  color: indianred;
+}
+.main .register .register-list .register-item .operate {
+  padding-top: 0.625rem;
+  padding-left: 5.9375rem;
+}
+.main .register .register-list .register-item .operate .btn {
+  width: 10rem;
+  height: 2.375rem;
+  border-radius: 0.1875rem;
+  border: none;
+  cursor: pointer;
+}
+.main .register .register-list .register-item .operate .green {
+  background-color: #34C796;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+}
+.main .register .register-list .register-item .operate .red {
+  background-color: #FF5859;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+}
+.main .register .suggest-list {
+  float: left;
+  width: 21.875rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main .register .suggest-list .suggest-item {
+  font-size: 0.875rem;
+}
+.main .register .suggest-list .suggest-item .suggest-title {
+  margin-top: 0;
+  letter-spacing: 0.0625rem;
+}
+.main .register .suggest-list .suggest-item .step-list {
+  margin: 0;
+  padding: 0;
+}
+.main .register .suggest-list .suggest-item .step-list .step-item {
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.9375rem;
+  color: #555;
+  font-weight: 400;
+}
+.main .about {
+  clear: both;
+  overflow: hidden;
+  height: 28.125rem;
+}
+.main .about .about-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.main .about .about-list .title {
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  margin-top: 4.375rem;
+}
+.main .about .about-list .sub-title {
+  font-weight: 500;
+  color: #FF5859;
+  letter-spacing: 0.0625rem;
+}
+.main .about .about-list .desc {
+  font-weight: 300;
+  letter-spacing: 0.0625rem;
+  line-height: 1.75rem;
+}
+.main .about .about-list .about-item {
+  width: 22.5rem;
+}
+.main .error {
+  color: red !important;
+}
+.footer {
+  padding-top: 3.125rem;
+  padding-bottom: 0.625rem;
+}
+.footer .footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.footer .footer-list .foot-item:first-child {
+  width: 23.75rem;
+}
+.footer .footer-list .foot-item:first-child .big-title {
+  font-size: 4.375rem;
+  font-weight: 400;
+  color: #FF5859;
+  margin: 0 0 0.625rem;
+  line-height: 4.375rem;
+}
+.footer .footer-list .foot-item:first-child .middle-title {
+  font-size: 4.375rem;
+  font-weight: 400;
+  color: #FF5859;
+  margin: 0 0 0.625rem;
+  line-height: 4.375rem;
+  font-size: 3.5rem;
+  margin-top: 1.25rem;
+}
+.footer .footer-list .foot-item:first-child .sub-title {
+  color: #FF5859;
+  font-weight: 400;
+  font-size: 1.375rem;
+  letter-spacing: 0.0625rem;
+  margin: 0 0 0.625rem;
+}
+.footer .footer-list .foot-item:first-child .sub-desc {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  margin: 0;
+}
+.footer .footer-list .foot-item:first-child .desc {
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.0625rem;
+}
+.footer .footer-list .foot-item:nth-child(2) .title {
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+}
+.footer .footer-list .foot-item:nth-child(2) .desc {
+  letter-spacing: 0.0625rem;
+  font-weight: 400;
+}
+.footer .footer-list .foot-item:nth-child(2) img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+.footer .footer-list .foot-item:last-child .title {
+  margin-top: 0;
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  font-size: 1.875rem;
+}
+.footer .footer-list .foot-item:last-child .contact {
+  letter-spacing: 0.0625rem;
+  font-weight: 400;
+}
+.white {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.gray {
+  background-color: rgba(0, 0, 0, 0);
+}
+.dropdown {
+  width: 21.875rem !important;
+}
+#downloadModal {
+  width: 31.25rem;
+  height: 13.75rem;
+}
+/*# sourceMappingURL=register.css.map */

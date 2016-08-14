@@ -1,0 +1,37 @@
+.page-list {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #EBEEF7;
+  margin-top: 0.9375rem;
+}
+.page-list .page-item {
+  height: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+}
+.page-list .page-info {
+  float: left;
+  margin-left: 0.9375rem;
+}
+.page-list .page-info span {
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+}
+.page-list .page-operation {
+  float: right;
+  margin-right: 0.625rem;
+}
+.page-list .page-operation a {
+  cursor: pointer;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+.page-list .page-operation a:hover {
+  color: #ff6700;
+}
+.page-list .page-operation .page-active {
+  color: red;
+  font-weight: 600;
+}
+/*# sourceMappingURL=page.css.map */

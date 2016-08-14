@@ -1,0 +1,87 @@
+body{
+    background-color: #fff;
+}
+.main-container{
+    .getmailbar{
+        padding-left: 15/16rem;
+        padding-right: 15/16rem;
+        background-color: #fff;
+        .daymail{
+            padding-top: 20/16rem;
+            .date{
+                padding-left: 10/16rem;
+                padding-bottom: 5/16rem;
+                border-bottom: solid 3/16rem #9182A8;
+                span{
+                    color: #7C5EA8;
+                    &:first-child{
+                        font-family: "微软雅黑";
+                        font-size: large;
+                        font-weight: 600;                       
+                    }
+                    &:nth-child(2){
+                        font-family: "微软雅黑";
+                        font-size: medium;
+                        font-weight: 400;  
+                    }
+                }
+            }
+            .mail-list{
+                margin: 0;
+                .mail-item{
+                    .title-list{
+                        border-bottom: solid 1/16rem #AD9DCC;
+                        height: 25/16rem;
+                        margin: 0;
+                        padding-bottom: 5/16rem;
+                        padding-top: 5/16rem;
+                        &:hover{
+                            background-color: #B0B0B0;
+                        }
+                        .title-item{
+                            padding-left: 10/16rem;
+                            float: left;
+                            margin-right:  30/16rem;
+                            font-size: medium;
+                            color: #212121;
+                            font-family: "微软雅黑";
+                            &:first-child{
+                                color: black;
+                            }
+                            &:nth-child(2){
+                                width: 150/16rem;
+                                color: red;
+                                font-weight: 500;
+                            }
+                            &:nth-child(3){
+                                font-weight: bold;
+                                min-width: 150/16rem;
+                            }                                                     
+                            &:nth-child(6){
+                                color: blue;
+                                font-weight: 500;
+                                float: right;
+                                cursor: pointer;
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                            &:nth-child(5){
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.no-select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.hidden{
+    display: none;
+}

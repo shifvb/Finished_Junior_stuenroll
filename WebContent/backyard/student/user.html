@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../../font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/dropdown.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/modal.css" />
+		<link rel="stylesheet" type="text/css" href="../../js/plugin/toastr.css" />
+		<link rel="stylesheet" type="text/css" href="../../font/ux_1468159030_469826/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../../font/ux_1468305933_2258763/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="user.css" />
+	</head>
+
+	<body>
+		<div class="main-container">
+			<dl class="tab-list no-select">
+				<dt class="tab-item tab-active" data-index="用户列表">用户列表</dt>
+			</dl>
+			<div class="tab-container">
+				<div class="tab-content content-active" data-index="用户列表">
+					<dl class="operation-list no-select">
+						<dt class="operation-item" name="addUser">添加
+							<!--添加下拉菜单开始-->
+							<div id="addUserMenu" class="menu">
+								<div class="flex-wrapper">
+									<div class="mainAddUserMenu">
+										<div class="title-1">
+											<span>用户资料</span>
+											<span>新用户注册</span>
+										</div>
+										<dl class="inputs-list">
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-1.png"/>
+													<span>账户信息</span>
+												</div>
+												<div class="content-2">
+													<label><span>用户名：</span><input type="text" name="username" id="username" value="" placeholder="用户名" required="required" pattern="^[a-zA-Z0-9]{3,15}$" title="3-15位英文或数字"/></label><br />
+													<label><span>密码：</span><input type="password" name="password" id="password" value="" placeholder="密码" required="required" pattern="^[a-zA-Z0-9]{6,15}$" title="6-15位英文或数字"/></label><br />
+													<label><span>重复密码：</span><input type="password" name="re-password" id="re-password" value="" placeholder="重复密码" required="required" pattern="^[a-zA-Z0-9]{6,15}$" title="6-15位英文或数字"/></label><br />
+													<label><span>提示问题：</span><input type="text" name="question" id="question" value="" placeholder="提示问题" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$" title="3-40位中英文字符" /></label><br />
+													<label><span>用户答案：</span><input type="text" name="answer" id="answer" value="" placeholder="用户答案" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$" title="3-40位中英文字符" /></label>
+												</div>
+												<div class="photo-2">
+													<form class="uploadImageForm" action="#" enctype="multipart/form-data" method="post">
+														<div class="selectFile" id="addUserMenu_uploadImageForm_selectFile">
+															<img class="preView" src="../../img/temp_photo.PNG" title="点击选择文件" />
+															<input class="file" type="file" name="photo" id="addUserMenu_uploadImageForm_file" value="" />
+														</div>
+													</form>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-2.png"/>
+													<span>基本信息</span>
+												</div>
+												<div class="content-2">
+													<label><span>姓名：</span><input type="text" name="name" id="name" value="" placeholder="姓名" required="required" pattern="^[\u4e00-\u9fa5]{2,15}$" title="2-15位中文"/></label><br />
+													<label>
+														<span>性别：</span>
+														<div id="sex" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list">
+																<li class="dropdown-item">男</li>
+																<li class="dropdown-item">女</li>
+															</ul>
+														</div>
+													</label><br />
+													<label><span>身份证号：</span><input type="text" name="pid" id="pid" value="" placeholder="身份证号" title="中国大陆有效身份证号"/></label><br />
+													<label><span>电话：</span><input type="text" name="tel" id="tel" value="" placeholder="电话" required="required" pattern="^1\d{10}$" title="中国大陆有效电话号码"/></label><br />
+													<label><span>电子信箱：</span><input type="email" name="email" id="email" value="" placeholder="电子信箱" title="有效电子信箱" required="required"/></label>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-3.png"/>
+													<span>系统信息</span>
+												</div>
+												<div class="content-2">
+													<label>
+														<span>培训机构：</span>
+														<div id="organization" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list"></ul>
+														</div>
+													</label><br />
+													<label><span>职位：</span><input type="text" name="position" id="position" value="" placeholder="职位" required="required" pattern="^[\u4e00-\u9fa5|a-z|0-9|A-Z]{2,30}$" title="2-30位中英文"/></label><br />
+													<label>
+														<span>角色：</span>
+														<div id="role" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list"></ul>
+														</div>
+													</label><br />
+													<label>
+														<span>用户状态：</span>
+														<div id="status" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list">
+																<li class="dropdown-item">开</li>
+																<li class="dropdown-item">关</li>
+															</ul>
+														</div>
+													</label><br />
+													<div class="buttons-2">
+														<a name="register" id="register" >立即注册</a>
+														<a name="cancel" id="cancel">取消</a>
+													</div>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="user-notes">
+													<div class="user-notes-title">
+														<span>用户须知</span>
+													</div>
+													<div class="accountRules">
+														<dl class="rules-list">
+															<dt class="rules-title">账号管理规则</dt>
+															<dt class="rules-item">1) 必须使用真实身份信息注册账号，昵称和用户资料等自定义命名均不得使用违反国家法规或带侮辱性的词语或图片；</dt>
+															<dt class="rules-item">2) 所有注册账号只可用于正常登陆邀请网、邀请购物、进行游戏、完成任务，不得用于对邀请网进行恶意攻击或破坏；</dt>
+															<dt class="rules-item">3) 一个用户只能注册和使用一个邀请网账号；</dt>
+															<dt class="rules-item">4) 邀请网官方有权对任何不符合账号管理规则的账号进行冻结和处罚。</dt>
+														</dl>
+													</div>
+													<div class="middle-line"></div>
+													<div class="userRules">
+														<dl class="rules-list">
+															<dt class="rules-title">用户行为准则</dt>
+															<dt class="rules-item">同意并按照邀请网网官方不时发布、变更和修改的此用户规则及其他规则，接受并使用我们的产品和服务，不得通过不正当的手段或其他不公平的手段使用我们的产品和服务或参与我们的邀请购物以及非常任务等活动。</dt>
+															<dt class="rules-item">2) 用户不得干扰官方正常地提供产品和服务，包括但不限于：</dt>
+															<dt class="rules-item">3) 用户必须保管好自己的账号和密码，由于用户个人的原因导致账号和密码泄密而造成的后果均将由该用户自行承担。</dt>
+														</dl>
+													</div>
+												</div>
+											</dt>
+										</dl>
+									</div>
+									<div class="friends">
+										<div class="friends-title">
+											<span>好友列表</span>
+											<i class="iconfont">&#xe617;</i>
+										</div>
+										<div class="friends-search">
+											<div class="search-bar">
+												<div class="search-btn">
+													<i class="iconfont fangdajing" title="按回车添加好友">&#xe66b;</i>
+												</div>
+												<div class="search-input">
+													<input type="text" name="friend-search" id="friend-search" value="" placeholder="查询用户(回车添加好友)"/>
+												</div>
+												<div class="close-btn">
+													<i class="iconfont chacha-copy">&#xe708;</i>
+												</div>
+											</div>
+											<div class="search-result">
+												<div class="friends-item friends-item-active">
+													<div class="user-img-wrapper">
+														<img src="../../img/matthew.png"/>
+														<div class="status-circle status-circle-offline"></div>
+													</div>
+													<div class="user-text-wrapper">
+														<div class="text-title-1">
+															<span class="result-name"></span>
+															<i class="iconfont jia" title="点击加号添加为好友">&#xe617;</i>
+														</div>
+														<div class="text-title-2 result-role-name"></div>
+														<div class="text-title-2 result-organization-name"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="friends-list">
+											<!--<div class="friends-item">
+												<div class="user-img-wrapper">
+													<img src="../../img/matthew.png"/>
+													<div class="status-circle"></div>
+												</div>
+												<div class="user-text-wrapper">
+													<div class="text-title-1">
+														<span>侯一宁</span>
+														<i class="iconfont xingxing">&#xe601;</i>
+														<i class="iconfont chacha-copy">&#xe708;</i>
+													</div>
+													<div class="text-title-2">普通用户</div>
+													<div class="text-title-2">大连中软卓越计算机培训中心</div>
+												</div>
+											</div>
+											<div class="friends-item friends-item-active">
+												<div class="user-img-wrapper">
+													<img src="../../img/matthew.png"/>
+													<div class="status-circle status-circle-offline"></div>
+												</div>
+												<div class="user-text-wrapper">
+													<div class="text-title-1">
+														<span>侯二宁</span>
+														<i class="iconfont xingxing">&#xe601;</i>
+														<i class="iconfont chacha-copy">&#xe708;</i>
+													</div>
+													<div class="text-title-2">普通用户</div>
+													<div class="text-title-2">大连中软卓越计算机培训中心</div>
+												</div>
+											</div>
+											-->
+										</div>
+										<div class="friends-pages">
+											<div class="prevBtn">
+												<img src="../../img/friends-prevBtn.png"/>
+											</div>
+											<div class="pageText">
+												<span class="currentPage">1</span>/<span class="totalPages"></span>
+											</div>
+											<div class="nextBtn">
+												<img src="../../img/friends-nextBtn.png"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--添加下拉菜单结束-->
+						</dt>
+						<dt class="operation-item" name="modifyUser">修改
+							<!--修改下拉菜单开始-->
+							<div id="modifyUserMenu" class="menu">
+								<div class="flex-wrapper">
+									<div class="mainModifyUserMenu">
+										<div class="title-1">
+											<span>用户资料</span>
+											<span>修改用户信息</span>
+										</div>
+										<dl class="inputs-list">
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-1.png"/>
+													<span>账户信息</span>
+												</div>
+												<div class="content-2">
+													<label><span>用户名：</span><input type="text" name="username" id="username" value="" placeholder="用户名" required="required" pattern="^[a-zA-Z0-9]{3,15}$" title="3-15位英文或数字"/></label><br />
+													<label><span>密码：</span><input type="password" name="password" id="password" value="" placeholder="密码" required="required" pattern="^[a-zA-Z0-9]{6,15}$" title="6-15位英文或数字"/></label><br />
+													<label><span>重复密码：</span><input type="password" name="re-password" id="re-password" value="" placeholder="重复密码" required="required" pattern="^[a-zA-Z0-9]{6,15}$" title="6-15位英文或数字"/></label><br />
+													<label><span>提示问题：</span><input type="text" name="question" id="question" value="" placeholder="提示问题" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$" title="3-40位中英文字符" /></label><br />
+													<label><span>用户答案：</span><input type="text" name="answer" id="answer" value="" placeholder="用户答案" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$" title="3-40位中英文字符" /></label>
+												</div>
+												<div class="photo-2">
+													<form class="uploadImageForm" action="#" enctype="multipart/form-data" method="post">
+														<div class="selectFile">
+															<img class="preView" src="../../img/friends-nextBtn.png" title="点击选择文件" />
+															<input class="file" type="file" name="photo" id="file" value="" />
+														</div>
+													</form>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-2.png"/>
+													<span>基本信息</span>
+												</div>
+												<div class="content-2">
+													<label><span>姓名：</span><input type="text" name="name" id="name" value="" placeholder="姓名" required="required" pattern="^[\u4e00-\u9fa5]{2,15}$" title="2-15位中文"/></label><br />
+													<label>
+														<span>性别：</span>
+														<div id="sex" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list">
+																<li class="dropdown-item">男</li>
+																<li class="dropdown-item">女</li>
+															</ul>
+														</div>
+													</label><br />
+													<label><span>身份证号：</span><input type="text" name="pid" id="pid" value="" placeholder="身份证号" title="中国大陆有效身份证号"/></label><br />
+													<label><span>电话：</span><input type="text" name="tel" id="tel" value="" placeholder="电话" required="required" pattern="^1\d{10}$" title="中国大陆有效电话号码"/></label><br />
+													<label><span>电子信箱：</span><input type="email" name="email" id="email" value="" placeholder="电子信箱" title="有效电子信箱" required="required"/></label>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="title-2">
+													<img src="../../img/step-3.png"/>
+													<span>系统信息</span>
+												</div>
+												<div class="content-2">
+													<label>
+														<span>培训机构：</span>
+														<div id="organization" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list"></ul>
+														</div>
+													</label><br />
+													<label><span>职位：</span><input type="text" name="position" id="position" value="" placeholder="职位" required="required" pattern="^[\u4e00-\u9fa5|a-z|0-9|A-Z]{2,30}$" title="2-30位中英文"/></label><br />
+													<label>
+														<span>角色：</span>
+														<div id="role" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list"></ul>
+														</div>
+													</label><br />
+													<label>
+														<span>用户状态：</span>
+														<div id="status" class="dropdown">
+															<span class="value">- 选择 -</span>
+															<i class="iconfont arrowhead">&#xe610;</i>
+															<ul class="dropdown-list">
+																<li class="dropdown-item">开</li>
+																<li class="dropdown-item">关</li>
+															</ul>
+														</div>
+													</label><br />
+													<div class="buttons-2">
+														<a name="register" id="register" >保存修改</a>
+														<a name="cancel" id="cancel">取消</a>
+													</div>
+												</div>
+											</dt>
+											<dt class="inputs-item">
+												<div class="user-notes">
+													<div class="user-notes-title">
+														<span>用户须知</span>
+													</div>
+													<div class="accountRules">
+														<dl class="rules-list">
+															<dt class="rules-title">账号管理规则</dt>
+															<dt class="rules-item">1) 必须使用真实身份信息注册账号，昵称和用户资料等自定义命名均不得使用违反国家法规或带侮辱性的词语或图片；</dt>
+															<dt class="rules-item">2) 所有注册账号只可用于正常登陆邀请网、邀请购物、进行游戏、完成任务，不得用于对邀请网进行恶意攻击或破坏；</dt>
+															<dt class="rules-item">3) 一个用户只能注册和使用一个邀请网账号；</dt>
+															<dt class="rules-item">4) 邀请网官方有权对任何不符合账号管理规则的账号进行冻结和处罚。</dt>
+														</dl>
+													</div>
+													<div class="middle-line"></div>
+													<div class="userRules">
+														<dl class="rules-list">
+															<dt class="rules-title">用户行为准则</dt>
+															<dt class="rules-item">同意并按照邀请网网官方不时发布、变更和修改的此用户规则及其他规则，接受并使用我们的产品和服务，不得通过不正当的手段或其他不公平的手段使用我们的产品和服务或参与我们的邀请购物以及非常任务等活动。</dt>
+															<dt class="rules-item">2) 用户不得干扰官方正常地提供产品和服务，包括但不限于：</dt>
+															<dt class="rules-item">3) 用户必须保管好自己的账号和密码，由于用户个人的原因导致账号和密码泄密而造成的后果均将由该用户自行承担。</dt>
+														</dl>
+													</div>
+												</div>
+											</dt>
+										</dl>
+									</div>
+									<div class="friends">
+										<div class="friends-title">
+											<span>好友列表</span>
+											<i class="iconfont">&#xe617;</i>
+										</div>
+										<div class="friends-search">
+											<div class="search-bar">
+												<div class="search-btn">
+													<i class="iconfont fangdajing">&#xe66b;</i>
+												</div>
+												<div class="search-input">
+													<input type="text" name="friend-search" id="friend-search" value="" placeholder="查询用户"/>
+												</div>
+												<div class="close-btn">
+													<i class="iconfont chacha-copy">&#xe708;</i>
+												</div>
+											</div>
+											<div class="search-result">
+												<div class="friends-item friends-item-active">
+													<div class="user-img-wrapper">
+														<img src="../../img/matthew.png"/>
+														<div class="status-circle status-circle-offline"></div>
+													</div>
+													<div class="user-text-wrapper">
+														<div class="text-title-1">
+															<span class="result-name"></span>
+															<i class="iconfont jia" title="点击加号添加为好友">&#xe617;</i>
+														</div>
+														<div class="text-title-2 result-role-name"></div>
+														<div class="text-title-2 result-organization-name"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="friends-list"></div>
+										<div class="friends-pages">
+											<div class="prevBtn">
+												<img src="../../img/friends-prevBtn.png"/>
+											</div>
+											<div class="pageText">
+												<span class="currentPage">1</span>/<span class="totalPages"></span>
+											</div>
+											<div class="nextBtn">
+												<img src="../../img/friends-nextBtn.png"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--修改下拉菜单结束-->
+						</dt>
+						<dt class="operation-item" name="deleteUser">删除</dt>
+						<dt class="operation-item" name="importUser">导入
+							<!--导入下拉菜单开始-->
+							<div class="menu2" id="importUserMenu">
+								<div class="menu-title">导入用户数据</div>
+								<form id="uploadFileForm" action="#" enctype="multipart/form-data" method="post" onsubmit="return false;">
+									<div class="selectFile">
+										<div class="selectFilePresenter">
+											<i class="icon iconfont jia">&#xe617;</i>
+											<span class="iconText">选择文件</span>
+										</div>
+										<input class="addFileView" type="file" name="uploadFile" id="uploadFile" value="" title="请上传文件" accept=".xlsx,.xml,.csv"/>
+									</div>
+									<input class="showFilePath"></input>
+									<input class="uploadFile" type="submit" value="上传" />
+								</form>
+							</div>
+							<!--导入下拉菜单结束-->
+						</dt>
+						<dt class="operation-item" name="exportUser">导出
+							<!--导出下拉菜单开始-->
+							<div class="menu3" id="exportUserMenu">
+								<div class="menu-title">导出用户数据</div>
+								<div class="menu-content">
+									<form action="/stuenroll/systemUser/exportUser" method="post">
+										<input type="hidden" name="type" id="type" value="Excel" />
+										<input type="submit" id="exportExcel" value="导出Excel文件" />
+									</form>
+									<form action="/stuenroll/systemUser/exportUser" method="post">
+										<input type="hidden" name="type" id="type" value="XML" />
+										<input type="submit" id="exportXML" value="导出XML文件" />
+									</form>
+									<form action="/stuenroll/systemUser/exportUser" method="post">
+										<input type="hidden" name="type" id="type" value="CSV" />
+										<input type="submit" id="exportCSV" value="导出CSV文件" />
+									</form>
+								</div>
+							</div>
+							<!--导出下拉菜单结束-->
+						</dt>
+					</dl>
+					<table class="data-table">
+						<tr>
+							<td></td>
+							<td>序号</td>
+							<td>用户名</td>
+							<td>姓名</td>
+							<td>机构名称</td>
+							<td>角色</td>
+							<td>电话</td>
+							<td>电子信箱</td>
+							<td>用户状态</td>
+						</tr>
+					</table>
+					<dl class="page-list no-select">
+						<dt class="page-item page-info">
+							总计<span id="totalRows"></span>条记录，<span id="currentPage">1</span>/<span id="totalPages"></span>页
+						</dt>
+						<dt class="page-item page-operation">
+							<a name="prevBtn">上一页</a>
+							<a data-page="1" class="page-active">1</a>
+							<a data-page="2">2</a>
+							<a data-page="3">3</a>
+							<a data-page="4">4</a>
+							<a data-page="5">5</a>
+							<a name="nextBtn">下一页</a>
+						</dt>
+					</dl>
+				</div>
+			</div>
+		</div>
+		
+
+		<script src="../../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/dropdown.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/plugin/modal.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/permission.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="user.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

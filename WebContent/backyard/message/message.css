@@ -1,0 +1,351 @@
+body {
+  background-color: #fff;
+}
+.main-container .chart-container {
+  height: 3.125rem;
+  background-color: #BABABA;
+}
+.main-container .chart-container .title-list {
+  height: 3.125rem;
+  margin: 0;
+}
+.main-container .chart-container .title-list .title-item {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  padding-right: 1.25rem;
+  padding-left: 1.25rem;
+  float: left;
+  font-size: large;
+  color: #1C1C1C;
+  font-weight: bolder;
+}
+.main-container .chart-container .title-list .title-item:last-child {
+  border-right: 0;
+}
+.main-container .chart-container .title-list .active {
+  color: #fff;
+  background-color: #2AB0DB;
+}
+.main-container .getmailbar {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  background-color: #fff;
+}
+.main-container .getmailbar .daymail {
+  padding-top: 1.25rem;
+}
+.main-container .getmailbar .daymail .date {
+  padding-left: 0.625rem;
+  padding-bottom: 0.3125rem;
+  border-bottom: solid 0.1875rem #9182A8;
+}
+.main-container .getmailbar .daymail .date span {
+  color: #7C5EA8;
+}
+.main-container .getmailbar .daymail .date span:first-child {
+  font-family: "微软雅黑";
+  font-size: large;
+  font-weight: 600;
+}
+.main-container .getmailbar .daymail .date span:nth-child(2) {
+  font-family: "微软雅黑";
+  font-size: medium;
+  font-weight: 400;
+}
+.main-container .getmailbar .daymail .mail-list {
+  margin: 0;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list {
+  border-bottom: solid 0.0625rem #AD9DCC;
+  height: 1.5625rem;
+  margin: 0;
+  padding-bottom: 0.3125rem;
+  padding-top: 0.3125rem;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list:hover {
+  background-color: #B0B0B0;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item {
+  padding-left: 0.625rem;
+  float: left;
+  margin-right: 1.875rem;
+  font-size: medium;
+  color: #212121;
+  font-family: "微软雅黑";
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:first-child {
+  color: black;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(2) {
+  width: 9.375rem;
+  color: red;
+  font-weight: 500;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(3) {
+  font-weight: bold;
+  min-width: 9.375rem;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6) {
+  color: blue;
+  font-weight: 500;
+  float: right;
+  cursor: pointer;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6):hover {
+  color: red;
+}
+.main-container .getmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(5) {
+  float: right;
+}
+.main-container .getsendmailbar {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  background-color: #fff;
+}
+.main-container .getsendmailbar .daymail {
+  padding-top: 1.25rem;
+}
+.main-container .getsendmailbar .daymail .date {
+  padding-left: 0.625rem;
+  padding-bottom: 0.3125rem;
+  border-bottom: solid 0.1875rem #9182A8;
+}
+.main-container .getsendmailbar .daymail .date span {
+  color: #7C5EA8;
+}
+.main-container .getsendmailbar .daymail .date span:first-child {
+  font-family: "微软雅黑";
+  font-size: large;
+  font-weight: 600;
+}
+.main-container .getsendmailbar .daymail .date span:nth-child(2) {
+  font-family: "微软雅黑";
+  font-size: medium;
+  font-weight: 400;
+}
+.main-container .getsendmailbar .daymail .mail-list {
+  margin: 0;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list {
+  border-bottom: solid 0.0625rem #AD9DCC;
+  height: 1.5625rem;
+  margin: 0;
+  padding-bottom: 0.3125rem;
+  padding-top: 0.3125rem;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list:hover {
+  background-color: #B0B0B0;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item {
+  padding-left: 0.625rem;
+  float: left;
+  margin-right: 1.875rem;
+  font-size: medium;
+  color: #212121;
+  font-family: "微软雅黑";
+  overflow: hidden;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:first-child {
+  color: black;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(2) {
+  color: red;
+  font-weight: 500;
+  width: 9.375rem;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(3) {
+  font-weight: bold;
+  min-width: 9.375rem;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6) {
+  color: blue;
+  font-weight: 500;
+  float: right;
+  cursor: pointer;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(6):hover {
+  color: red;
+}
+.main-container .getsendmailbar .daymail .mail-list .mail-item .title-list .title-item:nth-child(5) {
+  float: right;
+}
+.main-container .write {
+  padding: 1.25rem;
+  background-color: #F0F0F0;
+}
+.main-container .write .info .info-list {
+  margin: 0;
+}
+.main-container .write .info .info-list .info-item {
+  margin-bottom: 1.875rem;
+}
+.main-container .write .info .info-list .info-item:nth-child(3) textarea {
+  width: 62.5rem;
+  height: 18.75rem;
+  margin-left: 0.625rem;
+  outline: none;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  color: black;
+  font-weight: 700;
+  font-size: 1.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.9375rem;
+  margin-right: 0.625rem;
+  border-color: grey;
+  resize: none;
+}
+.main-container .write .info .info-list .info-item:nth-child(3) label {
+  display: block;
+  float: left;
+}
+.main-container .write .info .info-list .info-item label {
+  width: 4.6875rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+  margin-right: 0.625rem;
+  display: inline-block;
+  text-align: right;
+}
+.main-container .write .info .info-list .info-item input {
+  width: 62.5rem;
+  height: 1.875rem;
+  outline: none;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  color: #333;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-right: 0.625rem;
+  border-color: grey;
+}
+.main-container .write .info .info-list .info-item .btn {
+  width: 9.375rem;
+  height: 2.5rem;
+  border-radius: 0.1875rem;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+}
+.main-container .write .info .info-list .info-item .green {
+  color: #fff;
+  background-color: #0EC093;
+}
+.main-container .write .info .info-list .info-item .green:active {
+  background-color: #10D8A5;
+}
+.main-container .write .info .info-list .info-item .red {
+  color: #fff;
+  background-color: #E86167;
+}
+.main-container .write .info .info-list .info-item .red:active {
+  background-color: #EB777C;
+}
+.main-container .majormessage {
+  padding: 1.25rem;
+  background-color: #F0F0F0;
+}
+.main-container .majormessage .info .info-list {
+  margin: 0;
+}
+.main-container .majormessage .info .info-list .info-item {
+  margin-bottom: 1.875rem;
+}
+.main-container .majormessage .info .info-list .info-item:nth-child(5) textarea {
+  width: 62.5rem;
+  height: 18.75rem;
+  margin-left: 0.625rem;
+  outline: none;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  color: black;
+  font-weight: 700;
+  font-size: 1.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.625rem;
+  padding-right: 0.9375rem;
+  margin-right: 0.625rem;
+  border-color: grey;
+  resize: none;
+}
+.main-container .majormessage .info .info-list .info-item:nth-child(5) label {
+  display: block;
+  float: left;
+}
+.main-container .majormessage .info .info-list .info-item select {
+  width: 64.5rem;
+  height: 2.1875rem;
+  outline: none;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  color: #333;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-right: 0.625rem;
+  border-color: grey;
+}
+.main-container .majormessage .info .info-list .info-item label {
+  width: 4.6875rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.0625rem;
+  margin-right: 0.625rem;
+  display: inline-block;
+  text-align: right;
+}
+.main-container .majormessage .info .info-list .info-item input {
+  width: 62.5rem;
+  height: 1.875rem;
+  outline: none;
+  border-radius: 0.1875rem;
+  border: solid 0.0625rem #e0e0e0;
+  color: #333;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  margin-right: 0.625rem;
+  border-color: grey;
+}
+.main-container .majormessage .info .info-list .info-item .btn {
+  width: 9.375rem;
+  height: 2.5rem;
+  border-radius: 0.1875rem;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 0.0625rem;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+}
+.main-container .majormessage .info .info-list .info-item .green {
+  color: #fff;
+  background-color: #0EC093;
+}
+.main-container .majormessage .info .info-list .info-item .green:active {
+  background-color: #10D8A5;
+}
+.main-container .majormessage .info .info-list .info-item .red {
+  color: #fff;
+  background-color: #E86167;
+}
+.main-container .majormessage .info .info-list .info-item .red:active {
+  background-color: #EB777C;
+}
+.no-select {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: default;
+}
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=message.css.map */

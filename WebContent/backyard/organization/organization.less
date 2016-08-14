@@ -1,0 +1,391 @@
+.body {
+    background-color: #e7e7e7;
+}
+.main-container {
+    background-color: #fff;
+    margin: 15/16rem;
+    padding: 15/16rem;
+    .tab-list {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #EBEEF7;
+        .tab-item {
+            display: none;
+            float: left;
+            height: 36/16rem;
+            line-height: 36/16rem;
+            text-align: center;
+            padding-left: 20/16rem;
+            padding-right: 20/16rem;
+            letter-spacing: 1/16rem;
+            font-size: 14/16rem;
+            cursor: pointer;
+        }
+        .tab-item-show {
+            display: block;
+        }
+        .tab-active {
+            color: #fff;
+            background-color: #02A0E9;
+        }
+        
+    }
+    .tab-container {
+        //overflow: hidden;
+        .tab-content {
+            display: none;
+            position: relative;
+            .operation-list {
+                margin: 0;
+                padding: 0;
+                height: 48/16rem;
+                position: relative;
+                .operation-item {
+                    display: none;
+                    float: left;
+                    height: 48/16rem;
+                    line-height: 48/16rem;
+                    text-align: center;
+                    letter-spacing: 1/16rem;
+                    font-size: 14/16rem;
+                    padding-left: 10/16rem;
+                    padding-right: 10/16rem;
+                    cursor: pointer;
+                    &:hover {
+                        color: orange;
+                        background-color: #fff;
+                    }
+                    .menu {
+                        display: none;
+                        cursor: default;
+                        left: 0;
+                        top: 38/16rem;
+                        background-color: #f0f0f0;
+                        color: #333;
+                        width: 100%;
+                        border: solid #e0e0e0 1/16rem;
+                        box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                        padding: 10/16rem;
+                        position: absolute;
+                        z-index: 50;
+                        margin-top: 10/16rem;
+                        border-radius: 3/16rem;
+                        .value {
+                            float: left;
+                        }
+                        .arrowhead {
+                            float: right;
+                            font-size: 11/16rem;
+                            cursor: pointer;
+                        }
+                        .menu-title {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            padding-bottom: 1/16rem;
+                            font-size: 15/16rem;
+                            letter-spacing: 1/16rem;
+                            border-bottom: #ccc dashed 1/16rem;
+                            text-align: left;
+                            margin-left: 10/16rem;
+                        }
+                        dl {
+                            margin-top: 15/16rem;
+                            margin-bottom: 10/16rem;
+                            height: 170/16rem;
+                            margin-left: 10/16rem;
+                            dt {
+                                float: left;
+                                letter-spacing: 1/16rem;
+                                height: 32/16rem;
+                                line-height: 32/16rem;
+                                font-weight: 600;
+                                margin-right: 25/16rem;
+                                padding-top: 6/16rem;
+                            }
+                            dd {
+                                float: left;
+                                margin-left: 0;
+                                .condition-list {
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    width: 680/16rem;
+                                    min-width: 680/16rem;
+                                    height: 171/16rem;
+                                    .label {
+                                        float: left;
+                                        width: 100/16rem;
+                                        //letter-spacing: 1/16rem;
+                                        height: 32/16rem;
+                                        line-height: 32/16rem;
+                                        text-align: right;
+                                        padding-right: 5/16rem;
+                                        padding-top: 6/16rem;
+                                        margin-bottom: 25/16rem;
+                                        font-size: 14/16rem;
+                                        list-style: none;
+                                    }
+                                    .condition {
+                                        float: left;
+                                        margin-right: 40/16rem;
+                                        margin-bottom: 12/16rem;
+                                        list-style: none; //                                      line-height: 32/16rem;
+                                        input[name='address'] {
+                                            width: 540/16rem;
+                                        }
+                                        .keyword {
+                                            width: 200/16rem;
+                                            height: 32/16rem; //                                          line-height: 32/16rem;
+                                            padding-left: 10/16rem;
+                                            padding-right: 10/16rem;
+                                            margin: 0;
+                                            border: solid #ccc 1/16rem;
+                                            outline: none;
+                                            letter-spacing: 1/16rem;
+                                            border-radius: 3/16rem;
+                                            color: #666666;
+                                        }
+                                    }
+                                }
+                                .transform-list {
+                                    width: 340/16rem;
+                                    min-width: 340/16rem;
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    height: 171/16rem;
+                                }
+                                .menu-btn {
+                                    display: block;
+                                    width: 120/16rem;
+                                    height: 32/16rem;
+                                    margin-bottom: 25/16rem;
+                                    margin-top: 8/16rem;
+                                    background-color: #F4494E;
+                                    border: none;
+                                    color: #fff;
+                                    outline: none;
+                                    border-radius: 3/16rem;
+                                    letter-spacing: 1/16rem;
+                                    font-size: 14/16rem;
+                                    font-weight: 600;
+                                    &:active {
+                                        background-color: #CD0C12;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .operation-item-show {
+                    display: block;
+                }
+                .item-active {
+                    color: red;
+                    background-color: #fff;
+                }
+            }
+            .data-table {
+                a {
+                    color: #02A0E9;
+                    cursor: pointer;
+                }
+                .model {
+                    float: left;
+                    min-width: 60/16rem;
+                    min-height: 25/16rem;
+                    display: block; //  box-sizing: border-box;
+                    text-align: center;
+                    font-size: 100%;
+                    margin-top: 6/16rem;
+                    .checkbox {
+                        position: relative;
+                        display: inline-block;
+                        input {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            z-index: 5;
+                            opacity: 0; // 设置元素透明度，取值范围为0~1。 1为完全不透明， 0为完全透明
+                            cursor: pointer;
+                            box-sizing: border-box;
+                            line-height: normal;
+                            font-size: 100%;
+                            text-align: center;
+                        }
+                        label {
+                            position: relative;
+                            display: inline-block;
+                            background: none;
+                            border: 2/16rem solid #777;
+                            border-radius: 20/16rem;
+                            width: 55/16rem;
+                            height: 25/16rem;
+                            text-align: center;
+                            transition: 0.4s;
+                            // 动画效果
+                        }
+                    }
+                    .checkbox:before,
+                    .checkbox:after {
+                        box-sizing: border-box;
+                        font-feature-settings: normal;
+                        font-kerning: auto;
+                        font-language-override: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        font-synthesis: weight style;
+                        font-variant: normal;
+                        font-weight: normal;
+                        text-rendering: auto;
+                        text-align: center;
+                        font-size: 100%;
+                    }
+                    .checkbox label:after {
+                        // 使用after伪类在label元素后添加东西
+                        content: '开';
+                        text-align: center;
+                        font-family: "微软雅黑";
+                        color: #fff;
+                        line-height: 15/16rem;
+                        text-indent: 18/16rem; // 规定文本行的首行缩进
+                        background-color: #777;
+                        overflow: hidden;
+                        box-shadow: none; // 向方框添加一个或多个阴影
+                        border-radius: 14/16rem;
+                        transform: translateX(-30/16rem); // 向右移动
+                        transition: all 0.4s 0.2s, width 0.2s linear, text-indent 0.4s linear; // 过度属性
+                        left: auto; // 设置定位元素左外边距边界与其包含块左边界之间的偏移
+                        top: 1.7/16rem; // 设置定位元素的上外边距边界与其包含块上边界之间的偏移
+                        right: 3/16rem; // 设置定位元素右外边距边界与其包含块右边界之间的偏移
+                        width: 16/16rem;
+                        height: 18/16rem;
+                        position: absolute;
+                        z-index: 2;
+                        box-sizing: border-box;
+                    }
+                    .checkbox:after {
+                        content: '关';
+                        font-family: "微软雅黑";
+                        position: absolute;
+                        color: #666;
+                        top: 1/16rem;
+                        right: 12/16rem;
+                    }
+                    .checkbox input:checked + label {
+                        border-color: #62C874;
+                    }
+                    .checkbox input:checked + label:after {
+                        background-color: #40B655;
+                        left: auto;
+                        transform: translateX(0/16rem);
+                        transition: all 0.4s, width 0.2s linear, text-indent 0.3s linear 0.4s;
+                        width: 45/16rem;
+                        text-align: center;
+                    }
+                }
+            }
+            .professionMenu {
+                display: none;
+                cursor: default;
+                left: 0;
+                top: 38/16rem;
+                background-color: #f0f0f0;
+                color: #333;
+                width: 100%;
+                border: solid #e0e0e0 1/16rem;
+                box-shadow: 0 3/16rem 4/16rem rgba(0,0,0,0.18);
+                padding: 10/16rem;
+                position: absolute;
+                z-index: 50;
+                margin-top: 10/16rem;
+                border-radius: 3/16rem;
+                .menu-title {
+                    margin: 0;
+                    padding-bottom: 10/16rem;
+                    padding-top: 10/16rem;
+                    font-size: 15/16rem;
+                    letter-spacing: 1/16rem;
+                    border-bottom: #ccc dashed 1/16rem;
+                    text-align: left;
+                    margin-left: 10/16rem;
+                }
+                dl {
+                    margin-top: 15/16rem;
+                    margin-bottom: 10/16rem;
+                    height: 170/16rem;
+                    margin-left: 10/16rem;
+                    dt {
+                        float: left;
+                        letter-spacing: 1/16rem;
+                        height: 32/16rem;
+                        line-height: 32/16rem;
+                        font-weight: 600;
+                        margin-right: 25/16rem; //                      padding-top: 6/16rem;
+                        font-size: 14/16rem;
+                    }
+                    dd {
+                        float: left;
+                        margin-left: 0;
+                        .professions {
+                            float: left;
+                            background-color: #fff;
+                            border: solid 1/16rem #CCCCCC;
+                            margin-right: 30/16rem;
+                            margin-top: 8/16rem;
+                            height: 310/16rem;
+                            width: 210/16rem;
+                            overflow-y: auto;
+                            overflow-x: auto;
+                            ul {
+                                padding: 0;
+                                margin: 0;
+                                li {
+                                    list-style: none;
+                                    font-size: 14/16rem;
+                                    font-weight: 300;
+                                    letter-spacing: 1/16rem;
+                                    cursor: pointer;
+                                    margin: 10/16rem 4/16rem;
+                                    .profession {
+                                        padding: 5/16rem 100/16rem 5/16rem 15/16rem;
+                                    }
+                                    .profession-active {
+                                        background-color: #33CCFF;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        .menu-btn {
+                            display: block;
+                            width: 120/16rem;
+                            height: 32/16rem;
+                            margin-bottom: 25/16rem;
+                            margin-top: 8/16rem;
+                            margin-left: 30/16rem;
+                            background-color: #F4494E;
+                            border: none;
+                            color: #fff;
+                            outline: none;
+                            border-radius: 3/16rem;
+                            letter-spacing: 1/16rem;
+                            font-size: 14/16rem;
+                            font-weight: 600;
+                            &:active {
+                                background-color: #CD0C12;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-active {
+            display: block;
+        }
+        .error {
+            color: red !important;
+        }
+    }
+}

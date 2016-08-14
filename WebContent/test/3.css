@@ -1,0 +1,134 @@
+body {
+  scrollbar-arrow-color: #1FB5AC;
+  scrollbar-base-color: #22B5AD;
+}
+.menu {
+  position: relative;
+}
+.menu .professions {
+  float: left;
+  background-color: #fff;
+  border: solid 0.0625rem #CCCCCC;
+  margin-left: 3.125rem;
+  height: 19.375rem;
+  width: 12.5rem;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.menu .professions ul {
+  padding: 0;
+  margin: 0;
+}
+.menu .professions ul li {
+  list-style: none;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+  margin: 0.625rem 0.25rem;
+}
+.menu .professions ul li .profession {
+  padding: 0.3125rem 6.25rem 0.3125rem 0.9375rem;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+.menu .professions ul li .profession-active {
+  background-color: #33CCFF;
+  color: #fff;
+}
+.menu .professions ul li .profession-hidden {
+  display: none;
+}
+.model {
+  float: left;
+  min-width: 3.75rem;
+  min-height: 1.5625rem;
+  display: block;
+  text-align: center;
+  font-size: 100%;
+}
+.model .checkbox {
+  position: relative;
+  display: inline-block;
+}
+.model .checkbox input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  line-height: normal;
+  font-size: 100%;
+  text-align: center;
+}
+.model .checkbox label {
+  position: relative;
+  display: inline-block;
+  background: none;
+  border: 0.1875rem solid #777;
+  border-radius: 1.25rem;
+  width: 3.4375rem;
+  height: 1.375rem;
+  text-align: center;
+  transition: 0.4s;
+}
+.model .checkbox:before,
+.model .checkbox:after {
+  box-sizing: border-box;
+  font-feature-settings: normal;
+  font-kerning: auto;
+  font-language-override: normal;
+  font-stretch: normal;
+  font-style: normal;
+  font-synthesis: weight style;
+  font-variant: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  text-align: center;
+  font-size: 100%;
+}
+.model .checkbox label:after {
+  content: '开';
+  text-align: center;
+  font-family: "微软雅黑";
+  color: #fff;
+  line-height: 1rem;
+  text-indent: 1.125rem;
+  background-color: #777;
+  overflow: hidden;
+  box-shadow: none;
+  border-radius: 0.875rem;
+  transform: translateX(-1.875rem);
+  transition: all 0.4s 0.2s, width 0.2s linear, text-indent 0.4s linear;
+  left: auto;
+  top: 0.125rem;
+  right: 0.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.model .checkbox:after {
+  content: '关';
+  font-family: "微软雅黑";
+  position: absolute;
+  color: #666;
+  top: 0.1875rem;
+  right: 0.75rem;
+}
+.model .checkbox input:checked + label {
+  border-color: #329043;
+}
+.model .checkbox input:checked + label:after {
+  background-color: #3eb454;
+  left: auto;
+  transform: translateX(0rem);
+  transition: all 0.4s, width 0.2s linear, text-indent 0.3s linear 0.4s;
+  width: 3.125rem;
+  text-align: center;
+}
+/*# sourceMappingURL=3.css.map */

@@ -1,0 +1,354 @@
+body {
+  background: url("../img/bg.jpg");
+}
+.btn {
+  width: 10rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  border-radius: 0.3125rem;
+  border: none;
+  display: inline-block;
+  text-align: center;
+}
+.red {
+  background-color: #ed2123;
+  color: #fff;
+}
+.red:hover {
+  background-color: #ee4244;
+}
+.container {
+  height: inherit;
+  width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.header {
+  height: 8.75rem;
+  background-color: #fff;
+}
+.header .header-nav {
+  padding-top: 2.75rem;
+}
+.header .header-nav .logo .desc-list {
+  display: inline-block;
+  margin: 0;
+  padding: 0 1.25rem 0 0;
+  vertical-align: 0.625rem;
+  border-right: 0.0625rem solid #e3e3e3;
+  overflow: hidden;
+}
+.header .header-nav .logo .desc-list .desc-item {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.9375rem;
+  color: #626262;
+}
+.header .header-nav .nav-list {
+  display: inline-block;
+  height: 3.25rem;
+  line-height: 3.25rem;
+  margin: 0 0 0 2.5rem;
+  padding: 0;
+  overflow: hidden;
+}
+.header .header-nav .nav-list .nav-item {
+  height: inherit;
+  float: left;
+  display: inline-block;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+.header .header-nav .nav-list .nav-item .link {
+  font-size: 1rem;
+  transition: all 0.2s;
+  letter-spacing: 0.0625rem;
+}
+.header .header-nav .nav-list .nav-item .link:hover {
+  color: #54C895;
+  text-decoration: underline;
+}
+.main {
+  overflow: hidden;
+}
+.main .banner .image {
+  height: 43.75rem;
+  background-size: cover;
+}
+.main .banner .image:nth-child(1) {
+  background-image: url("../img/banner-1.jpg");
+}
+.main .presentation {
+  overflow: hidden;
+  height: 25rem;
+  text-align: center;
+}
+.main .presentation .title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  padding-bottom: 0.625rem;
+  width: 37.5rem;
+  margin: 4.375rem auto 2.5rem;
+}
+.main .presentation .desc {
+  letter-spacing: 0.0625rem;
+  margin-bottom: 3.125rem;
+}
+.main .presentation .image {
+  background: url("../img/ico_brand.png");
+  width: 23.75rem;
+  height: 3.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.5rem;
+}
+.main .education {
+  overflow: hidden;
+  height: 61.25rem;
+}
+.main .education .title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  padding-bottom: 0.625rem;
+  width: 43.75rem;
+  margin: 4.375rem auto 2.5rem;
+}
+.main .education .education-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.main .education .education-list .education-item {
+  margin-bottom: 1.25rem;
+}
+.main .education .education-list .education-item img {
+  width: 5rem;
+  height: 5rem;
+  vertical-align: top;
+  margin-top: 5rem;
+}
+.main .education .education-list .education-item .content {
+  display: inline-block;
+  width: 28.125rem;
+  margin-left: 1.25rem;
+}
+.main .education .education-list .education-item .content .sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+}
+.main .education .education-list .education-item .content .desc {
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  line-height: 1.625rem;
+}
+.main .education .education-list .education-item .content .desc .link {
+  color: #3D97CF;
+  cursor: pointer;
+}
+.main .education .operate {
+  margin-top: 1.875rem;
+  text-align: center;
+}
+.main .cooperator {
+  overflow: hidden;
+  height: 60rem;
+}
+.main .cooperator .title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  text-align: center;
+  padding-bottom: 0.625rem;
+  margin: 4.375rem auto 2.5rem;
+}
+.main .cooperator .desc {
+  text-align: center;
+  margin: 0;
+  line-height: 1.875rem;
+}
+.main .cooperator .section-list {
+  margin: 0;
+  padding: 0;
+  width: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.main .cooperator .section-list .sestion-item {
+  padding-bottom: 1.875rem;
+}
+.main .cooperator .section-list .sestion-item .section-title {
+  font-weight: 500;
+  margin: 0.625rem 0 0.3125rem;
+  letter-spacing: 0.0625rem;
+}
+.main .cooperator .section-list .sestion-item .section-desc {
+  margin: 0 0 0.625rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+}
+.main .company {
+  overflow: hidden;
+  height: 36.25rem;
+}
+.main .company .title {
+  font-size: 2.25rem;
+  font-weight: 300;
+  letter-spacing: 0.1875rem;
+  text-align: center;
+  padding-bottom: 0.625rem;
+  margin: 4.375rem auto 0.625rem 0;
+}
+.main .company .desc {
+  text-align: left;
+  margin: 0rem 0 2.5rem;
+  padding: 0;
+  line-height: 1.875rem;
+}
+.main .company .company-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.main .company .company-list .company-item {
+  padding-bottom: 0.9375rem;
+}
+.main .company .company-list .company-item .link img {
+  border: solid 0.0625rem #e0e0e0;
+}
+.main .about {
+  overflow: hidden;
+  height: 28.125rem;
+}
+.main .about .about-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.main .about .about-list .title {
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  margin-top: 4.375rem;
+}
+.main .about .about-list .sub-title {
+  font-weight: 500;
+  color: #FF5859;
+  letter-spacing: 0.0625rem;
+}
+.main .about .about-list .desc {
+  font-weight: 300;
+  letter-spacing: 0.0625rem;
+  line-height: 1.75rem;
+}
+.main .about .about-list .about-item {
+  width: 22.5rem;
+}
+.footer {
+  padding-top: 3.125rem;
+  padding-bottom: 0.625rem;
+}
+.footer .footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.footer .footer-list .foot-item:first-child {
+  width: 23.75rem;
+}
+.footer .footer-list .foot-item:first-child .big-title {
+  font-size: 4.375rem;
+  font-weight: 400;
+  color: #FF5859;
+  margin: 0 0 0.625rem 0;
+  line-height: 4.375rem;
+}
+.footer .footer-list .foot-item:first-child .middle-title {
+  font-size: 4.375rem;
+  font-weight: 400;
+  color: #FF5859;
+  margin: 0 0 0.625rem 0;
+  line-height: 4.375rem;
+  font-size: 3.5rem;
+  margin-top: 1.25rem;
+}
+.footer .footer-list .foot-item:first-child .sub-title {
+  color: #FF5859;
+  font-weight: 400;
+  font-size: 1.375rem;
+  letter-spacing: 0.0625rem;
+  margin: 0 0 0.625rem 0;
+}
+.footer .footer-list .foot-item:first-child .sub-desc {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.0625rem;
+  margin: 0;
+}
+.footer .footer-list .foot-item:first-child .desc {
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.0625rem;
+}
+.footer .footer-list .foot-item:nth-child(2) .title {
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.0625rem;
+}
+.footer .footer-list .foot-item:nth-child(2) .desc {
+  letter-spacing: 0.0625rem;
+  font-weight: 400;
+}
+.footer .footer-list .foot-item:nth-child(2) img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+.footer .footer-list .foot-item:last-child .title {
+  margin-top: 0;
+  font-weight: 400;
+  letter-spacing: 0.0625rem;
+  font-size: 1.875rem;
+}
+.footer .footer-list .foot-item:last-child .contact {
+  letter-spacing: 0.0625rem;
+  font-weight: 400;
+}
+.white {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+.gray {
+  background-color: rgba(0, 0, 0, 0);
+}
+.error{
+	color: red !important;
+}
+#downloadModal {
+  width: 31.25rem;
+  height: 13.75rem;
+}
+#organizationModal {
+  width: 40.00rem;
+  height: 42.00rem;
+  
+}
+#professionModal {
+  width: 40.00rem;
+  height: 42.00rem;
+}
+/*# sourceMappingURL=index.css.map */

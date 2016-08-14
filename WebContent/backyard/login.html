@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="辽宁省大学生离校未就业技能转换培训"/>
+		<meta name="keywords" content="大学生就业,大学生就业难,免费培训,转换培训,辽宁省大学生离校未就业技能转换培训"/>
+		<meta name="author" content="神一样的男人"/>
+		<meta name="copyright" content="辽宁省人力资源与社会保障厅" />
+		<title>辽宁省大学生离校未就业技能转换培训</title>
+		<link rel="shortcut icon" href="../img/icon.png"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="../js/plugin/toastr.css"/>
+		<link rel="stylesheet" type="text/css" href="login.css"/>
+		
+	</head>
+	<body>
+		<div class="main">
+			<div class="login-container no-select">
+				<dl class="login-list">
+					<dt class="login-item">
+						<h1 class="title">辽宁省就业转换管理系统</h1>
+					</dt>
+					<dt class="login-item">
+						<input type="text" name="username" id="username" value="" class="input" placeholder="用户名" autocomplete="off" required="required" pattern="^[a-zA-Z0-9]{3,15}$"/>
+					</dt>
+					<dt class="login-item">
+						<input type="password" name="password" id="password" value="" class="input" placeholder="密码" autocomplete="off" required="required" pattern="^[a-zA-Z0-9]{6,15}$"/>
+					</dt>
+					<dt class="login-item">
+						<input type="button" value="登录" id="login-btn" class="btn blue"/>
+					</dt>
+					<dt class="login-item">
+						<a class="link" id="link-recover">忘记密码，执行找回</a>
+					</dt>
+				</dl>
+			</div>
+			<div class="recover-container no-select">
+				<h2 class="title">找回密码</h2>
+				<div class="step-container">
+					<div class="step-bar">
+						<dl class="step-list">
+							<dt class="step-item step-active">
+								<div class="ball">1</div>
+								<div class="desc">验证个人资料</div>
+							</dt>
+							<dt class="step-item">
+								<div class="ball">2</div>
+								<div class="desc">验证账号资料</div>
+							</dt>
+							<dt class="step-item">
+								<div class="ball">3</div>
+								<div class="desc">设置新密码</div>
+							</dt>
+							<dt class="step-item">
+								<div class="ball">4</div>
+								<div class="desc">完成</div>
+							</dt>
+						</dl>
+					</div>
+					<div class="step-content">
+						<div class="step-wrapper">
+							<div class="step">
+								<dl class="content-list">
+									<dt class="content-item">
+										<h3 class="step-title">个人基本资料</h3>
+									</dt>
+									<dt class="content-item">
+										<label for="name">真实姓名：</label>
+										<input type="text" id="name" name="name" class="input" placeholder="真实姓名" autocomplete="off" tabindex="-1" required="required" pattern="^[\u4e00-\u9fa5]{2,15}$"/>
+										<input type="button" class="btn green" name="next" value="下一步" tabindex="-1" data-index = "1"/>
+									</dt>
+									<dt class="content-item">
+										<label for="pid">身份证号：</label>
+										<input type="text" id="pid" name="pid" class="input" placeholder="身份证号" autocomplete="off" tabindex="-1" required="required"/>
+										<input type="button" class="btn red" name="cancel" value="取消"  tabindex="-1"/>
+									</dt>
+									<dt class="content-item">
+										<label for="organization">组织机构：</label>
+										<input type="text" id="organization" name="organization" class="input" placeholder="组织机构" autocomplete="off" tabindex="-1" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{4,30}$"/>
+									</dt>
+								</dl>
+							</div>
+							<div class="step">
+								<dl class="content-list">
+									<dt class="content-item">
+										<h3 class="step-title">账号基本资料</h3>
+									</dt>
+									<dt class="content-item">
+										<label for="recoverUsername">用户名：</label>
+										<input type="text" id="recoverUsername" name="recoverUsername" class="input" placeholder="用户名" autocomplete="off" tabindex="-1" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,15}$"/>
+										<input type="button" class="btn green" name="next" value="下一步"  tabindex="-1" data-index = "2"/>
+									</dt>
+									<dt class="content-item">
+										<label for="email">电子信箱：</label>
+										<input type="email" id="email" name="email" class="input" placeholder="电子信箱" autocomplete="off" tabindex="-1" required="required"/>
+										<input type="button" class="btn red" name="cancel" value="取消"  tabindex="-1"/>
+									</dt>
+									<dt class="content-item">
+										<label for="tel">手机号码：</label>
+										<input type="text" id="tel" name="tel" class="input" placeholder="手机号码" autocomplete="off" tabindex="-1" required="required" pattern="^1\d{10}$"/>
+									</dt>
+								</dl>
+							</div>
+							<div class="step">
+								<dl class="content-list">
+									<dt class="content-item">
+										<h3 class="step-title">重新设置密码</h3>
+									</dt>
+									<dt class="content-item">
+										<label for="newPassword">新密码：</label>
+										<input type="password" id="newPassword" name="newPassword" class="input" placeholder="新密码" autocomplete="off" tabindex="-1" required="required" pattern="^[0-9a-zA-Z]{6,15}$"/>
+										<input type="button" class="btn green" name="next" value="下一步" tabindex="-1" data-index = "3"/>
+									</dt>
+									<dt class="content-item">
+										<label for="question">提示问题：</label>
+										<input type="text" id="question" name="question" class="input" placeholder="提示问题" autocomplete="off" tabindex="-1" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$"/>
+										<input type="button" class="btn red" name="cancel" value="取消"  tabindex="-1"/>
+									</dt>
+									<dt class="content-item">
+										<label for="answer">用户答案：</label>
+										<input type="text" id="answer" name="answer" class="input" placeholder="用户答案" autocomplete="off" tabindex="-1" required="required" pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{3,40}$"/>
+									</dt>
+								</dl>
+							</div>
+							<div class="step">
+								<dl class="success-list">
+									<dt class="success-item">
+										<h3 class="success-title">密码修改成功</h3>
+									</dt>
+									<dt class="success-item">
+										<p class="success-desc">
+											<span class="second">15</span>秒之后自动跳转到登陆界面
+										</p>
+									</dt>
+									<dt class="success-item">
+										<input type="button" class="back-btn" value="返回登陆界面" tabindex="-1"/>
+									</dt>
+								</dl>
+								<div class="QR">
+									<img src="../img/二维码.jpeg" height="150" width="150"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/plugin/toastr.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/pid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="login.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
