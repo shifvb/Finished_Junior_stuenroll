@@ -25,4 +25,4 @@
 
     * 使用了MongoDB集群技术(ReplicaSet)，实现非重要信息（系统公告，图片信息等）的存储
 
-    * 使用了Haproxy + Redis(entinel)集群提高了对于突发大访问量的承载能力
+    * 使用了Haproxy + Redis(Sentinel)集群提高了对于突发大访问量的承载能力
